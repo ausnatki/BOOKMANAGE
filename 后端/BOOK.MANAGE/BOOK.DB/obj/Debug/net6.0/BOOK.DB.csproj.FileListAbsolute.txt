@@ -1,0 +1,17 @@
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\bin\Debug\net6.0\BOOK.DB.deps.json
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\bin\Debug\net6.0\BOOK.DB.runtimeconfig.json
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\bin\Debug\net6.0\BOOK.DB.dll
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\bin\Debug\net6.0\BOOK.DB.pdb
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\bin\Debug\net6.0\BOOK.MODEL.dll
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\bin\Debug\net6.0\BOOK.MODEL.pdb
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\obj\Debug\net6.0\BOOK.DB.csproj.AssemblyReference.cache
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\obj\Debug\net6.0\BOOK.DB.GeneratedMSBuildEditorConfig.editorconfig
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\obj\Debug\net6.0\BOOK.DB.AssemblyInfoInputs.cache
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\obj\Debug\net6.0\BOOK.DB.AssemblyInfo.cs
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\obj\Debug\net6.0\BOOK.DB.csproj.CoreCompileInputs.cache
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\obj\Debug\net6.0\BOOK.DB.csproj.Up2Date
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\obj\Debug\net6.0\BOOK.DB.dll
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\obj\Debug\net6.0\refint\BOOK.DB.dll
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\obj\Debug\net6.0\BOOK.DB.pdb
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\obj\Debug\net6.0\BOOK.DB.genruntimeconfig.cache
+D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.DB\obj\Debug\net6.0\ref\BOOK.DB.dll
