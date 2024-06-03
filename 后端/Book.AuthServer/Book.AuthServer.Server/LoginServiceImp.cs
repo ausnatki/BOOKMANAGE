@@ -13,13 +13,11 @@ namespace Book.AuthServer.Server
     {
         private IOptions<Audience> m_Settings;
         private static AuthServer.DataAccessor.AuthContext m_DbContext;
-        private AuthServer.Server.ILoginService m_Logger;
-
-        public LoginServiceImp(AuthServer.DataAccessor.AuthContext dbContext, IOptions<Audience> settings, AuthServer.Server.ILoginService logger)
+        public LoginServiceImp(AuthServer.DataAccessor.AuthContext dbContext, IOptions<Audience> settings)
         {
             m_DbContext = dbContext;
             this.m_Settings = settings;
-            m_Logger = logger;
+           
         }
 
         #region 通过jwt获取用户信息
@@ -69,7 +67,6 @@ namespace Book.AuthServer.Server
             }
         }
         #endregion
-
 
         #region 获取jwt
         public object GetJwt(string username, string password)

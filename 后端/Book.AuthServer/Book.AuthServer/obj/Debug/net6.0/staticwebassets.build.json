@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "y7icI7io+SKz/quJ5E/BLyIga0EkENKXmuoWK5DcmK4=",
+  "Source": "Book.AuthServer",
+  "BasePath": "_content/Book.AuthServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

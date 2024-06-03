@@ -1,0 +1,16 @@
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\bin\Debug\net6.0\Book.AuthServer.DataAccessor.deps.json
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\bin\Debug\net6.0\Book.AuthServer.DataAccessor.dll
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\bin\Debug\net6.0\Book.AuthServer.DataAccessor.pdb
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\bin\Debug\net6.0\Book.AuthServer.Models.dll
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\bin\Debug\net6.0\Book.AuthServer.Models.pdb
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\obj\Debug\net6.0\Book.AuthServer.DataAccessor.csproj.AssemblyReference.cache
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\obj\Debug\net6.0\Book.AuthServer.DataAccessor.GeneratedMSBuildEditorConfig.editorconfig
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\obj\Debug\net6.0\Book.AuthServer.DataAccessor.AssemblyInfoInputs.cache
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\obj\Debug\net6.0\Book.AuthServer.DataAccessor.AssemblyInfo.cs
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\obj\Debug\net6.0\Book.AuthServer.DataAccessor.csproj.CoreCompileInputs.cache
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\obj\Debug\net6.0\Book.AuthServer.DataAccessor.sourcelink.json
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\obj\Debug\net6.0\Book.Aut.69D2DE55.Up2Date
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\obj\Debug\net6.0\Book.AuthServer.DataAccessor.dll
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\obj\Debug\net6.0\refint\Book.AuthServer.DataAccessor.dll
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\obj\Debug\net6.0\Book.AuthServer.DataAccessor.pdb
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer.DataAccessor\obj\Debug\net6.0\ref\Book.AuthServer.DataAccessor.dll
