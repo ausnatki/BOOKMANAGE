@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.AuthServer\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD89FFEE-6593-42BF-8EBD-2C74F2D00E47}|Book.AuthServer\\Book.AuthServer.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.authserver\\book.authserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD89FFEE-6593-42BF-8EBD-2C74F2D00E47}|Book.AuthServer\\Book.AuthServer.csproj|solutionrelative:book.authserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.AuthServer\\Book.AuthServer\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Book.AuthServer\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.AuthServer\\Book.AuthServer\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Book.AuthServer\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T10:23:29.985Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
