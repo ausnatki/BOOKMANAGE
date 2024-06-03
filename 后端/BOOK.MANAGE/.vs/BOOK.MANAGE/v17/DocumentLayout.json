@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{71C68E2A-C930-4BB7-9ECA-30B113FA6269}|BOOK.DB\\BOOK.DB.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.db\\bookscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71C68E2A-C930-4BB7-9ECA-30B113FA6269}|BOOK.DB\\BOOK.DB.csproj|solutionrelative:book.db\\bookscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E25C3E49-A308-4166-848C-54C7570E5434}|BOOK.MODEL\\BOOK.MODEL.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.model\\sysuser_role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E25C3E49-A308-4166-848C-54C7570E5434}|BOOK.MODEL\\BOOK.MODEL.csproj|solutionrelative:book.model\\sysuser_role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{E25C3E49-A308-4166-848C-54C7570E5434}|BOOK.MODEL\\BOOK.MODEL.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.model\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E25C3E49-A308-4166-848C-54C7570E5434}|BOOK.MODEL\\BOOK.MODEL.csproj|solutionrelative:book.model\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71C68E2A-C930-4BB7-9ECA-30B113FA6269}|BOOK.DB\\BOOK.DB.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.db\\bookscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71C68E2A-C930-4BB7-9ECA-30B113FA6269}|BOOK.DB\\BOOK.DB.csproj|solutionrelative:book.db\\bookscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E25C3E49-A308-4166-848C-54C7570E5434}|BOOK.MODEL\\BOOK.MODEL.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.model\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,43 +41,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Role.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\Role.cs",
               "RelativeDocumentMoniker": "BOOK.MODEL\\Role.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\Role.cs",
               "RelativeToolTip": "BOOK.MODEL\\Role.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAADwvw8AAAA3AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAADwvw8AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T01:31:04.944Z"
+              "WhenOpened": "2024-05-30T01:31:04.944Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SysUser_Role.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\SysUser_Role.cs",
               "RelativeDocumentMoniker": "BOOK.MODEL\\SysUser_Role.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\SysUser_Role.cs",
               "RelativeToolTip": "BOOK.MODEL\\SysUser_Role.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAADwvw8AAAAUAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T01:33:33.546Z"
+              "WhenOpened": "2024-05-30T01:33:33.546Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "SysUser.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\SysUser.cs",
               "RelativeDocumentMoniker": "BOOK.MODEL\\SysUser.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\SysUser.cs",
               "RelativeToolTip": "BOOK.MODEL\\SysUser.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAADwvw4AAAAoAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAA0wBIAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T01:24:56.85Z"
+              "WhenOpened": "2024-05-30T01:24:56.85Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -117,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "BooksContext.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.DB\\BooksContext.cs",
               "RelativeDocumentMoniker": "BOOK.DB\\BooksContext.cs",
