@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "HWZ4AB22Iq///xlji1jwIYfCpHmA7+ZKMOJ2klSPUq72qY3D9msDJGqBYiY50wFftZmARZ0OTuSjidRjFF4JMQ==",
+  "dgSpecHash": "4s7KOa8e3Y7o0hFiDiTm9i/5hf/sC5m9+nak56IqGNcNzjYM/w+JyqZfxs0TLGeyndYMerOxKC9zBkkQyfUrgg==",
   "success": true,
   "projectFilePath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.AuthServer\\Book.AuthServer\\Book.AuthServer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\KKK\\.nuget\\packages\\consul\\1.7.14.3\\consul.1.7.14.3.nupkg.sha512",
     "C:\\Users\\KKK\\.nuget\\packages\\jose-jwt\\5.0.0\\jose-jwt.5.0.0.nupkg.sha512",
     "C:\\Users\\KKK\\.nuget\\packages\\jwt\\10.1.1\\jwt.10.1.1.nupkg.sha512",
     "C:\\Users\\KKK\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.3\\microsoft.aspnetcore.authentication.jwtbearer.6.0.3.nupkg.sha512",
-    "C:\\Users\\KKK\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\KKK\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\KKK\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\KKK\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\KKK\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",

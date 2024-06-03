@@ -75,3 +75,4 @@ D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\obj\Debug\net6.0\r
 D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\obj\Debug\net6.0\Book.AuthServer.pdb
 D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\obj\Debug\net6.0\Book.AuthServer.genruntimeconfig.cache
 D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\obj\Debug\net6.0\ref\Book.AuthServer.dll
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\bin\Debug\net6.0\Consul.dll

@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Consul/1.7.14.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Consul.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Consul.dll": {}
+        }
+      },
       "jose-jwt/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -52,7 +65,7 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.CSharp/4.5.0": {
+      "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -1482,6 +1495,19 @@
     }
   },
   "libraries": {
+    "Consul/1.7.14.3": {
+      "sha512": "t4w5fwKldVE9gnByiDbSLvsSIMWAp7vN3pGzASGup5BgFDfcpxjFrBr2wLbuyUGJW3QrHp2VuS32/blPGMPkrA==",
+      "type": "package",
+      "path": "consul/1.7.14.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "consul.1.7.14.3.nupkg.sha512",
+        "consul.nuspec",
+        "lib/net461/Consul.dll",
+        "lib/netstandard2.0/Consul.dll"
+      ]
+    },
     "jose-jwt/5.0.0": {
       "sha512": "4O+9GvoGDdEbzyajA7ie0/D4RCQi5zd3jeMbj2FR8oZVGhSd5s7SAwRb0NieiV2Kr3eqHl7+Q6ulDi1l1sSVzg==",
       "type": "package",
@@ -1544,10 +1570,10 @@
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
-    "Microsoft.CSharp/4.5.0": {
-      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+    "Microsoft.CSharp/4.7.0": {
+      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "type": "package",
-      "path": "microsoft.csharp/4.5.0",
+      "path": "microsoft.csharp/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1560,6 +1586,7 @@
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
         "lib/portable-net45+win8+wp8+wpa81/_._",
         "lib/uap10.0.16299/_._",
         "lib/win8/_._",
@@ -1569,7 +1596,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.4.7.0.nupkg.sha512",
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -4803,6 +4830,7 @@
     "net6.0": [
       "Book.AuthServer.Models >= 1.0.0",
       "Book.AuthServer.Server >= 1.0.0",
+      "Consul >= 1.7.14.3",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.3",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
@@ -4863,6 +4891,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Consul": {
+            "target": "Package",
+            "version": "[1.7.14.3, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[6.0.3, )"

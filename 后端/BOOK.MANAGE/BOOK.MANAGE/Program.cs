@@ -1,3 +1,6 @@
+using BOOK.MANAGE;
+using System.Runtime.CompilerServices;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// 配置consul的相关服务启用
+builder.Services.RegisterConsul(builder.Configuration);
 
 var app = builder.Build();
 

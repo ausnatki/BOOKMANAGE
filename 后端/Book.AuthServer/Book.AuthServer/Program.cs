@@ -1,3 +1,4 @@
+using Book.AuthServer;
 using Book.AuthServer.DataAccessor;
 using Book.AuthServer.Models;
 
@@ -17,6 +18,9 @@ builder.Services.AddOptions();
 builder.Services.AddDbContext<AuthContext>();
 builder.Services.Configure<Audience>(builder.Configuration.GetSection("Audience"));
 builder.Services.AddScoped<Book.AuthServer.Server.ILoginService, Book.AuthServer.Server.LoginServiceImp>();
+// consul服务引入
+builder.Services.RegisterConsul(builder.Configuration);
+
 
 var app = builder.Build();
 

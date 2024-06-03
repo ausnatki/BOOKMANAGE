@@ -30,3 +30,17 @@ D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\obj\Debug\net6.0\refint\BO
 D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\obj\Debug\net6.0\BOOK.MANAGE.pdb
 D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\obj\Debug\net6.0\BOOK.MANAGE.genruntimeconfig.cache
 D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\obj\Debug\net6.0\ref\BOOK.MANAGE.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\bin\Debug\net6.0\Consul.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\bin\Debug\net6.0\RabbitMQ.Client.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\bin\Debug\net6.0\StackExchange.Redis.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\bin\Debug\net6.0\System.Threading.Channels.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MANAGE\obj\Debug\net6.0\BOOK.MANAGE.sourcelink.json

@@ -12,6 +12,32 @@
           "Port": 7019
         }
       ]
+    },
+    {
+      "UpstreamPathTemplate": "/Book/{url}", // 主要业务上有服务
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7065
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/Consul/{url}", // consul服务上游地址
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7247
+        }
+      ]
     }
   ],
 

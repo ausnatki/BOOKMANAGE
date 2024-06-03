@@ -9,3 +9,15 @@ D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.MODEL\obj\Debug\net6.0\BOOK.MODEL
 D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.MODEL\obj\Debug\net6.0\refint\BOOK.MODEL.dll
 D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.MODEL\obj\Debug\net6.0\BOOK.MODEL.pdb
 D:\新技术课程\BookManage\BOOK.MANAGE\BOOK.MODEL\obj\Debug\net6.0\ref\BOOK.MODEL.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MODEL\bin\Debug\net6.0\BOOK.MODEL.deps.json
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MODEL\bin\Debug\net6.0\BOOK.MODEL.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MODEL\bin\Debug\net6.0\BOOK.MODEL.pdb
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MODEL\obj\Debug\net6.0\BOOK.MODEL.GeneratedMSBuildEditorConfig.editorconfig
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MODEL\obj\Debug\net6.0\BOOK.MODEL.AssemblyInfoInputs.cache
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MODEL\obj\Debug\net6.0\BOOK.MODEL.AssemblyInfo.cs
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MODEL\obj\Debug\net6.0\BOOK.MODEL.csproj.CoreCompileInputs.cache
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MODEL\obj\Debug\net6.0\BOOK.MODEL.sourcelink.json
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MODEL\obj\Debug\net6.0\BOOK.MODEL.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MODEL\obj\Debug\net6.0\refint\BOOK.MODEL.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MODEL\obj\Debug\net6.0\BOOK.MODEL.pdb
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.MODEL\obj\Debug\net6.0\ref\BOOK.MODEL.dll
