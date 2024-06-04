@@ -11,9 +11,9 @@ namespace BOOK.MANAGE.Controllers
     public class BookController : ControllerBase
     {
 
-        private readonly IBookService _bookService;
+        private readonly BOOK.SERVERS.IBookService _bookService;
 
-        public BookController(BookSerivceImp bookService)
+        public BookController(BOOK.SERVERS.IBookService bookService)
         {
             _bookService = bookService;
         }

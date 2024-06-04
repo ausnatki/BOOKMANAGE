@@ -13,21 +13,23 @@ namespace BOOK.DB
 {
   public class BooksContext : DbContext
   {
-    //public BooksContext()
-    //{
-    //}
+        //public BooksContext()
+        //{
+        //}
 
-    // 数据库配置文件
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-      optionsBuilder.UseSqlServer("Server=DESKTOP-VCSEMTQ\\KKKMSSQLSERVER;Database=BOOKMANAGE;Trusted_Connection=True;");
-
-
-      base.OnConfiguring(optionsBuilder);
-    }
+        //// 数据库配置文件
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //  optionsBuilder.UseSqlServer("Server=DESKTOP-VCSEMTQ\\KKKMSSQLSERVER;Database=BOOKMANAGE;Trusted_Connection=True;");
 
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //  base.OnConfiguring(optionsBuilder);
+        //}
+        public BooksContext(DbContextOptions<BooksContext> options) : base(options)
+        {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
       //modelBuilder.Entity<CQIE.Books.Models.Book>().ToTable("TB_Book");
       //modelBuilder.Entity<CQIE.Books.Models.BookInventory>().ToTable("TB_BookInventory");

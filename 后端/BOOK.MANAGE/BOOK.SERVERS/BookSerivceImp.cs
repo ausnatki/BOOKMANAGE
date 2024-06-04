@@ -6,16 +6,11 @@ namespace BOOK.SERVERS
 {
     public class BookSerivceImp : IBookService
     {
-        private readonly BOOK.DB.BooksContext Ctx;
-        private readonly BOOK.DB.RedisContext RedisContext;
         private readonly BOOK.Repository.DB_Book dB_Book;
         private readonly BOOK.Repository.Redis_Book redis_Book;
-        private string m_BookHashSetName = "BookHashSet";
 
-        public BookSerivceImp(BooksContext ctx, RedisContext redisContext, DB_Book dB_Book, Redis_Book redis_Book)
+        public BookSerivceImp(DB_Book dB_Book, Redis_Book redis_Book)
         {
-            Ctx = ctx;
-            RedisContext = redisContext;
             this.dB_Book = dB_Book;
             this.redis_Book = redis_Book;
         }

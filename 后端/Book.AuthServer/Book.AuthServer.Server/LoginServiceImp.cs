@@ -5,6 +5,7 @@ using Book.AuthServer.DataAccessor;
 using Book.AuthServer.Models;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace Book.AuthServer.Server
@@ -17,7 +18,6 @@ namespace Book.AuthServer.Server
         {
             m_DbContext = dbContext;
             this.m_Settings = settings;
-           
         }
 
         #region 通过jwt获取用户信息

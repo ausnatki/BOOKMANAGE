@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace Book.AuthServer.Server
 {
     public interface ILoginService
     {
-        public object GetJwt(string username,string password);
+        public object  GetJwt(string username,string password);
         public object GetInfoByName(string token);
     }
 }

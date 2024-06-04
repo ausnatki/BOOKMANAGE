@@ -161,6 +161,30 @@ export const asyncRoutes = [
       }
     }
     ]
+  },
+  {
+    path: '/book',
+    component: Layout,
+    redirect: '/book/list',
+    alwaysShow: true,
+    name: 'BookList',
+    meta: {
+      title: '图书',
+      icon: 'shopping',
+      roles: ['admin', 'editor']
+    },
+    children: [{
+      path: 'list',
+      component: () => import('@/views/book/index'),
+      name: 'bookpage',
+      meta: {
+        title: '图书列表',
+        icon: 'guide',
+        noCache: true,
+        roles: ['admin', 'editor']
+      }
+    }
+    ]
   }
 
   // 自带模块

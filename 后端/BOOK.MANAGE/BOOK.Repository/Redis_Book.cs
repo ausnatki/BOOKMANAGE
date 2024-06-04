@@ -9,13 +9,13 @@ namespace BOOK.Repository
 {
     public class Redis_Book
     {
-        private readonly BOOK.DB.RedisContext RedisContext;
         private string m_BookHashSetName = "BookHashSet";
 
-        public Redis_Book(RedisContext redisContext, string bookHashSetName)
+        public StackExchange.Redis.ConnectionMultiplexer GetConnection()
         {
-            RedisContext = redisContext;
-            m_BookHashSetName = bookHashSetName;
+            string connectionString = "localhost:6379,password=123456,abortConnect=false";
+            var connection = StackExchange.Redis.ConnectionMultiplexer.Connect(connectionString);
+            return connection;
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace BOOK.Repository
         {
             var bookList = new List<BOOK.MODEL.Book>();
             // 获取redis的链接 然后创建一个临时空间
-            using (var connction = RedisContext.GetConnection())
+            using (var connction = GetConnection())
             {
                 // 获取redis的数据链接
                 var db = connction.GetDatabase();
@@ -61,7 +61,7 @@ namespace BOOK.Repository
         /// <returns></returns>
         public BOOK.MODEL.Book GetBooksById(int id)
         {
-            using (var connection = RedisContext.GetConnection())
+            using (var connection = GetConnection())
             {
                 var db = connection.GetDatabase();
                 this.RefreshExpiredTime(db);// 设置缓存时间
@@ -82,7 +82,7 @@ namespace BOOK.Repository
         /// <returns></returns>
         public bool DeleteBook(int id)
         {
-            using (var connection = RedisContext.GetConnection())
+            using (var connection = GetConnection())
             {
                 var db = connection.GetDatabase();
                 this.RefreshExpiredTime(db);// 设置缓存时间
@@ -97,7 +97,7 @@ namespace BOOK.Repository
         /// <returns></returns>
         public bool NewBook(BOOK.MODEL.Book book)
         {
-            using (var connection = RedisContext.GetConnection())
+            using (var connection = GetConnection())
             {
 
 
@@ -119,7 +119,7 @@ namespace BOOK.Repository
         /// <returns></returns>
         public bool UpdateBook(BOOK.MODEL.Book book)
         {
-            using (var connection = RedisContext.GetConnection())
+            using (var connection = GetConnection())
             {
                 var db = connection.GetDatabase();
                 this.RefreshExpiredTime(db);// 设置缓存时间

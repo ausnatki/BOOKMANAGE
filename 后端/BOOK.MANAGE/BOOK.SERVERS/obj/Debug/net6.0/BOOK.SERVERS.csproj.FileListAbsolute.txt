@@ -10,3 +10,13 @@ D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.SERVERS\obj\Debug\net6.0\BOOK.SER
 D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.SERVERS\obj\Debug\net6.0\refint\BOOK.SERVERS.dll
 D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.SERVERS\obj\Debug\net6.0\BOOK.SERVERS.pdb
 D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.SERVERS\obj\Debug\net6.0\ref\BOOK.SERVERS.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.SERVERS\bin\Debug\net6.0\BOOK.SERVERS.runtimeconfig.json
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.SERVERS\bin\Debug\net6.0\BOOK.DB.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.SERVERS\bin\Debug\net6.0\BOOK.MODEL.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.SERVERS\bin\Debug\net6.0\BOOK.Repository.dll
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.SERVERS\bin\Debug\net6.0\BOOK.DB.pdb
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.SERVERS\bin\Debug\net6.0\BOOK.MODEL.pdb
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.SERVERS\bin\Debug\net6.0\BOOK.Repository.pdb
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.SERVERS\obj\Debug\net6.0\BOOK.SERVERS.csproj.AssemblyReference.cache
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.SERVERS\obj\Debug\net6.0\BOOK.SER.0FF22BF2.Up2Date
+D:\git\book\BOOKMANAGE\后端\BOOK.MANAGE\BOOK.SERVERS\obj\Debug\net6.0\BOOK.SERVERS.genruntimeconfig.cache

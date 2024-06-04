@@ -10,19 +10,16 @@ namespace Book.AuthServer.DataAccessor
 {
     public class AuthContext:DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+
+        public AuthContext(DbContextOptions<AuthContext> options) : base(options)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-VCSEMTQ\\KKKMSSQLSERVER;Database=BOOKMANAGE;Trusted_Connection=True;");
-
-
-            base.OnConfiguring(optionsBuilder);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Book.AuthServer.Models.SysUser>();
-            modelBuilder.Entity<Book.AuthServer.Models.SysUser_Role>();
-            modelBuilder.Entity<Book.AuthServer.Models.Role>();
+            modelBuilder.Entity<Book.AuthServer.Models.SysUser>().ToTable("TB_SysUser");
+            modelBuilder.Entity<Book.AuthServer.Models.SysUser_Role>().ToTable("TB_SysUser_Role");
+            modelBuilder.Entity<Book.AuthServer.Models.Role>().ToTable("TB_Role");
             base.OnModelCreating(modelBuilder);
         }
 
