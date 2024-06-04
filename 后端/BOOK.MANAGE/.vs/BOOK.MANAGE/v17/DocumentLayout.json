@@ -3,55 +3,12 @@
   "WorkspaceRootPath": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CDA672A7-523F-4B06-BDBE-78DF23FAE4E9}|BOOK.MANAGE\\BOOK.MANAGE.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.manage\\apiresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDA672A7-523F-4B06-BDBE-78DF23FAE4E9}|BOOK.MANAGE\\BOOK.MANAGE.csproj|solutionrelative:book.manage\\apiresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDA672A7-523F-4B06-BDBE-78DF23FAE4E9}|BOOK.MANAGE\\BOOK.MANAGE.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.manage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDA672A7-523F-4B06-BDBE-78DF23FAE4E9}|BOOK.MANAGE\\BOOK.MANAGE.csproj|solutionrelative:book.manage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDA672A7-523F-4B06-BDBE-78DF23FAE4E9}|BOOK.MANAGE\\BOOK.MANAGE.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.manage\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CDA672A7-523F-4B06-BDBE-78DF23FAE4E9}|BOOK.MANAGE\\BOOK.MANAGE.csproj|solutionrelative:book.manage\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDA672A7-523F-4B06-BDBE-78DF23FAE4E9}|BOOK.MANAGE\\BOOK.MANAGE.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.manage\\consuleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDA672A7-523F-4B06-BDBE-78DF23FAE4E9}|BOOK.MANAGE\\BOOK.MANAGE.csproj|solutionrelative:book.manage\\consuleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDA672A7-523F-4B06-BDBE-78DF23FAE4E9}|BOOK.MANAGE\\BOOK.MANAGE.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.manage\\controllers\\heathcheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDA672A7-523F-4B06-BDBE-78DF23FAE4E9}|BOOK.MANAGE\\BOOK.MANAGE.csproj|solutionrelative:book.manage\\controllers\\heathcheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E25C3E49-A308-4166-848C-54C7570E5434}|BOOK.MODEL\\BOOK.MODEL.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.model\\sysuser_role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E25C3E49-A308-4166-848C-54C7570E5434}|BOOK.MODEL\\BOOK.MODEL.csproj|solutionrelative:book.model\\sysuser_role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E25C3E49-A308-4166-848C-54C7570E5434}|BOOK.MODEL\\BOOK.MODEL.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.model\\sysuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E25C3E49-A308-4166-848C-54C7570E5434}|BOOK.MODEL\\BOOK.MODEL.csproj|solutionrelative:book.model\\sysuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E25C3E49-A308-4166-848C-54C7570E5434}|BOOK.MODEL\\BOOK.MODEL.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.model\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E25C3E49-A308-4166-848C-54C7570E5434}|BOOK.MODEL\\BOOK.MODEL.csproj|solutionrelative:book.model\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71C68E2A-C930-4BB7-9ECA-30B113FA6269}|BOOK.DB\\BOOK.DB.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.db\\bookscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71C68E2A-C930-4BB7-9ECA-30B113FA6269}|BOOK.DB\\BOOK.DB.csproj|solutionrelative:book.db\\bookscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDA672A7-523F-4B06-BDBE-78DF23FAE4E9}|BOOK.MANAGE\\BOOK.MANAGE.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.manage\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDA672A7-523F-4B06-BDBE-78DF23FAE4E9}|BOOK.MANAGE\\BOOK.MANAGE.csproj|solutionrelative:book.manage\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E25C3E49-A308-4166-848C-54C7570E5434}|BOOK.MODEL\\BOOK.MODEL.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.model\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E25C3E49-A308-4166-848C-54C7570E5434}|BOOK.MODEL\\BOOK.MODEL.csproj|solutionrelative:book.model\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E25C3E49-A308-4166-848C-54C7570E5434}|BOOK.MODEL\\BOOK.MODEL.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.model\\borrowed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E25C3E49-A308-4166-848C-54C7570E5434}|BOOK.MODEL\\BOOK.MODEL.csproj|solutionrelative:book.model\\borrowed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D26A6EB-FBDE-4A26-B15D-86D14C32473B}|BOOK.SERVERS\\BOOK.SERVERS.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.manage\\book.servers\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D26A6EB-FBDE-4A26-B15D-86D14C32473B}|BOOK.SERVERS\\BOOK.SERVERS.csproj|solutionrelative:book.servers\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u65B0\u6280\u672F\u8BFE\u7A0B\\BookManage\\BOOK.MANAGE\\BOOK.DB\\BookService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -61,165 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "apiResult.cs",
-              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MANAGE\\apiResult.cs",
-              "RelativeDocumentMoniker": "BOOK.MANAGE\\apiResult.cs",
-              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MANAGE\\apiResult.cs",
-              "RelativeToolTip": "BOOK.MANAGE\\apiResult.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwYAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T14:01:42.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HeathCheckController.cs",
-              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MANAGE\\Controllers\\HeathCheckController.cs",
-              "RelativeDocumentMoniker": "BOOK.MANAGE\\Controllers\\HeathCheckController.cs",
-              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MANAGE\\Controllers\\HeathCheckController.cs",
-              "RelativeToolTip": "BOOK.MANAGE\\Controllers\\HeathCheckController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T13:34:58.142Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MANAGE\\Program.cs",
-              "RelativeDocumentMoniker": "BOOK.MANAGE\\Program.cs",
-              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MANAGE\\Program.cs",
-              "RelativeToolTip": "BOOK.MANAGE\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T13:29:03.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MANAGE\\appsettings.json",
-              "RelativeDocumentMoniker": "BOOK.MANAGE\\appsettings.json",
-              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MANAGE\\appsettings.json",
-              "RelativeToolTip": "BOOK.MANAGE\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-03T13:25:58.456Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ConsuleConfiguration.cs",
-              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MANAGE\\ConsuleConfiguration.cs",
-              "RelativeDocumentMoniker": "BOOK.MANAGE\\ConsuleConfiguration.cs",
-              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MANAGE\\ConsuleConfiguration.cs",
-              "RelativeToolTip": "BOOK.MANAGE\\ConsuleConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T13:20:19.164Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Role.cs",
-              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\Role.cs",
-              "RelativeDocumentMoniker": "BOOK.MODEL\\Role.cs",
-              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\Role.cs",
-              "RelativeToolTip": "BOOK.MODEL\\Role.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAADwvw8AAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T01:31:04.944Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SysUser_Role.cs",
-              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\SysUser_Role.cs",
-              "RelativeDocumentMoniker": "BOOK.MODEL\\SysUser_Role.cs",
-              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\SysUser_Role.cs",
-              "RelativeToolTip": "BOOK.MODEL\\SysUser_Role.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T01:33:33.546Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SysUser.cs",
-              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\SysUser.cs",
-              "RelativeDocumentMoniker": "BOOK.MODEL\\SysUser.cs",
-              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\SysUser.cs",
-              "RelativeToolTip": "BOOK.MODEL\\SysUser.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAzwBIAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T01:24:56.85Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Borrowed.cs",
-              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\Borrowed.cs",
-              "RelativeDocumentMoniker": "BOOK.MODEL\\Borrowed.cs",
-              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\Borrowed.cs",
-              "RelativeToolTip": "BOOK.MODEL\\Borrowed.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAABIwA8AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T01:24:11.909Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "Book.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\Book.cs",
               "RelativeDocumentMoniker": "BOOK.MODEL\\Book.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MODEL\\Book.cs",
               "RelativeToolTip": "BOOK.MODEL\\Book.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAABcwBIAAAAAAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAzwBQAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T01:03:33.017Z"
+              "WhenOpened": "2024-06-04T09:19:40.74Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BookService.cs",
-              "DocumentMoniker": "D:\\\u65B0\u6280\u672F\u8BFE\u7A0B\\BookManage\\BOOK.MANAGE\\BOOK.DB\\BookService.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\\u65B0\u6280\u672F\u8BFE\u7A0B\\BookManage\\BOOK.MANAGE\\BOOK.DB\\BookService.cs",
-              "ToolTip": "D:\\\u65B0\u6280\u672F\u8BFE\u7A0B\\BookManage\\BOOK.MANAGE\\BOOK.DB\\BookService.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\\u65B0\u6280\u672F\u8BFE\u7A0B\\BookManage\\BOOK.MANAGE\\BOOK.DB\\BookService.cs",
+              "DocumentIndex": 0,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MANAGE\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "BOOK.MANAGE\\Controllers\\BookController.cs",
+              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.MANAGE\\Controllers\\BookController.cs",
+              "RelativeToolTip": "BOOK.MANAGE\\Controllers\\BookController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAEAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T00:58:27.631Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BooksContext.cs",
-              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.DB\\BooksContext.cs",
-              "RelativeDocumentMoniker": "BOOK.DB\\BooksContext.cs",
-              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.DB\\BooksContext.cs",
-              "RelativeToolTip": "BOOK.DB\\BooksContext.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAAwDYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T00:58:15.29Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.SERVERS\\Class1.cs",
-              "RelativeDocumentMoniker": "BOOK.SERVERS\\Class1.cs",
-              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\BOOK.MANAGE\\BOOK.SERVERS\\Class1.cs",
-              "RelativeToolTip": "BOOK.SERVERS\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T00:57:00.798Z"
+              "WhenOpened": "2024-06-04T08:33:52.245Z",
+              "EditorCaption": ""
             }
           ]
         }

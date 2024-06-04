@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 export function login(data) {
   return request({
-    url: '/api/Values/login',
+    url: '/Auth/Auth/GetToken',
     method: 'post',
     data
   })
@@ -10,7 +10,7 @@ export function login(data) {
 
 export function getInfo(token) {
   return request({
-    url: '/api/Values/info',
+    url: '/Auth/Auth/info',
     method: 'get',
     params: { token }
   })
@@ -18,7 +18,7 @@ export function getInfo(token) {
 
 export function logout() {
   return request({
-    url: '/api/Values/logout',
+    url: '/webapiconsul/Login/logout',
     method: 'post'
   })
 }

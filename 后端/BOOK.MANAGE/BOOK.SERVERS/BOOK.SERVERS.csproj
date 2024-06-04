@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.3" />
+    <PackageReference Include="StackExchange.Redis" Version="2.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BOOK.DB\BOOK.DB.csproj" />
+    <ProjectReference Include="..\BOOK.MODEL\BOOK.MODEL.csproj" />
+    <ProjectReference Include="..\BOOK.Repository\BOOK.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

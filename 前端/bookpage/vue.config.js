@@ -38,9 +38,9 @@ module.exports = {
       errors: true
     },
     proxy: {
-      "/api": {
-        target: "https://localhost:7052",
-        changeOrigin:true
+      "/": {
+        target: "https://localhost:7223",
+        changeOrigin: true
       }
     }
 

@@ -14,4 +14,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BOOK.MODEL\BOOK.MODEL.csproj" />
+    <ProjectReference Include="..\BOOK.SERVERS\BOOK.SERVERS.csproj" />
+  </ItemGroup>
+
 </Project>

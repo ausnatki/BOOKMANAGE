@@ -7,7 +7,7 @@ using Ocelot.Values;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-//builder.Configuration.AddJsonFile("OcelotConfig.json", optional: false, reloadOnChange: true);
+builder.Configuration.AddJsonFile("OcelotConfig.json", optional: false, reloadOnChange: true);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
