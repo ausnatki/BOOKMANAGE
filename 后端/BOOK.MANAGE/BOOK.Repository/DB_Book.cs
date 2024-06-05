@@ -30,7 +30,7 @@ namespace BOOK.Repository
         #endregion
 
         #region 获取单本书的信息
-        public BOOK.MODEL.Book GetById(int id) 
+        public object GetById(int id) 
         {
             try
             {
@@ -122,5 +122,20 @@ namespace BOOK.Repository
         }
         #endregion
 
+        #region 获取单个图书的库存
+        public int GetOutInventory(int id)
+        {
+            try
+            {
+                int result = Ctx.Borroweds.Where(c => c.BID == id).Count();
+                return result;
+            }
+            catch 
+            {
+                throw new Exception();
+            }
+
+        }
+        #endregion
     }
 }

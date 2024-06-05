@@ -1,4 +1,5 @@
 ﻿using BOOK.SERVERS;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Diagnostics;
@@ -8,6 +9,7 @@ namespace BOOK.MANAGE.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class BookController : ControllerBase
     {
 
@@ -46,10 +48,11 @@ namespace BOOK.MANAGE.Controllers
         {
             var result = new BOOK.MODEL.ApiResp();
             var book = _bookService.GetById(id);
+            var OutInventory = _bookService.GetOutInventory(id);
             if (book != null)
             {
                 result.Code = 20000;
-                result.Data = book;
+                result.Data = new { book ,OutInventory};
                 result.Result = true;
                 result.Msg = "查找成功";
                 return result;

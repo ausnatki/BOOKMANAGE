@@ -109,7 +109,7 @@ namespace Book.AuthServer.Server
                     audience: m_Settings.Value.Aud,//jwt受众
                     claims: claims,//jwt一组声明
                     notBefore: now,
-                    expires: now.Add(TimeSpan.FromMinutes(2)),//jwt令牌过期时间
+                    expires: now.Add(TimeSpan.FromMinutes(20)),//jwt令牌过期时间
                     signingCredentials: new SigningCredentials(signingKey, SecurityAlgorithms.HmacSha256)//签名凭证: 安全密钥、签名算法
                 );
 

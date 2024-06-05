@@ -59,7 +59,7 @@ namespace BOOK.Repository
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public BOOK.MODEL.Book GetBooksById(int id)
+        public object GetBooksById(int id)
         {
             using (var connection = GetConnection())
             {

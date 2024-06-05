@@ -1,6 +1,7 @@
 ﻿using BOOK.DB;
 using BOOK.MODEL.Exception;
 using BOOK.Repository;
+using System.Reflection.Metadata.Ecma335;
 
 namespace BOOK.SERVERS
 {
@@ -25,6 +26,7 @@ namespace BOOK.SERVERS
                 var redisBook = redis_Book.GetBooks();
                 if (redisBook.Count() > 0)
                 {
+                    booklist = redisBook.ToList();
                     return booklist;
                 }
                 else
@@ -50,14 +52,14 @@ namespace BOOK.SERVERS
         #endregion
 
         #region 获取单本书的信息
-        public BOOK.MODEL.Book GetById(int id)
+        public object GetById(int id)
         {
             try 
             {
-                var book = new BOOK.MODEL.Book();
+               
                 // 首先从redis里面查询数据 如果没有查找到就从数据库里面查询
                 var redisBook = redis_Book.GetBooksById(id);
-                book = redisBook;
+                object book = redisBook;
 
                 if (redisBook == null)
                 {
@@ -126,6 +128,22 @@ namespace BOOK.SERVERS
             catch
             {
                 return false ;
+            }
+        }
+        #endregion
+
+        #region 获取单本书的库存
+        public int GetOutInventory(int id)
+        {
+            try 
+            {
+                // 直接查询借阅表
+                var result = dB_Book.GetOutInventory(id);
+                return result;
+            }
+            catch
+            {
+                throw new DbException("数据库错误");
             }
         }
         #endregion

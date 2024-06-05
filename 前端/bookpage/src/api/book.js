@@ -8,3 +8,17 @@ export function AddBook(data) {
   })
 }
 
+export function GetBook() {
+  return request({
+    url: '/Book/Book/GetBook',
+    method: 'get'
+  })
+}
+
+export function GetById(id) {
+  return request({
+    url: '/Book/Book/GetById',
+    method: 'get',
+    params: { id }
+  })
+}

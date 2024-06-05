@@ -142,9 +142,7 @@ export default {
   methods: {
     // 图片路径处理方式
     handleAvatarSuccess(res, file) {
-      this.imageUrl = URL.createObjectURL(file.raw)
-      var match = this.imageUrl.match(/[^/]+$/)
-      this.BookForm.Image = match[0]
+      this.BookForm.Image = res.data.url
       console.log((this.BookForm.Image))
     },
     // 上传之前的方法

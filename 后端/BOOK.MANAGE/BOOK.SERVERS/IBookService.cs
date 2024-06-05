@@ -10,9 +10,10 @@ namespace BOOK.SERVERS
     {
         
         public IEnumerable<BOOK.MODEL.Book> GetBook();// 获取全部图书
-        public BOOK.MODEL.Book GetById(int id);
+        public object GetById(int id);
         public bool Edit(BOOK.MODEL.Book book);
         public bool InstallBook(BOOK.MODEL.Book book);
         public bool DelBook(BOOK.MODEL.Book book);
+        public int GetOutInventory(int id);
     }
 }
