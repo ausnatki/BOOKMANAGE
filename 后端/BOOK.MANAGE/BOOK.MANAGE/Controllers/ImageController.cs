@@ -40,7 +40,7 @@ namespace BOOK.MANAGE.Controllers
                     }
 
                     // 构建图片的URL地址
-                    string imageUrl = $"https://localhost:7052/temp_img/{fileName}";
+                    string imageUrl = $"https://localhost:7065/temp_img/{fileName}";
 
                     // 返回成功的响应，包含图片的URL
                     return new { code = 20000, success = true, message = "文件上传成功", data = new { imageUrl, URL = fileName } };

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.AuthServer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BD89FFEE-6593-42BF-8EBD-2C74F2D00E47}|Book.AuthServer\\Book.AuthServer.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.authserver\\book.authserver\\controllers\\heathcheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD89FFEE-6593-42BF-8EBD-2C74F2D00E47}|Book.AuthServer\\Book.AuthServer.csproj|solutionrelative:book.authserver\\controllers\\heathcheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BD89FFEE-6593-42BF-8EBD-2C74F2D00E47}|Book.AuthServer\\Book.AuthServer.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.authserver\\book.authserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD89FFEE-6593-42BF-8EBD-2C74F2D00E47}|Book.AuthServer\\Book.AuthServer.csproj|solutionrelative:book.authserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,10 +31,6 @@
       "RelativeMoniker": "D:0:0:{BD89FFEE-6593-42BF-8EBD-2C74F2D00E47}|Book.AuthServer\\Book.AuthServer.csproj|solutionrelative:book.authserver\\consuleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD89FFEE-6593-42BF-8EBD-2C74F2D00E47}|Book.AuthServer\\Book.AuthServer.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.authserver\\book.authserver\\controllers\\heathcheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD89FFEE-6593-42BF-8EBD-2C74F2D00E47}|Book.AuthServer\\Book.AuthServer.csproj|solutionrelative:book.authserver\\controllers\\heathcheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BD89FFEE-6593-42BF-8EBD-2C74F2D00E47}|Book.AuthServer\\Book.AuthServer.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.authserver\\book.authserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{BD89FFEE-6593-42BF-8EBD-2C74F2D00E47}|Book.AuthServer\\Book.AuthServer.csproj|solutionrelative:book.authserver\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -50,11 +50,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AuthContext.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.AuthServer\\Book.AuthServer.DataAccessor\\AuthContext.cs",
               "RelativeDocumentMoniker": "Book.AuthServer.DataAccessor\\AuthContext.cs",
@@ -62,12 +62,11 @@
               "RelativeToolTip": "Book.AuthServer.DataAccessor\\AuthContext.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T14:15:16.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-04T14:15:16.017Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ConsuleConfiguration.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.AuthServer\\Book.AuthServer\\ConsuleConfiguration.cs",
               "RelativeDocumentMoniker": "Book.AuthServer\\ConsuleConfiguration.cs",
@@ -75,12 +74,11 @@
               "RelativeToolTip": "Book.AuthServer\\ConsuleConfiguration.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T13:40:05.582Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T13:40:05.582Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "HeathCheckController.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.AuthServer\\Book.AuthServer\\Controllers\\HeathCheckController.cs",
               "RelativeDocumentMoniker": "Book.AuthServer\\Controllers\\HeathCheckController.cs",
@@ -88,7 +86,8 @@
               "RelativeToolTip": "Book.AuthServer\\Controllers\\HeathCheckController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwwAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T13:39:03.114Z"
+              "WhenOpened": "2024-06-03T13:39:03.114Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -104,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LoginServiceImp.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.AuthServer\\Book.AuthServer.Server\\LoginServiceImp.cs",
               "RelativeDocumentMoniker": "Book.AuthServer.Server\\LoginServiceImp.cs",
@@ -112,12 +111,11 @@
               "RelativeToolTip": "Book.AuthServer.Server\\LoginServiceImp.cs",
               "ViewState": "AQIAABQAAAAAAAAAAAAAAEcAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T12:55:07.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T12:55:07.473Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ILoginService.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.AuthServer\\Book.AuthServer.Server\\ILoginService.cs",
               "RelativeDocumentMoniker": "Book.AuthServer.Server\\ILoginService.cs",
@@ -125,8 +123,7 @@
               "RelativeToolTip": "Book.AuthServer.Server\\ILoginService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T12:55:05.622Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T12:55:05.622Z"
             },
             {
               "$type": "Document",
@@ -142,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.AuthServer\\Book.AuthServer\\Program.cs",
               "RelativeDocumentMoniker": "Book.AuthServer\\Program.cs",
@@ -150,8 +147,7 @@
               "RelativeToolTip": "Book.AuthServer\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T12:54:59.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T12:54:59.252Z"
             },
             {
               "$type": "Document",
@@ -167,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.AuthServer\\Book.AuthServer\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Book.AuthServer\\Controllers\\AuthController.cs",

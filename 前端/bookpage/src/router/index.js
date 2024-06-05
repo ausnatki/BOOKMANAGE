@@ -183,7 +183,19 @@ export const asyncRoutes = [
         noCache: true,
         roles: ['admin', 'editor']
       }
+    },
+    {
+      path: 'add',
+      component: () => import('@/views/book/bookAdd'),
+      name: 'bookAdd',
+      meta: {
+        title: '图书添加',
+        icon: 'guide',
+        noCache: true,
+        roles: ['admin']
+      }
     }
+
     ]
   }
 

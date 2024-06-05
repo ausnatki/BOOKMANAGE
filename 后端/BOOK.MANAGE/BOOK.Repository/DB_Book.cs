@@ -84,7 +84,8 @@ namespace BOOK.Repository
                     // 由于ISBN编码具有唯一性 需要把他当作主键来看待 所以需要对ISBN进行查重
                     BOOK.MODEL.Book db_book = Ctx.Books.Where(c => c.ISBN == book.ISBN).FirstOrDefault();
                     if (db_book != null) throw new DbException("ISBN错误，数据库已有相同数据");
-                    Ctx.Add(db_book);
+                    book.AddTime = DateTime.Now;
+                    Ctx.Add(book);
                     Ctx.SaveChanges();
                     transaction.Commit();
                     return true;
