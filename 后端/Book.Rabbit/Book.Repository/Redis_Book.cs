@@ -98,14 +98,12 @@ namespace Book.Repository
         {
             using (var connection = GetConnection())
             {
-
-
                 var db = connection.GetDatabase();
                 this.RefreshExpiredTime(db);// 设置缓存时间
                 // 首先获取redies中的所有数据 然后得到我的总体长度
                 var keys = db.HashKeys(m_BookHashSetName);
-                //int count = keys.Length;
-                //book.Id = count+1;
+                int count = keys.Length;
+                book.Id = count + 1;
                 var n = db.HashSet(m_BookHashSetName, book.Id, System.Text.Json.JsonSerializer.Serialize(book));
                 return true;
             }

@@ -32,6 +32,9 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddScoped<BOOK.SERVERS.IBookService, BOOK.SERVERS.BookSerivceImp>();
+builder.Services.AddScoped<BOOK.SERVERS.IBorrowedService,BOOK.SERVERS.BorrowedServiceImp>();
+builder.Services.AddScoped<DB_Borrwoed>();
+builder.Services.AddScoped<Redis_Borrowed>();
 builder.Services.AddScoped<DB_Book>();
 builder.Services.AddScoped<Redis_Book>();
 

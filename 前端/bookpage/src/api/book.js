@@ -22,3 +22,23 @@ export function GetById(id) {
     params: { id }
   })
 }
+
+export function BorrowedBook(BID, UID) {
+  return request({
+    url: 'Book/Borrowed/BorrowedBook',
+    method: 'post',
+    params: {
+      BID, UID
+    }
+  })
+}
+
+export function IsBorrowed(BID, UID) {
+  return request({
+    url: 'Book/Borrowed/IsBorrowed',
+    method: 'post',
+    params: {
+      BID, UID
+    }
+  })
+}

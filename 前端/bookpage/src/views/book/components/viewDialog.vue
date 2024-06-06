@@ -67,7 +67,7 @@
               </el-col>
               <!-- 按钮 -->
               <el-col :span="10" :offset="1">
-                <el-button type="primary" @click="dialogVisible = false">借 阅</el-button>
+                <el-button type="primary" @click="ClickBorrow()">借 阅</el-button>
                 <el-button @click="dialogVisible = false">取 消</el-button>
               </el-col>
             </el-row>
@@ -79,7 +79,8 @@
 </template>
 
 <script>
-import { GetById } from '@/api/book.js'
+import { GetById, BorrowedBook, IsBorrowed } from '@/api/book.js'
+import { mapGetters } from 'vuex'
 export default {
   name: 'ViewBook',
   props: {
@@ -102,6 +103,14 @@ export default {
       },
       outinventory: 0
     }
+  },
+  computed: {
+    ...mapGetters([
+      'name',
+      'avatar',
+      'roles',
+      'uid'
+    ])
   },
   watch: {
     isDialog(newVal) {
@@ -132,12 +141,77 @@ export default {
       })
     },
     // 点击借阅
-    ClickBorrow() {
+    async ClickBorrow() {
+      try {
+        // 首先判断用户是否以及借阅了当前的图书
+        const isborrowed = await this.TIsBorrowed(this.bookid, this.uid)
+        if (isborrowed) {
+          this.$message({
+            type: 'warning',
+            message: '您已经借阅了'
+          })
+          return // 如果已经借阅，直接返回，不再继续后面的代码
+        }
 
+        // 判断库存是否还够
+        if (this.outinventory <= 0) {
+          this.$message({
+            type: 'warning',
+            message: '很可惜图书暂无库存，已经在反馈了'
+          })
+          return // 如果库存不足，直接返回，不再继续后面的代码
+        }
+
+        // 弹出提示框
+        if (await this.$confirm('是否确认借阅, 是否继续?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        })) {
+          // 用户点击确定
+          const result = await BorrowedBook(this.bookid, this.uid)
+          if (result.result) {
+            this.$message({
+              type: 'success',
+              message: '借阅成功'
+            })
+            setTimeout(() => {
+              this.dialogVisible = false
+            }, 3000)
+          } else {
+            this.$message({
+              type: 'error',
+              message: '借阅失败，系统错误'
+            })
+          }
+        } else {
+          // 用户点击取消
+          this.$message({
+            type: 'info',
+            message: '取消'
+          })
+        }
+      } catch (error) {
+        console.error('An error occurred:', error)
+        this.$message({
+          type: 'error',
+          message: '借阅失败'
+        })
+      }
     },
     // 拼接图片路径
     DoImage(image) {
       return 'Book/Image/' + image
+    },
+    // 判断用户是否借阅当前图书 借阅：返回true 没有借阅：返回false
+    TIsBorrowed(BID, UID) {
+      return IsBorrowed(BID, UID).then(result => { // 注意这里添加了return
+        console.log(result.result)
+        return result.result // 返回Promise解决的值
+      }).catch(response => {
+        console.error(response)
+        return Promise.reject(false) // 使用Promise.reject返回失败的值
+      })
     }
   }
 }

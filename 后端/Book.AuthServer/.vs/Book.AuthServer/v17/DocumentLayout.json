@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{405599FB-09C9-45DF-9166-6B7C92684D8A}|Book.AuthServer.Server\\Book.AuthServer.Server.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.authserver\\book.authserver.server\\loginserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{405599FB-09C9-45DF-9166-6B7C92684D8A}|Book.AuthServer.Server\\Book.AuthServer.Server.csproj|solutionrelative:book.authserver.server\\loginserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD89FFEE-6593-42BF-8EBD-2C74F2D00E47}|Book.AuthServer\\Book.AuthServer.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.authserver\\book.authserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD89FFEE-6593-42BF-8EBD-2C74F2D00E47}|Book.AuthServer\\Book.AuthServer.csproj|solutionrelative:book.authserver\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.AuthServer\\Book.AuthServer\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Book.AuthServer\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.AuthServer\\Book.AuthServer\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Book.AuthServer\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAzwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T15:18:06.552Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +41,7 @@
               "RelativeDocumentMoniker": "Book.AuthServer.Server\\LoginServiceImp.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.AuthServer\\Book.AuthServer.Server\\LoginServiceImp.cs",
               "RelativeToolTip": "Book.AuthServer.Server\\LoginServiceImp.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAowGMAAAA+AAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAIwGMAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-05T13:06:02.554Z",
               "EditorCaption": ""

@@ -41,6 +41,8 @@ namespace BOOK.SERVERS
                         {
                             redis_Book.UpdateBook(t); // 更新图书信息
                         }
+                        booklist = dbBook.ToList();
+                        return booklist;
                     }
                 }
                 return booklist;

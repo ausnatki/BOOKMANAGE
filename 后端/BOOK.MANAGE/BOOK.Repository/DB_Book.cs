@@ -19,7 +19,7 @@ namespace BOOK.Repository
         {
             try 
             {
-                var listbook = Ctx.Books.ToList();
+                var listbook = Ctx.Books.OrderByDescending(c=>c.Id).ToList();
                 return listbook;
             }
             catch

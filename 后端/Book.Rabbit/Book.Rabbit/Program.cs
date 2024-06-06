@@ -12,10 +12,13 @@ factory.UserName = "guest";
 factory.Password = "guest";
 
 var serviceProvider = new ServiceCollection()
-    .AddScoped<Book.DataAccess.BooksContext>()
-    .AddScoped<Book.Repository.DB_Book>()
-    .AddScoped<Book.Repository.Redis_Book>()
-   .AddScoped<IBookService, BookSerivceImp>()
+    .AddTransient<Book.DataAccess.BooksContext>()
+    .AddTransient<Book.Repository.DB_Book>()
+    .AddTransient<Book.Repository.Redis_Book>()
+    .AddTransient<Book.Repository.DB_Borrwoed>()
+    .AddTransient<Book.Repository.Redis_Borrowed>()
+    .AddTransient<IBorrowedService,BorrwoedServiceImp>()
+   .AddTransient<IBookService, BookSerivceImp>()
    .BuildServiceProvider();
 
 
@@ -27,8 +30,9 @@ using (var connection = factory.CreateConnection())
     {
         // 定义队列
         string queueName = "book-add";
+        string queue_Borrowed = "borrowed-add";
         var queue = channel.QueueDeclare(queueName, false, false, false, null);
-
+        var queue_borrowed = channel.QueueDeclare(queue_Borrowed, false, false, false, null);
         // 同一时刻服务器只发送一条消息给消费者
         channel.BasicQos(0, 1, false);
 
@@ -67,35 +71,38 @@ using (var connection = factory.CreateConnection())
                         }
                     }
                 }
+                else if(e.RoutingKey =="borrowed-add") // 图书添加业务
+                {
+                    Console.WriteLine("开始处理数据");
+                    // 获取传过来的图书数据 然后执行我的图书相关的服务
+                    var borrowed  = System.Text.Json.JsonSerializer.Deserialize<Book.Model.Borrowed>(jsonStr);
 
+                    if (borrowed == null)
+                    {
+                        throw new Exception("数据为空");
+                    }
+                    else
+                    {
+                        var borrowedService = serviceProvider.GetService<IBorrowedService>();
+                        if (borrowedService.BorrowBook(borrowed))
+                        {
+                            Console.WriteLine("数据处理成功");
+                            channel.BasicAck(e.DeliveryTag, false);
+                        }
+                    }
+                }
 
-                //// 处理收到的消息
-                //if (book != null)
-                //{
-                //    Console.WriteLine("开始处理消息");
-                //    bool processed = false;// 标志数据处理完成
-                   
-
-                  
-                //    //processed = true; // 这里是标识
-                   
-                //    if (processed)
-                //    {
-                //        // 数据处理后，向消息队列返回确认状态
-                //        channel.BasicAck(e.DeliveryTag, false);
-                //    }
-                //}
             }
             catch (Exception ex)
             {
                 Console.WriteLine("消费者角色业务发生错误" + ex.Message);
             }
         };
-        string consumerTag = "book-consumer";
-
+        string addConsumerTag = "add-book-consumer";
+        string borrowedTag = "add-borrowed-consumer"; 
         // 启动消费者程序，监听消息
-        channel.BasicConsume(queueName, false, consumerTag, false, false, null, consumer);
-
+        channel.BasicConsume(queueName, false, addConsumerTag, false, false, null, consumer);
+        channel.BasicConsume(queue_Borrowed, false, borrowedTag, false, false, null, consumer);
         Console.WriteLine("按任意键结束程序");
         Console.ReadLine();
     }

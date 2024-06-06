@@ -20,6 +20,7 @@ namespace BOOK.MODEL
         public string? Image { get; set; } // 图书图片
         public decimal Price { get; set; } // 图书价格
         public string? Category {  get; set; } // 图书类别
+        public bool? IsDel {  get; set; }
         public List<Borrowed>? borrowed { get; set; }
     }
 }
