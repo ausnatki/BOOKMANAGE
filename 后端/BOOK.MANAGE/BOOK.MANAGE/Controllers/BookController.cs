@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Diagnostics;
+using System.Data.Entity.Core.Mapping;
 using System.Diagnostics.CodeAnalysis;
 
 namespace BOOK.MANAGE.Controllers
@@ -68,13 +69,13 @@ namespace BOOK.MANAGE.Controllers
         }
 
         [HttpPost("DelBook")]
-        public BOOK.MODEL.ApiResp DelBook([FromBody] BOOK.MODEL.Book book)
+        public BOOK.MODEL.ApiResp DelBook(int id)
         {
             var result = new BOOK.MODEL.ApiResp();
-            if (_bookService.DelBook(book))
+            if (_bookService.DelBook(id))
             {
                 result.Code = 20000;
-                result.Data = book;
+                result.Data = id;
                 result.Result = true;
                 result.Msg = "删除成功";
                 return result;
@@ -82,7 +83,7 @@ namespace BOOK.MANAGE.Controllers
             else
             {
                 result.Code = 500;
-                result.Data = book;
+                result.Data = id;
                 result.Result = false;
                 result.Msg = "删除失败";
                 return result;

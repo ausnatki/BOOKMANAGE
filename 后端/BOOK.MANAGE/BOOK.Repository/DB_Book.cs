@@ -100,13 +100,13 @@ namespace BOOK.Repository
         #endregion
 
         #region 删除图书
-        public bool DelBook(BOOK.MODEL.Book book)
+        public bool DelBook(int id)
         {
             using (var transaction = Ctx.Database.BeginTransaction())
             {
                 try
                 {
-                    var db_book = Ctx.Books.Where(c => c.Id == book.Id).FirstOrDefault();
+                    var db_book = Ctx.Books.Where(c => c.Id == id).FirstOrDefault();
                     if (db_book == null) throw new DbException("查找的数据为空");
                     Ctx.Books.Remove(db_book);
                     Ctx.SaveChanges();

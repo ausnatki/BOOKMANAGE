@@ -1,0 +1,12 @@
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Model\bin\Debug\net6.0\Book.Model.deps.json
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Model\bin\Debug\net6.0\Book.Model.dll
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Model\bin\Debug\net6.0\Book.Model.pdb
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Model\obj\Debug\net6.0\Book.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Model\obj\Debug\net6.0\Book.Model.AssemblyInfoInputs.cache
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Model\obj\Debug\net6.0\Book.Model.AssemblyInfo.cs
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Model\obj\Debug\net6.0\Book.Model.csproj.CoreCompileInputs.cache
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Model\obj\Debug\net6.0\Book.Model.sourcelink.json
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Model\obj\Debug\net6.0\Book.Model.dll
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Model\obj\Debug\net6.0\refint\Book.Model.dll
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Model\obj\Debug\net6.0\Book.Model.pdb
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Model\obj\Debug\net6.0\ref\Book.Model.dll

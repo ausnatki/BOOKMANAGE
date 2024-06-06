@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9A1C6C35-DA75-4973-8623-4368E784AA4F}|Book.Rabbit\\Book.Rabbit.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.rabbit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A1C6C35-DA75-4973-8623-4368E784AA4F}|Book.Rabbit\\Book.Rabbit.csproj|solutionrelative:book.rabbit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.service\\bookserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|solutionrelative:book.service\\bookserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.service\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|solutionrelative:book.service\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.repository\\redis_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|solutionrelative:book.repository\\redis_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.repository\\db_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|solutionrelative:book.repository\\db_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Rabbit\\Program.cs",
+              "RelativeDocumentMoniker": "Book.Rabbit\\Program.cs",
+              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Rabbit\\Program.cs",
+              "RelativeToolTip": "Book.Rabbit\\Program.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAEAAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T00:57:56.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookServiceImp.cs",
+              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Service\\BookServiceImp.cs",
+              "RelativeDocumentMoniker": "Book.Service\\BookServiceImp.cs",
+              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Service\\BookServiceImp.cs",
+              "RelativeToolTip": "Book.Service\\BookServiceImp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T00:53:10.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Service\\IBookService.cs",
+              "RelativeDocumentMoniker": "Book.Service\\IBookService.cs",
+              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Service\\IBookService.cs",
+              "RelativeToolTip": "Book.Service\\IBookService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvw8AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T00:53:10.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Redis_Book.cs",
+              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Repository\\Redis_Book.cs",
+              "RelativeDocumentMoniker": "Book.Repository\\Redis_Book.cs",
+              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Repository\\Redis_Book.cs",
+              "RelativeToolTip": "Book.Repository\\Redis_Book.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAADwvwwAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T00:48:54.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DB_Book.cs",
+              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Repository\\DB_Book.cs",
+              "RelativeDocumentMoniker": "Book.Repository\\DB_Book.cs",
+              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Repository\\DB_Book.cs",
+              "RelativeToolTip": "Book.Repository\\DB_Book.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAADwv3UAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T00:41:12.732Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,385 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Rabbit\\Book.Rabbit.csproj": {}
+  },
+  "projects": {
+    "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.DataAccess\\Book.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.DataAccess\\Book.DataAccess.csproj",
+        "projectName": "Book.DataAccess",
+        "projectPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.DataAccess\\Book.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\KKK\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\电脑软件\\VCStudio\\Share\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\KKK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Model\\Book.Model.csproj": {
+                "projectPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Model\\Book.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Model\\Book.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Model\\Book.Model.csproj",
+        "projectName": "Book.Model",
+        "projectPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Model\\Book.Model.csproj",
+        "packagesPath": "C:\\Users\\KKK\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\电脑软件\\VCStudio\\Share\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\KKK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Rabbit\\Book.Rabbit.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Rabbit\\Book.Rabbit.csproj",
+        "projectName": "Book.Rabbit",
+        "projectPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Rabbit\\Book.Rabbit.csproj",
+        "packagesPath": "C:\\Users\\KKK\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Rabbit\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\电脑软件\\VCStudio\\Share\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\KKK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.DataAccess\\Book.DataAccess.csproj": {
+                "projectPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.DataAccess\\Book.DataAccess.csproj"
+              },
+              "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Model\\Book.Model.csproj": {
+                "projectPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Model\\Book.Model.csproj"
+              },
+              "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Service\\Book.Service.csproj": {
+                "projectPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Service\\Book.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.8.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Repository\\Book.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Repository\\Book.Repository.csproj",
+        "projectName": "Book.Repository",
+        "projectPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Repository\\Book.Repository.csproj",
+        "packagesPath": "C:\\Users\\KKK\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\电脑软件\\VCStudio\\Share\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\KKK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.DataAccess\\Book.DataAccess.csproj": {
+                "projectPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.DataAccess\\Book.DataAccess.csproj"
+              },
+              "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Model\\Book.Model.csproj": {
+                "projectPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Model\\Book.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.7.33, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Service\\Book.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Service\\Book.Service.csproj",
+        "projectName": "Book.Service",
+        "projectPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Service\\Book.Service.csproj",
+        "packagesPath": "C:\\Users\\KKK\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\电脑软件\\VCStudio\\Share\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\KKK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.DataAccess\\Book.DataAccess.csproj": {
+                "projectPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.DataAccess\\Book.DataAccess.csproj"
+              },
+              "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Model\\Book.Model.csproj": {
+                "projectPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Model\\Book.Model.csproj"
+              },
+              "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Repository\\Book.Repository.csproj": {
+                "projectPath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Repository\\Book.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

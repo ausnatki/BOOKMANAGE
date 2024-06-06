@@ -10,7 +10,7 @@
           <!-- 图书封面 -->
           <el-col :span="6" offset="1">
             <div class="bookimage">
-              <el-image style="width:100%;height:100%" src="Book/Image/20240605143604.jpg" />
+              <el-image style="width:100%;height:100%" :src="DoImage(form.image)" />
             </div>
           </el-col>
           <el-col :span="15">
@@ -134,6 +134,10 @@ export default {
     // 点击借阅
     ClickBorrow() {
 
+    },
+    // 拼接图片路径
+    DoImage(image) {
+      return 'Book/Image/' + image
     }
   }
 }

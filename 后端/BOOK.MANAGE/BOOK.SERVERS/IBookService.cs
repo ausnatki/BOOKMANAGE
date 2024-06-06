@@ -13,7 +13,7 @@ namespace BOOK.SERVERS
         public object GetById(int id);
         public bool Edit(BOOK.MODEL.Book book);
         public bool InstallBook(BOOK.MODEL.Book book);
-        public bool DelBook(BOOK.MODEL.Book book);
+        public bool DelBook(int id);
         public int GetOutInventory(int id);
     }
 }

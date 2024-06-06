@@ -1122,6 +1122,7 @@
           "BOOK.MODEL": "1.0.0",
           "BOOK.Repository": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.3",
+          "RabbitMQ.Client": "6.8.1",
           "StackExchange.Redis": "2.2.3"
         },
         "compile": {

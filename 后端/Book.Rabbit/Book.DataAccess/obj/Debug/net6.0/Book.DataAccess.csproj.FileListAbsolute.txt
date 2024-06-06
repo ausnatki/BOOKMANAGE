@@ -1,0 +1,16 @@
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\bin\Debug\net6.0\Book.DataAccess.deps.json
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\bin\Debug\net6.0\Book.DataAccess.dll
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\bin\Debug\net6.0\Book.DataAccess.pdb
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\bin\Debug\net6.0\Book.Model.dll
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\bin\Debug\net6.0\Book.Model.pdb
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\obj\Debug\net6.0\Book.DataAccess.csproj.AssemblyReference.cache
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\obj\Debug\net6.0\Book.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\obj\Debug\net6.0\Book.DataAccess.AssemblyInfoInputs.cache
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\obj\Debug\net6.0\Book.DataAccess.AssemblyInfo.cs
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\obj\Debug\net6.0\Book.DataAccess.csproj.CoreCompileInputs.cache
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\obj\Debug\net6.0\Book.DataAccess.sourcelink.json
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\obj\Debug\net6.0\Book.Dat.E638D6D7.Up2Date
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\obj\Debug\net6.0\Book.DataAccess.dll
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\obj\Debug\net6.0\refint\Book.DataAccess.dll
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\obj\Debug\net6.0\Book.DataAccess.pdb
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.DataAccess\obj\Debug\net6.0\ref\Book.DataAccess.dll

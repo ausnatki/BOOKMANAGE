@@ -142,6 +142,7 @@ export default {
   methods: {
     // 图片路径处理方式
     handleAvatarSuccess(res, file) {
+      this.imageUrl = 'Book/Image/' + res.data.url
       this.BookForm.Image = res.data.url
       console.log((this.BookForm.Image))
     },
