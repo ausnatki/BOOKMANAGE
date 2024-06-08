@@ -67,6 +67,40 @@ namespace BOOK.Repository
         }
         #endregion
 
+        #region 获取当前用户的借阅列表
+        public IEnumerable<object> GetBorrowed(int UID)
+        {
+            var borrwoedlist = new List<BOOK.MODEL.Borrowed>();
+
+            // 获取redis连接
+            using(var connection = GetConnection())
+            {
+                // 获取redis的数据连接
+                var db = connection.GetDatabase();
+
+                this.RefreshExpiredTime(db);// 设置缓存时间
+
+                // 获取键值对名字
+                var keys = db.HashKeys(m_BorrowedHashName);
+
+                foreach(var key in keys)
+                {
+                    var json = db.HashGet(m_BorrowedHashName,key);
+
+                    if (!string.IsNullOrEmpty(json))
+                    {
+                        var borrowed = System.Text.Json.JsonSerializer.Deserialize<BOOK.MODEL.Borrowed>(json);
+                        if(borrowed != null)
+                        {
+                            borrwoedlist.Add(borrowed);
+                        }
+                    }
+                }
+            }
+            return borrwoedlist;
+        }
+        #endregion
+
         /// <summary>
         /// 设置的缓存时间
         /// </summary>

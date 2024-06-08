@@ -31,8 +31,10 @@ using (var connection = factory.CreateConnection())
         // 定义队列
         string queueName = "book-add";
         string queue_Borrowed = "borrowed-add";
+        string queue_Repaid = "borrow-repaid";
         var queue = channel.QueueDeclare(queueName, false, false, false, null);
         var queue_borrowed = channel.QueueDeclare(queue_Borrowed, false, false, false, null);
+        var queue_repaid = channel.QueueDeclare(queue_Repaid, false, false, false, null);
         // 同一时刻服务器只发送一条消息给消费者
         channel.BasicQos(0, 1, false);
 
@@ -91,7 +93,26 @@ using (var connection = factory.CreateConnection())
                         }
                     }
                 }
+                else if(e.RoutingKey == "borrow-repaid")
+                {
+                    Console.WriteLine( "开始处理数据");
+                    // 获取传过来的数据 然后执行我的归还的相关业务
+                    var borrowed = System.Text.Json.JsonSerializer.Deserialize<Book.Model.Borrowed>(jsonStr);
 
+                    if(borrowed == null)
+                    {
+                        throw new Exception("数据为空");
+                    }
+                    else
+                    {
+                        var borrowedService = serviceProvider.GetService<IBorrowedService>();
+                        if (borrowedService.Repiad(borrowed))
+                        {
+                            Console.WriteLine("数据处理成功");
+                            channel.BasicAck(e.DeliveryTag, false);
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -100,9 +121,11 @@ using (var connection = factory.CreateConnection())
         };
         string addConsumerTag = "add-book-consumer";
         string borrowedTag = "add-borrowed-consumer"; 
+        string borrowedRepaidTag = "repaid-borrowed-consumer"; 
         // 启动消费者程序，监听消息
         channel.BasicConsume(queueName, false, addConsumerTag, false, false, null, consumer);
         channel.BasicConsume(queue_Borrowed, false, borrowedTag, false, false, null, consumer);
+        channel.BasicConsume(queue_Repaid, false, borrowedRepaidTag, false, false, null, consumer);
         Console.WriteLine("按任意键结束程序");
         Console.ReadLine();
     }

@@ -9,5 +9,7 @@ namespace Book.Service
     public interface IBorrowedService
     {
         public bool BorrowBook(Book.Model.Borrowed borrowed);
+
+        public bool Repiad(Book.Model.Borrowed borrowed);
     }
 }

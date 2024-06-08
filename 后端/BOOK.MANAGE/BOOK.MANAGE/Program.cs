@@ -17,7 +17,10 @@ builder.Services.AddDbContext<BooksContext>(options =>
     options.UseSqlServer(connectionString));
 
 // 添加其他服务
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>

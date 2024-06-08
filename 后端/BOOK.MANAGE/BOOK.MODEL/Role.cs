@@ -11,7 +11,7 @@ namespace BOOK.MODEL
   public class Role
   {
     public int Id { get; set; }
-    public string Name { get; set; }
+    public string? Name { get; set; }
     public bool State {  get; set; }
     public List<SysUser_Role>? user_roles { get; set; }
   }

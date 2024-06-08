@@ -26,11 +26,14 @@
           <i class="el-icon-caret-bottom" />
         </div>
         <el-dropdown-menu slot="dropdown">
-          <router-link to="/profile/index">
+          <!-- <router-link to="/profile/index">
             <el-dropdown-item>
               {{ $t('navbar.profile') }}
             </el-dropdown-item>
-          </router-link>
+          </router-link> -->
+          <el-dropdown-item @click.native="ClickUser()">
+            <span style="display:block;">个人中心</span>
+          </el-dropdown-item>
           <router-link to="/">
             <el-dropdown-item>
               {{ $t('navbar.dashboard') }}
@@ -41,19 +44,18 @@
               {{ $t('navbar.github') }}
             </el-dropdown-item>
           </a>
-          <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
-            <el-dropdown-item>Docs</el-dropdown-item>
-          </a>
           <el-dropdown-item divided @click.native="logout">
             <span style="display:block;">{{ $t('navbar.logOut') }}</span>
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </div>
+    <DigUserPage :digflage.sync="digflage" />
   </div>
 </template>
 
 <script>
+import DigUserPage from '@/layout/components/DigUserPage.vue'
 import { mapGetters } from 'vuex'
 import Breadcrumb from '@/components/Breadcrumb'
 import Hamburger from '@/components/Hamburger'
@@ -71,7 +73,13 @@ export default {
     Screenfull,
     SizeSelect,
     LangSelect,
-    Search
+    Search,
+    DigUserPage
+  },
+  data() {
+    return {
+      digflage: false
+    }
   },
   computed: {
     ...mapGetters([
@@ -87,6 +95,11 @@ export default {
     async logout() {
       await this.$store.dispatch('user/logout')
       this.$router.push(`/login?redirect=${this.$route.fullPath}`)
+    },
+    // 点击个人中心
+    ClickUser() {
+      // console.log('进入点击事件' + this.digflage)
+      this.digflage = true
     }
   }
 }

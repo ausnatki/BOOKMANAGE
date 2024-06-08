@@ -117,13 +117,16 @@ export default {
       this.dialogVisible = newVal
     },
     dialogVisible(newVal) {
+      if (newVal === true) {
+        this.initbook(this.bookid)
+      }
       if (newVal === false) {
         this.$emit('update:isDialog', newVal)
         this.isLoading = true
       }
     },
     bookid(newVal) {
-      this.initbook(newVal)
+      // this.initbook(newVal)
     }
 
   },

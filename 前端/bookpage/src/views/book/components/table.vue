@@ -2,16 +2,16 @@
 <template>
   <div>
     <!-- 这里是通过图书名查询 -->
-    <el-input v-model="input" placeholder="图书名" style="width:200px;padding:0 10px 10px 0" />
-    <el-button type="primary">搜索</el-button>
+    <el-input v-model="serchBookname" placeholder="图书名" style="width:200px;padding:0 10px 10px 0" />
+    <el-button type="primary" @click="ClickSerchBookName">搜索</el-button>
 
     <!-- 这里是通过我的作者查询 -->
-    <el-input v-model="input" placeholder="作者" style="width:200px;padding:0 10px 10px 10px" />
-    <el-button type="primary">搜索</el-button>
+    <el-input v-model="serchBookauth" placeholder="作者" style="width:200px;padding:0 10px 10px 10px" />
+    <el-button type="primary" @click="ClickSerchBookAuth">搜索</el-button>
 
     <!-- 这里是我的多选框的部分 -->
     <el-select
-      v-model="value2"
+      v-model="serchCategory"
       multiple
       collapse-tags
       style="margin-left: 20px;"
@@ -26,13 +26,15 @@
     </el-select>
     <el-table
       v-loading="isLoading"
-      :data="tableData"
+      :data="filteredData"
+      :default-sort="{prop: 'id', order: 'descending'}"
       border
       style="width: 100%"
     >
+
       <el-table-column
         sortable
-        prop="bookName"
+        prop="id"
         label="编号"
         width="180"
       >
@@ -80,8 +82,8 @@
         <!-- slot-scope="scope" -->
         <template slot-scope="scope">
           <el-link class="linetext" type="primary" @click="ClickBorrow(scope.row.id)">借阅</el-link>
-          <el-link class="linetext" type="success">查看</el-link>
-          <el-link class="linetext" type="danger">删除</el-link>
+          <!-- <el-link class="linetext" type="success">查看</el-link>
+          <el-link class="linetext" type="danger">删除</el-link> -->
 
         </template>
       </el-table-column>
@@ -115,8 +117,44 @@ export default {
         value: '程序编程',
         label: '程序编程'
       }],
-      value1: [],
-      value2: []
+      serchBookname: '',
+      tserchBookname: '',
+      serchBookauth: '',
+      tserchBookauth: '',
+      serchCategory: []
+    }
+  },
+  computed: {
+    filteredData() {
+      // console.log(this.tableData)
+      let filtered = this.tableData
+      const bookname = this.tserchBookname
+      const auth = this.tserchBookauth
+      const category = this.serchCategory
+      // console.log(category.length)
+      // 判断是否有值
+      if (bookname) {
+        console.log('进行我的图书查询')
+        filtered = filtered.filter(item => {
+          return item.bookName.includes(bookname)
+        })
+      }
+      // console.log(filtered)
+      if (auth) {
+        console.log('进行我的作者查询')
+        filtered = filtered.filter(item => {
+          return item.author.includes(auth)
+        })
+      }
+      // console.log(filtered)
+      if (category.length) {
+        console.log('进行我的类别查询')
+        filtered = filtered.filter(item => {
+          return category.includes(item.category)
+        })
+      }
+      // console.log(filtered)
+      return filtered
     }
   },
   mounted() {
@@ -128,7 +166,7 @@ export default {
       var flage = false
       GetBook().then(result => {
         flage = true
-        console.log(result)
+        // console.log(result)
 
         this.tableData = result.data
       }).catch(response => {
@@ -159,6 +197,14 @@ export default {
     ClickBorrow(id) {
       this.bookid = id
       this.isDialog = true
+    },
+    // 通过图书名搜索
+    ClickSerchBookName() {
+      this.tserchBookname = this.serchBookname
+    },
+    // 通过作者来搜索
+    ClickSerchBookAuth() {
+      this.tserchBookauth = this.serchBookauth
     }
   }
 }

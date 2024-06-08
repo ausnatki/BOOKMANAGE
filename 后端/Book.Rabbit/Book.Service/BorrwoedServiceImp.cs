@@ -43,5 +43,30 @@ namespace Book.Service
             }
         }
         #endregion
+
+        #region 用户归还
+        public bool Repiad(Book.Model.Borrowed borrowed)
+        {
+            try
+            {
+
+                // 如果查询出来有相应的值 就更新我的redis数据库
+                if (_dbBorrwoed.repiad(borrowed))
+                {
+                    borrowed.State = true;
+                    redis_borrowed.UpdataBorrowed(borrowed);
+                }
+                else
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        #endregion
     }
 }

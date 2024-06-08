@@ -107,6 +107,10 @@ namespace Book.Service
                 {
                     redis_Book.NewBook(Book);
                 }
+                else
+                {
+                    return false;
+                }
                 return true;
             }
             catch

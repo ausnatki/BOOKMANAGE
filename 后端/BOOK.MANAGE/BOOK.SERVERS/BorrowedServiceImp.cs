@@ -105,5 +105,116 @@ namespace BOOK.SERVERS
             }
         }
         #endregion
+
+        #region 获取当前用户的借阅列表
+        public IEnumerable<object> GetBorrowed(int UID)
+        {
+            var borrowedlist = new List<BOOK.MODEL.Borrowed>();
+            try
+            {
+               var redisborrowed = redis_borrowed.GetBorrowed(UID);
+                if (redisborrowed.Count() > 0)
+                {
+                    redisborrowed = redisborrowed.ToList();
+                    return redisborrowed;
+                }
+                else
+                {
+                    // 如果redis中里面没有查询到相关的数据就从数据库里面查询数据
+                    var dbBorrowed = _dbBorrwoed.Borrowed_User(UID);
+                    if (dbBorrowed != null)
+                    {
+                        foreach(var t in dbBorrowed)
+                        {
+                            redis_borrowed.UpdataBorrowed(t);
+                        }
+                        borrowedlist = dbBorrowed.ToList();
+                        return borrowedlist;
+                    }
+                }
+                return borrowedlist;
+            } 
+            catch
+            {
+                return null;
+            }
+        }
+        #endregion
+
+        #region 归还
+        public bool Repiad(BOOK.MODEL.Borrowed borrowed)
+        {
+            //try 
+            //{
+
+            //    // 如果查询出来有相应的值 就更新我的redis数据库
+            //    if (_dbBorrwoed.repiad(borrowed))
+            //    {
+            //        borrowed.State = true;
+            //        redis_borrowed.UpdataBorrowed(borrowed);    
+            //    }
+            //    else
+            //    {
+            //        return false;
+            //    }
+            //    return true;
+            //}
+            //catch
+            //{
+            //    return false;
+            //}
+
+            //var reuslt = new BOOK.MODEL.ApiResp();
+
+            // 连接rabbitmq
+
+            // 创建一个rabbitmq对象
+            var factory = new RabbitMQ.Client.ConnectionFactory();
+            factory.HostName = "localhost";
+            factory.UserName = "guest";
+            factory.Password = "guest";
+
+            // 1.连接rabbitmq
+            using (var connection = factory.CreateConnection())
+            {
+                // 2. 创建信道
+                using (var channel = connection.CreateModel())
+                {
+                    // 3. 创建交换器
+                    string exchangeName = "exchange-direct";
+                    string exchageType = "direct";
+                    channel.ExchangeDeclare(exchangeName, exchageType, false, true, null);
+
+                    // 4.创建消息队列
+                    string queueName = "borrow-repaid";
+                    string routigKey = "borrow-repaid";
+                    var queue = channel.QueueDeclare(queueName, false, false, false, null);
+
+                    // 5.交换器和消息队列进行绑定
+                    channel.QueueBind(queueName, exchangeName, routigKey, null);
+
+                    try
+                    {
+                        var properties = channel.CreateBasicProperties();
+                        properties.DeliveryMode = 1;
+                        // 将图书序列化，生成要发送的消息
+                        var bookJson = System.Text.Json.JsonSerializer.Serialize(borrowed);
+                        var body = System.Text.Encoding.UTF8.GetBytes(bookJson);
+
+                        // 向Broker中的Exchange发送消息
+                        channel.BasicPublish(exchangeName, routigKey, false, properties, body);
+
+                        return true;
+                    }
+                    catch (Exception ex)
+                    {
+                        //reuslt.Result = false;
+                        //reuslt.Msg = "发送消息失败" + ex.Message;
+                        return false;
+                    }
+                }
+            }
+        }
+        #endregion
     }
 }

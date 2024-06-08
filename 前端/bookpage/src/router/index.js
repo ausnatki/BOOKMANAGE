@@ -195,7 +195,30 @@ export const asyncRoutes = [
         roles: ['admin']
       }
     }
-
+    ]
+  },
+  {
+    path: '/borrow',
+    component: Layout,
+    redirect: '/borrow/list',
+    alwaysShow: true,
+    name: 'BorrowList',
+    meta: {
+      title: '借阅',
+      icon: 'shopping',
+      roles: ['admin', 'editor']
+    },
+    children: [{
+      path: 'list',
+      component: () => import('@/views/borrow/index'),
+      name: 'borrowpage',
+      meta: {
+        title: '我的借阅',
+        icon: 'guide',
+        noCache: true,
+        roles: ['admin', 'editor']
+      }
+    }
     ]
   }
 

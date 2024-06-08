@@ -54,8 +54,8 @@
       </el-form-item>
       <el-form-item label="图书类别" prop="Category">
         <el-select v-model="BookForm.Category" placeholder="请选择图书类别">
-          <el-option label="社会哲学" value="shanghai" />
-          <el-option label="数学" value="beijing" />
+          <el-option label="社会哲学" value="社会哲学" />
+          <el-option label="数学" value="数学" />
         </el-select>
       </el-form-item>
 

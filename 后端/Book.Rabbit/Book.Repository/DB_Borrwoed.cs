@@ -1,4 +1,5 @@
 ﻿using Book.DataAccess;
+using Book.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,6 +46,29 @@ namespace Book.Repository
                 catch
                 {
                     transaction.Rollback();
+                    return false;
+                }
+            }
+        }
+        #endregion
+
+        #region 用户归还
+        public bool repiad(Book.Model.Borrowed borrowed)
+        {
+            using (var transaction = Ctx.Database.BeginTransaction())
+            {
+
+                try
+                {
+                    var borrow = Ctx.Borroweds.Where(c => c.Id == borrowed.Id).FirstOrDefault();
+                    if (borrow == null) return false;
+                    borrow.State = true;
+                    Ctx.SaveChanges();
+                    transaction.Commit();
+                    return true;
+                }
+                catch
+                {
                     return false;
                 }
             }
