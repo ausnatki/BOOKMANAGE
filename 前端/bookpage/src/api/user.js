@@ -22,3 +22,19 @@ export function logout() {
     method: 'post'
   })
 }
+
+export function GetInfoById(id) {
+  return request({
+    url: '/BooK/SysUser/GetInfoById',
+    method: 'post',
+    params: { id }
+  })
+}
+
+export function EditInfo(user) {
+  return request({
+    url: '/Book/SysUser/EditInfo',
+    method: 'post',
+    data: user
+  })
+}

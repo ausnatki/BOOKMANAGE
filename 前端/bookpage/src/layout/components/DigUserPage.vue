@@ -1,59 +1,63 @@
 <template>
   <el-dialog
+
     :visible.sync="dialogVisible"
     width="25%"
   >
+    <div v-loading="isLoading">
+      <el-row :gutter="10">
+        <el-col :span="20" :offset="2">
+          <el-card shadow="always" class="imagebox">
+            <div class="avatar-container">
+              <el-avatar :size="80" src="https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif" />
+            </div>
+          </el-card>
+        </el-col>
+      </el-row>
 
-    <el-row :gutter="10">
-      <el-col :span="20" :offset="2">
-        <el-card shadow="always" class="imagebox">
-          <div class="avatar-container">
-            <el-avatar :size="80" src="https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif" />
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
-
-    <el-row :gutter="20">
-      <el-col :span="12" :offset="7" style="padding-bottom:10px">
-        <span class="mylable">用户名：</span>
-        <span class="mytext">{{ form.name }}</span>
-        <el-button type="primary" icon="el-icon-edit" size="mini" circle />
-      </el-col>
-    </el-row>
-    <el-row :gutter="20">
-      <el-col :span="10" :offset="2">
-        <div class="mylable">登录名：</div>
-        <span class="mytext">{{ form.name }}</span>
+      <el-row :gutter="20">
+        <el-col :span="18" :offset="7" style="padding-bottom:10px">
+          <span class="mylable">用户名：</span>
+          <span class="mytext">{{ form.UserName }}</span>
+          <el-button type="primary" icon="el-icon-edit" size="mini" circle @click="ClickUserEdit" />
+        </el-col>
+      </el-row>
+      <el-row :gutter="20">
+        <el-col :span="10" :offset="2">
+          <div class="mylable">登录名：</div>
+          <span class="mytext">{{ form.LoginName }}</span>
         <!-- <el-button type="primary" icon="el-icon-edit" size="mini" circle /> -->
-      </el-col>
-      <el-col :span="10" :offset="2">
-        <div class="mylable">密码：</div>
-        <span class="mytext">{{ form.password }}</span>
+        </el-col>
+        <el-col :span="10" :offset="2">
+          <div class="mylable">密码：</div>
+          <span class="mytext">{{ form.Password }}</span>
         <!-- <el-button type="primary" icon="el-icon-edit" size="mini" circle /> -->
-      </el-col>
-    </el-row>
-    <el-row :gutter="20">
-      <el-col :span="10" :offset="2">
-        <div class="mylable">Email：</div>
-        <span class="mytext">{{ form.email }}</span>
+        </el-col>
+      </el-row>
+      <el-row :gutter="20">
+        <el-col :span="10" :offset="2">
+          <div class="mylable">Email：</div>
+          <span class="mytext">{{ form.Email }}</span>
         <!-- <el-button type="primary" icon="el-icon-edit" size="mini" circle /> -->
-      </el-col>
-      <el-col :span="10" :offset="2" style="">
-        <div class="mylable">角色：</div>
-        <span class="mytext">{{ form.role }}</span>
+        </el-col>
+        <el-col :span="10" :offset="2" style="">
+          <div class="mylable">角色：</div>
+          <span class="mytext">{{ role }}</span>
         <!-- <el-button type="primary" icon="el-icon-edit" size="mini" circle /> -->
-      </el-col>
-    </el-row>
-    <el-row :gutter="20">
-      <el-col :span="20" :offset="2">
-        <el-button type="success" style="width:100%;margin-top:35px">确定</el-button>
-      </el-col>
-    </el-row>
+        </el-col>
+      </el-row>
+      <el-row :gutter="20">
+        <el-col :span="20" :offset="2">
+          <el-button type="success" style="width:100%;margin-top:35px">确定</el-button>
+        </el-col>
+      </el-row>
+    </div>
   </el-dialog>
 </template>
 
 <script>
+import { GetInfoById, EditInfo } from '@/api/user'
+import { mapGetters } from 'vuex'
 export default {
   props: {
     digflage: {
@@ -63,14 +67,22 @@ export default {
   },
   data() {
     return {
+      isLoading: true,
       dialogVisible: false,
       form: {
-        name: '测试名称',
-        email: 'ausnatki@outlook.com',
-        password: '123456',
-        role: 'admin'
-      }
+        Id: '',
+        UserName: '',
+        LoginName: '',
+        Email: '',
+        Password: ''
+      },
+      role: '管理员'
     }
+  },
+  computed: {
+    ...mapGetters([
+      'uid'
+    ])
   },
   watch: {
     digflage(newVal) {
@@ -82,6 +94,9 @@ export default {
       }
     }
   },
+  mounted() {
+    this.InitUserInfo()
+  },
   methods: {
     handleClose(done) {
       this.$confirm('确认关闭？')
@@ -89,6 +104,60 @@ export default {
           done()
         })
         .catch(_ => {})
+    },
+    // 点击用户修改
+    async ClickUserEdit() {
+      await this.$prompt('请输入新用户名', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        inputPattern: /^.{0,20}$/,
+        inputErrorMessage: '邮箱长度必须超过20个字符'
+      }).then(({ value }) => {
+        this.form.UserName = value
+        this.EditInfo()
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '取消输入'
+        })
+      })
+    },
+    // 初始化数据
+    async InitUserInfo() {
+      await GetInfoById(this.uid).then(result => {
+        console.log(result.data)
+        this.form.Email = result.data.email
+        this.form.LoginName = result.data.loginName
+        this.form.UserName = result.data.userName
+        this.form.Password = result.data.password
+        this.form.Id = result.data.id
+      }).catch(response => {
+        console.error(response)
+      }).finally(() => {
+        this.isLoading = false
+      })
+    },
+    // 修改数据
+    async EditInfo() {
+      await EditInfo(this.form).then(result => {
+        // console.log(result.data.result)
+        if (result.result === true) {
+          this.$message({
+            type: 'success',
+            message: '修改成功'
+          })
+        } else {
+          this.$message({
+            type: 'error',
+            message: '修改失败'
+          })
+        }
+      }).catch(response => {
+        this.$message({
+          type: 'success',
+          message: '修改失败'
+        })
+      })
     }
   }
 }

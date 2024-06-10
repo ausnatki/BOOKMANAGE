@@ -17,8 +17,11 @@ var serviceProvider = new ServiceCollection()
     .AddTransient<Book.Repository.Redis_Book>()
     .AddTransient<Book.Repository.DB_Borrwoed>()
     .AddTransient<Book.Repository.Redis_Borrowed>()
+    .AddTransient<Book.Repository.DB_SysUser>()
+    .AddTransient<Book.Repository.Redis_SysUser>()
     .AddTransient<IBorrowedService,BorrwoedServiceImp>()
    .AddTransient<IBookService, BookSerivceImp>()
+   .AddTransient<ISysUserService, SysUserServiceImp>()
    .BuildServiceProvider();
 
 
@@ -32,9 +35,11 @@ using (var connection = factory.CreateConnection())
         string queueName = "book-add";
         string queue_Borrowed = "borrowed-add";
         string queue_Repaid = "borrow-repaid";
+        string queue_EditUser = "user-edit";
         var queue = channel.QueueDeclare(queueName, false, false, false, null);
         var queue_borrowed = channel.QueueDeclare(queue_Borrowed, false, false, false, null);
         var queue_repaid = channel.QueueDeclare(queue_Repaid, false, false, false, null);
+        var queue_edituser = channel.QueueDeclare(queue_EditUser, false, false, false, null);
         // 同一时刻服务器只发送一条消息给消费者
         channel.BasicQos(0, 1, false);
 
@@ -113,6 +118,26 @@ using (var connection = factory.CreateConnection())
                         }
                     }
                 }
+                else if(e.RoutingKey == "user-edit")
+                {
+                    Console.WriteLine("开始处理数据");
+                    // 获取传过来的数据 然后执行我的归还的相关业务
+                    var sysuser = System.Text.Json.JsonSerializer.Deserialize<Book.Model.SysUser>(jsonStr);
+
+                    if (sysuser == null)
+                    {
+                        throw new Exception("数据为空");
+                    }
+                    else
+                    {
+                        var sysuserService = serviceProvider.GetService<ISysUserService>();
+                        if (sysuserService.EditUserInfo(sysuser))
+                        {
+                            Console.WriteLine("数据处理成功");
+                            channel.BasicAck(e.DeliveryTag, false);
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -121,11 +146,13 @@ using (var connection = factory.CreateConnection())
         };
         string addConsumerTag = "add-book-consumer";
         string borrowedTag = "add-borrowed-consumer"; 
-        string borrowedRepaidTag = "repaid-borrowed-consumer"; 
+        string borrowedRepaidTag = "repaid-borrowed-consumer";
+        string sysuserEditTag = "edit-user-consumer";
         // 启动消费者程序，监听消息
         channel.BasicConsume(queueName, false, addConsumerTag, false, false, null, consumer);
         channel.BasicConsume(queue_Borrowed, false, borrowedTag, false, false, null, consumer);
         channel.BasicConsume(queue_Repaid, false, borrowedRepaidTag, false, false, null, consumer);
+        channel.BasicConsume(queue_edituser, false, sysuserEditTag, false, false, null, consumer);
         Console.WriteLine("按任意键结束程序");
         Console.ReadLine();
     }

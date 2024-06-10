@@ -128,6 +128,30 @@ export const constantRoutes = [
 export const asyncRoutes = [
 
   {
+    path: '/user',
+    component: Layout,
+    redirect: '/user/list',
+    alwaysShow: true,
+    name: 'UserManage',
+    meta: {
+      title: '用户管理',
+      icon: 'shopping',
+      roles: ['admin', 'editor']
+    },
+    children: [{
+      path: 'list',
+      component: () => import('@/views/user/index'),
+      name: 'userlist',
+      meta: {
+        title: '用户列表',
+        icon: 'guide',
+        noCache: true,
+        roles: ['admin', 'editor']
+      }
+    }
+    ]
+  },
+  {
     path: '/goods',
     component: Layout,
     redirect: '/goods/list',
@@ -185,6 +209,17 @@ export const asyncRoutes = [
       }
     },
     {
+      path: 'inventory',
+      component: () => import('@/views/book/inventory'),
+      name: 'bookInventory',
+      meta: {
+        title: '图书库存',
+        icon: 'guide',
+        noCache: true,
+        roles: ['admin']
+      }
+    },
+    {
       path: 'add',
       component: () => import('@/views/book/bookAdd'),
       name: 'bookAdd',
@@ -214,6 +249,17 @@ export const asyncRoutes = [
       name: 'borrowpage',
       meta: {
         title: '我的借阅',
+        icon: 'guide',
+        noCache: true,
+        roles: ['admin', 'editor']
+      }
+    },
+    {
+      path: 'managelist',
+      component: () => import('@/views/borrow/indexManage'),
+      name: 'borrowpageManage',
+      meta: {
+        title: '借阅列表',
         icon: 'guide',
         noCache: true,
         roles: ['admin', 'editor']
