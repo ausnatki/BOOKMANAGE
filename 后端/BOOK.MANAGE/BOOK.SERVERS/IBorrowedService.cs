@@ -15,5 +15,7 @@ namespace BOOK.SERVERS
         public IEnumerable<object> GetBorrowed(int UID);
 
         public bool Repiad(BOOK.MODEL.Borrowed borrowed);
+
+        public IEnumerable<BOOK.MODEL.Borrowed> GetAllList();
     }
 }

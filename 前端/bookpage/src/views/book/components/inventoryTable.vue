@@ -62,6 +62,7 @@
 </template>
 
 <script>
+import { GetAll, ChangeState } from '@/api/user'
 export default {
   data() {
     return {
@@ -82,6 +83,42 @@ export default {
         name: '王小虎',
         address: '上海市普陀区金沙江路 1516 弄'
       }]
+    }
+  },
+  methods: {
+    // 初始化数据
+    InitData() {
+      GetAll()
+        .then(result => {
+          console.log()
+        })
+        .catch(response => {
+          console.error()
+        })
+    },
+    // 修改状态
+    ClickState() {
+      ChangeState(this.uid)
+        .then(result => {
+          if (result.result) {
+            this.$message({
+              type: 'success',
+              message: '修改成功'
+            })
+          } else {
+            this.$message({
+              type: 'error',
+              message: '修改失败'
+            })
+          }
+        })
+        .catch(response => {
+          console.error(response)
+          this.$message({
+            type: 'error',
+            message: '修改失败'
+          })
+        })
     }
   }
 }

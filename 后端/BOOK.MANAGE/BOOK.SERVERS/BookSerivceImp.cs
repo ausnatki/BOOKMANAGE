@@ -205,6 +205,67 @@ namespace BOOK.SERVERS
             }
         }
         #endregion
+
+        #region 获取图书库存界面的列表
+        public IEnumerable<BOOK.MODEL.DoTempClass.BookInventoryDto> GetAllBookAdmin() 
+        {
+            try 
+            {
+                var userlist = dB_Book.GetAllBookAdmin();
+                return userlist;
+            }
+            catch 
+            {
+                return null;
+            }
+        }
+        #endregion
+
+        #region 修改图书状态（isdel）
+        public bool ChangeState(int BID)
+        {
+            try 
+            {
+                if(dB_Book.ChangeState(BID)) return true;
+                else return false;  
+            }
+            catch 
+            {
+                return false;
+            }
+        }
+
+        #endregion
+
+        #region 添加库存
+        public bool AddInventory(int BID,int Cnt)
+        {
+            try 
+            {
+                return dB_Book.AddInventory(BID, Cnt);
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        #region 获取单本图书的借阅情况
+        public IEnumerable<BOOK.MODEL.DoTempClass.BorroweByBidDto> GetBorrowedByBid(int BID)
+        {
+            try 
+            {
+                var userlist = dB_Book.GetBorroweByBid(BID);
+                return userlist;
+            }
+            catch
+            {
+                throw new Exception();
+            }
+        }
+        #endregion
     }
 }
 

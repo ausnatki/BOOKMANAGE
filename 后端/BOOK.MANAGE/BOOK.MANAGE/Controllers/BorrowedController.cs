@@ -121,5 +121,29 @@ namespace BOOK.MANAGE.Controllers
             }
         }
         #endregion
+
+        #region 获取所有借阅信息
+
+        [HttpGet("GetAllList")]
+        public BOOK.MODEL.ApiResp GetAllList()
+        {
+            var result = new BOOK.MODEL.ApiResp();
+            try 
+            {
+                result.Code = 20000;
+                result.Data = borrowedService.GetAllList();
+                result.Result = true;
+                result.Msg = "查找成功";
+                return result;
+            } 
+            catch 
+            {
+                result.Code = 500;
+                result.Result= false;
+                result.Msg = "服务器错误，查找失败";
+                return result;
+            }
+        }
+        #endregion
     }
 }

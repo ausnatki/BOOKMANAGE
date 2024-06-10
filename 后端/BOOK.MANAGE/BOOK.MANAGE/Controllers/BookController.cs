@@ -1,4 +1,5 @@
-﻿using BOOK.SERVERS;
+﻿using BOOK.Repository;
+using BOOK.SERVERS;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,7 +11,7 @@ namespace BOOK.MANAGE.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class BookController : ControllerBase
     {
 
@@ -133,6 +134,117 @@ namespace BOOK.MANAGE.Controllers
                 result.Msg = "修改失败";
                 return result;
             }
+        }
+
+
+
+
+        /// <summary>
+        /// 下面事管理员操作的相关图书 业务
+        /// </summary>
+        /// <returns></returns>
+        
+
+        [HttpGet("GetAllBookAdmin")]
+        public BOOK.MODEL.ApiResp GetAllBookAdmin()
+        {
+            var result = new BOOK.MODEL.ApiResp();
+            var booklist = _bookService.GetAllBookAdmin();
+            if (booklist == null)
+            {
+                result.Code = 500;
+                result.Msg = "查询失败";
+                result.Result = false;
+                return result;
+            }
+            else
+            {
+                result.Code = 20000;
+                result.Data = booklist;
+                result.Result = true;
+                result.Msg = "查询成功";
+                return result;
+            }
+        }
+
+        [HttpGet("GetBorrowByBid")]
+        public BOOK.MODEL.ApiResp GetBorrowByBid(int BID)
+        {
+            var result = new BOOK.MODEL.ApiResp();
+            try 
+            {
+                
+                result.Data = _bookService.GetBorrowedByBid(BID);
+                result.Code = 20000;
+                result.Msg = "查找成功";
+                result.Result = true;
+                return result;
+            } 
+            catch 
+            {
+                result.Code = 500;
+                result.Result = false;
+                result.Msg = "发生错误查找失败";
+                return result;
+            }
+        }
+
+        [HttpPost("ChangeState")]
+        public BOOK.MODEL.ApiResp ChangeState(int BID)
+        {
+            var result = new BOOK.MODEL.ApiResp();
+            if(BID == 0)
+            {
+                result.Code = 500;
+                result.Msg = "改变失败";
+                result.Result = false;
+                return result;
+            }
+            if (_bookService.ChangeState(BID))
+            {
+                result.Code = 20000;
+                result.Result = true;
+                result.Msg = "改变成功";
+                result.Result = true;
+                return result;
+            }
+            else
+            {
+                result.Code = 500;
+                result.Msg = "改变失败";
+                result.Result = false;
+                return result;
+            }
+
+        }
+
+        [HttpPost("AddInventory")]
+        public BOOK.MODEL.ApiResp AddInventory(int BID,int Cnt) 
+        {
+            var result = new BOOK.MODEL.ApiResp();
+            if (BID == 0) 
+            {
+                result.Code = 500;
+                result.Msg = "添加失败";
+                result.Result = false;
+                return result;
+            }
+
+            if(_bookService.AddInventory(BID, Cnt))
+            {
+                result.Code = 20000;
+                result.Msg = "添加成功";
+                result.Result = true;
+                return result;
+            }
+            else
+            {
+                result.Code = 500;
+                result.Msg = "添加失败";
+                result.Result = true;
+                return result;
+            }
+
         }
     }
 }

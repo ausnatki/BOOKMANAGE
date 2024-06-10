@@ -94,8 +94,7 @@
               "RelativeToolTip": "Book.Model\\Role.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T06:12:08.987Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T06:12:08.987Z"
             },
             {
               "$type": "Document",
@@ -107,8 +106,7 @@
               "RelativeToolTip": "Book.Model\\Borrwoed.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T06:12:08.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T06:12:08.35Z"
             },
             {
               "$type": "Document",
@@ -120,8 +118,7 @@
               "RelativeToolTip": "Book.Model\\SysUser_Role.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T06:12:06.607Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T06:12:06.607Z"
             },
             {
               "$type": "Document",
@@ -133,8 +130,7 @@
               "RelativeToolTip": "Book.Model\\SysUser.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAADwvxEAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T06:09:08.686Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T06:09:08.686Z"
             },
             {
               "$type": "Document",
@@ -146,8 +142,7 @@
               "RelativeToolTip": "Book.Repository\\Redis_SysUser.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAAwEkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T06:01:06.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T06:01:06.846Z"
             },
             {
               "$type": "Document",
@@ -159,8 +154,7 @@
               "RelativeToolTip": "Book.Repository\\DB_SysUser.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAADwvyAAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T06:00:50.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T06:00:50.664Z"
             },
             {
               "$type": "Document",
@@ -170,7 +164,7 @@
               "RelativeDocumentMoniker": "Book.Service\\SysUserServiceImp.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Service\\SysUserServiceImp.cs",
               "RelativeToolTip": "Book.Service\\SysUserServiceImp.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAApwB4AAAAgAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAIA7wB4AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T06:00:26.273Z",
               "EditorCaption": ""
@@ -185,8 +179,7 @@
               "RelativeToolTip": "Book.Service\\ISysUserService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwoAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T06:00:15.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T06:00:15.982Z"
             },
             {
               "$type": "Document",
@@ -198,8 +191,7 @@
               "RelativeToolTip": "Book.Model\\Book.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAADwvxEAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T14:40:38.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-08T14:40:38.154Z"
             },
             {
               "$type": "Document",
@@ -211,8 +203,7 @@
               "RelativeToolTip": "Book.Service\\IBorrowedService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T02:10:33.323Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T02:10:33.323Z"
             },
             {
               "$type": "Document",
@@ -224,8 +215,7 @@
               "RelativeToolTip": "Book.Service\\BorrwoedServiceImp.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwC8AAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T02:10:12.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T02:10:12.768Z"
             },
             {
               "$type": "Document",
@@ -237,8 +227,7 @@
               "RelativeToolTip": "Book.Repository\\Redis_Borrowed.cs",
               "ViewState": "AQIAAC0AAAAAAAAAAAAIwEAAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T02:02:49.185Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T02:02:49.185Z"
             },
             {
               "$type": "Document",
@@ -250,8 +239,7 @@
               "RelativeToolTip": "Book.Repository\\DB_Borrwoed.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAADYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T02:02:33.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T02:02:33.984Z"
             },
             {
               "$type": "Document",
@@ -263,8 +251,7 @@
               "RelativeToolTip": "Book.Rabbit\\Program.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAAACQAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T00:57:56.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T00:57:56.349Z"
             },
             {
               "$type": "Document",
@@ -288,8 +275,7 @@
               "RelativeToolTip": "Book.Service\\IBookService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T00:53:10.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T00:53:10.459Z"
             },
             {
               "$type": "Document",
@@ -301,8 +287,7 @@
               "RelativeToolTip": "Book.Repository\\Redis_Book.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAGAAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T00:48:54.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T00:48:54.517Z"
             },
             {
               "$type": "Document",

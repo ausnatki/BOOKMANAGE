@@ -25,7 +25,7 @@ export function logout() {
 
 export function GetInfoById(id) {
   return request({
-    url: '/BooK/SysUser/GetInfoById',
+    url: '/Book/SysUser/GetInfoById',
     method: 'post',
     params: { id }
   })
@@ -36,5 +36,20 @@ export function EditInfo(user) {
     url: '/Book/SysUser/EditInfo',
     method: 'post',
     data: user
+  })
+}
+
+export function GetAll() {
+  return request({
+    url: '/Book/SysUser/GetAllSysUser',
+    method: 'get'
+  })
+}
+
+export function ChangeState(UID) {
+  return request({
+    url: '/Book/SysUser/ChangeState',
+    method: 'post',
+    params: { UID }
   })
 }

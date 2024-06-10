@@ -64,9 +64,144 @@
 </template>
 
 <script>
-
+import { GetAll, Repiad } from '@/api/borrowed.js'
 export default {
+  data() {
+    return {
+      isLoading: true, // 控制表格加载状态的变量
+      tableData: [],
+      serchBookname: '',
+      tserchBookname: '',
+      serchBookauth: '',
+      tserchBookauth: ''
+    }
+  },
+  computed: {
+    filteredData() {
+      // console.log(this.tableData)
+      let filtered = this.tableData
+      const bookname = this.tserchBookname
+      const auth = this.tserchBookauth
 
+      // 判断是否有值
+      if (bookname) {
+        console.log('进行我的图书查询')
+        filtered = filtered.filter(item => {
+          return item.book.bookName.includes(bookname)
+        })
+      }
+      // console.log(filtered)
+      if (auth) {
+        console.log('进行我的作者查询')
+        filtered = filtered.filter(item => {
+          return item.book.author.includes(auth)
+        })
+      }
+
+      return filtered
+    }
+  },
+  mounted() {
+    this.Initdata()
+  },
+  methods: {
+    // 点击归还
+    async ClickRepiad(data) {
+      // 创建一个data的深拷贝
+      // var tdata = JSON.parse(JSON.stringify(data))
+
+      //   // 现在可以安全地修改tdata的属性，而不会影响data
+      //   tdata.book = null
+      //   tdata.sysUser = null
+
+      if (data.state === true) {
+        this.$message({
+          type: 'warning',
+          message: '已经归还了'
+        })
+        return
+      }
+
+      await this.$confirm('确定要归还图书吗, 是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      })
+        .then(() => {
+          Repiad(data).then(result => {
+            this.$message({
+              type: 'success',
+              message: '归还成功'
+            })
+            data.state = true
+          }).catch(response => {
+            this.$message({
+              type: 'error',
+              message: '归还失败'
+            })
+          })
+        })
+        .catch(() => {
+          this.$message({
+            type: 'info',
+            message: '已取消删除'
+          })
+        })
+    },
+    // 初始化数据
+    Initdata() {
+      GetAll().then(result => {
+        this.tableData = result.data
+      }).catch(response => {
+        console.error(response)
+      }).finally(() => {
+        this.isLoading = false
+      })
+    },
+    // 时间处理方法
+    DoTime(timestamp) {
+    //   console.log(timestamp)
+      // 将时间戳字符串转换为日期对象
+      var dateTime = new Date(timestamp)
+
+      // 提取年、月、日、小时和分钟
+      var year = dateTime.getFullYear()
+      var month = dateTime.getMonth() + 1 // 月份是从0开始计数的，所以要加1
+      var day = dateTime.getDate()
+      var hours = dateTime.getHours()
+      var minutes = dateTime.getMinutes()
+
+      // 格式化成想要的格式，这里只保留到分钟
+      var formattedTimestamp = year + '-' + (month < 10 ? '0' : '') + month + '-' + (day < 10 ? '0' : '') + day + ' ' + (hours < 10 ? '0' : '') + hours + ':' + (minutes < 10 ? '0' : '') + minutes
+
+      return formattedTimestamp
+    },
+    // 通过图书名搜索
+    ClickSerchBookName() {
+      this.tserchBookname = this.serchBookname
+    },
+    // 通过作者来搜索
+    ClickSerchBookAuth() {
+      this.tserchBookauth = this.serchBookauth
+    },
+    // 状态栏样式判断
+    SwitchStateTyep(state) {
+    //   console.log(state)
+      switch (state) {
+        case true: return 'success'
+        case false: return 'danger'
+        default : return 'info'
+      }
+    },
+    // 状态栏文版
+    SwitchStateText(state) {
+      switch (state) {
+        case true: return '已归还'
+        case false: return '未归还'
+        default : return '未知状态'
+      }
+    }
+  }
 }
 </script>
 

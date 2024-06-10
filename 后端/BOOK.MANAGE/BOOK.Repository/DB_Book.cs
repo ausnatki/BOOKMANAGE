@@ -1,6 +1,10 @@
 ﻿using BOOK.DB;
 using BOOK.MODEL.Exception;
 using System.Data.Common;
+using System.Data.Entity.Core.Mapping;
+using System.Data.Entity.Validation;
+using System.Runtime.CompilerServices;
+using System.Security.Policy;
 using DbException = BOOK.MODEL.Exception.DbException;
 
 namespace BOOK.Repository
@@ -19,7 +23,7 @@ namespace BOOK.Repository
         {
             try 
             {
-                var listbook = Ctx.Books.OrderByDescending(c=>c.Id).ToList();
+                var listbook = Ctx.Books.Where(c=>c.IsDel == false).OrderByDescending(c=>c.Id).ToList();
                 return listbook;
             }
             catch
@@ -137,5 +141,94 @@ namespace BOOK.Repository
 
         }
         #endregion
+
+        #region 获取图书库存的信息(管理员）
+        public IEnumerable<BOOK.MODEL.DoTempClass.BookInventoryDto> GetAllBookAdmin()
+        {
+            try
+            {
+                var booklist = Ctx.Books.Select(c => new BOOK.MODEL.DoTempClass.BookInventoryDto
+                {
+                    Id = c.Id,
+                    BookName = c.BookName,
+                    ISBN = c.ISBN,
+                    State = c.IsDel,
+                    Inventory = c.Inventory,
+                    LoanedOut = c.borrowed.Count(o => o.BID == c.Id && !o.State),
+                    InStock = c.Inventory - c.borrowed.Count(o => o.BID == c.Id && !o.State)
+                }).ToList();
+
+                return booklist;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (ex) here if needed
+                return Enumerable.Empty<BOOK.MODEL.DoTempClass.BookInventoryDto>();
+            }
+        }
+
+        #endregion
+
+        #region 修改图书状态 （isdel）（管理员）
+        public bool ChangeState(int BID)
+        {
+            using(var transaction = Ctx.Database.BeginTransaction())
+            {
+                try 
+                {
+                    var book = Ctx.Books.Where(c=>c.Id == BID).FirstOrDefault();
+                    if (book == null) return false;
+                    book.IsDel = (bool)book.IsDel ? false : true;
+                    Ctx.SaveChanges();
+                    transaction.Commit();
+                    return true;
+                }
+                catch 
+                {
+                    return false;
+                }
+            }
+        }
+        #endregion
+
+        #region 具体图书的借阅信息(管理员)
+        public IEnumerable<BOOK.MODEL.DoTempClass.BorroweByBidDto> GetBorroweByBid(int BID) 
+        {
+            var borrowlist = Ctx.Borroweds.Where(c=>c.BID == BID).Select(c => new BOOK.MODEL.DoTempClass.BorroweByBidDto
+            {
+
+                BookName = c.Book.BookName,
+                BorroweDate = c.BorrowedTime,
+                State = c.State,
+                UserName = c.SysUser.UserName,
+                Email = c.SysUser.Email
+            }).ToList();
+            return borrowlist;
+        }
+        #endregion
+
+        #region 添加库存（管理员）
+        public bool AddInventory(int BID,int Cnt)
+        {
+            using(var transaction = Ctx.Database.BeginTransaction())
+            {
+                try 
+                {
+                    var book =Ctx.Books.Where(c=>c.Id==BID).FirstOrDefault();
+                    if (book == null) return false;
+                    book.Inventory += Cnt;
+                    Ctx.SaveChanges();
+                    transaction.Commit();
+                    return true;
+                }
+                catch 
+                {
+                    return false;
+                }
+            }
+        }
+        #endregion
+
+
     }
 }

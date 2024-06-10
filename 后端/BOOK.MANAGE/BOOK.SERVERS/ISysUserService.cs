@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BOOK.MODEL.DoTempClass;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,9 @@ namespace BOOK.SERVERS
         public bool EditUserInfo(BOOK.MODEL.SysUser user);
 
         public BOOK.MODEL.SysUser GetUserInfo(int Id);
+
+        public List<BOOK.MODEL.DoTempClass.SysUserDto> GetAllUserInfo();
+
+        public bool ChangeState(int UId);
     }
 }

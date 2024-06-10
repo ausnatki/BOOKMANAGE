@@ -152,41 +152,6 @@ export const asyncRoutes = [
     ]
   },
   {
-    path: '/goods',
-    component: Layout,
-    redirect: '/goods/list',
-    alwaysShow: true,
-    name: 'GoodManage',
-    meta: {
-      title: '商品管理',
-      icon: 'shopping',
-      roles: ['admin', 'editor']
-    },
-    children: [{
-      path: 'list',
-      component: () => import('@/views/goods/goods-list'),
-      name: 'goodsList',
-      meta: {
-        title: '商品列表',
-        icon: 'guide',
-        noCache: true,
-        roles: ['admin', 'editor']
-      }
-    },
-    {
-      path: 'add',
-      component: () => import('@/views/goods/goods-from'),
-      name: 'goodsform',
-      meta: {
-        title: '商品添加',
-        icon: 'guide',
-        noCache: true,
-        roles: ['admin']
-      }
-    }
-    ]
-  },
-  {
     path: '/book',
     component: Layout,
     redirect: '/book/list',

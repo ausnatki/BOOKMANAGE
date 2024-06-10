@@ -2,6 +2,8 @@
 using BOOK.Repository;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.Entity.Core.Mapping;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -89,6 +91,37 @@ namespace BOOK.SERVERS
             catch
             {
                 return null;
+            }
+        }
+        #endregion
+
+        #region 获取所有列表信息
+        public List<BOOK.MODEL.DoTempClass.SysUserDto> GetAllUserInfo()
+        {
+            try 
+            {
+                var userlist = dB_SysUser.GetAllSysUser();
+                return userlist;
+            }
+            catch 
+            {
+                return null;
+            }
+        }
+        #endregion
+
+        #region 更改用户状态
+        public bool ChangeState(int UId)
+        {
+          
+            try
+            {
+                if(dB_SysUser.ChangeState(UId)) return true;
+                return false;
+            }
+            catch 
+            {
+                return false;
             }
         }
         #endregion

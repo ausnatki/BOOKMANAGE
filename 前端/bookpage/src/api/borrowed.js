@@ -15,3 +15,10 @@ export function Repiad(data) {
     data
   })
 }
+
+export function GetAll() {
+  return request({
+    url: '/Book/Borrowed/GetAllList',
+    method: 'get'
+  })
+}

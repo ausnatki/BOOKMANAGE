@@ -216,5 +216,19 @@ namespace BOOK.SERVERS
             }
         }
         #endregion
+
+        #region 获取所有借阅信息（管理员）
+        public IEnumerable<BOOK.MODEL.Borrowed> GetAllList()
+        {
+            try
+            {
+                return _dbBorrwoed.GetAllList();
+            } 
+            catch
+            {
+                throw new Exception();
+            }
+        }
+        #endregion
     }
 }

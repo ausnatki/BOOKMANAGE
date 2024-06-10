@@ -15,5 +15,9 @@ namespace BOOK.SERVERS
         public bool InstallBook(BOOK.MODEL.Book book);
         public bool DelBook(int id);
         public int GetOutInventory(int id);
+        public bool ChangeState(int BID);
+        public IEnumerable<BOOK.MODEL.DoTempClass.BookInventoryDto> GetAllBookAdmin();
+        public bool AddInventory(int BID, int Cnt);
+        public IEnumerable<BOOK.MODEL.DoTempClass.BorroweByBidDto> GetBorrowedByBid(int BID);
     }
 }
