@@ -1,4 +1,5 @@
-﻿using BOOK.Repository;
+﻿using BOOK.MODEL;
+using BOOK.Repository;
 using BOOK.SERVERS;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -129,6 +130,22 @@ namespace BOOK.MANAGE.Controllers
                 result.Msg = "服务器错误，修改失败";
                 result.Result = false;
                 return result;
+            }
+        }
+
+        [HttpPost("Enroll")]
+
+        public ActionResult<object> Enroll([FromBody] SysUser user)
+        {
+            if (user.UserName == null) { return StatusCode(400, new { code = 50008, message = "注册失败" }); }
+
+            if (_userService.Enroll(user))
+            {
+                return new { code = 20000 };
+            }
+            else
+            {
+                return StatusCode(400, new { code = 50008, message = "注册失败" });
             }
         }
     }

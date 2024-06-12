@@ -1,5 +1,6 @@
 ﻿using BOOK.DB;
 using BOOK.MODEL.Exception;
+using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
 using System.Data.Entity.Core.Mapping;
 using System.Data.Entity.Validation;
@@ -13,9 +14,11 @@ namespace BOOK.Repository
     {
         private readonly BOOK.DB.BooksContext Ctx;
 
+
         public DB_Book(BooksContext ctx)
         {
             Ctx = ctx;
+           
         }
 
         #region 获取全部图书信息
@@ -23,7 +26,7 @@ namespace BOOK.Repository
         {
             try 
             {
-                var listbook = Ctx.Books.Where(c=>c.IsDel == false).OrderByDescending(c=>c.Id).ToList();
+                var listbook = Ctx.Books.Where(c=>c.IsDel == false).AsNoTracking().OrderByDescending(c=>c.Id).ToList();
                 return listbook;
             }
             catch
@@ -131,7 +134,7 @@ namespace BOOK.Repository
         {
             try
             {
-                int result = Ctx.Borroweds.Where(c => c.BID == id).Count();
+                int result = Ctx.Borroweds.Where(c => c.BID == id && c.State==false).Count(); 
                 return result;
             }
             catch 
@@ -170,22 +173,22 @@ namespace BOOK.Repository
         #endregion
 
         #region 修改图书状态 （isdel）（管理员）
-        public bool ChangeState(int BID)
+        public BOOK.MODEL.Book ChangeState(int BID)
         {
             using(var transaction = Ctx.Database.BeginTransaction())
             {
                 try 
                 {
                     var book = Ctx.Books.Where(c=>c.Id == BID).FirstOrDefault();
-                    if (book == null) return false;
+                    if (book == null) throw new Exception();
                     book.IsDel = (bool)book.IsDel ? false : true;
                     Ctx.SaveChanges();
                     transaction.Commit();
-                    return true;
+                    return book;
                 }
                 catch 
                 {
-                    return false;
+                    throw new Exception();
                 }
             }
         }
@@ -208,22 +211,22 @@ namespace BOOK.Repository
         #endregion
 
         #region 添加库存（管理员）
-        public bool AddInventory(int BID,int Cnt)
+        public BOOK.MODEL.Book AddInventory(int BID,int Cnt)
         {
             using(var transaction = Ctx.Database.BeginTransaction())
             {
                 try 
                 {
                     var book =Ctx.Books.Where(c=>c.Id==BID).FirstOrDefault();
-                    if (book == null) return false;
+                    if (book == null) throw new Exception();
                     book.Inventory += Cnt;
                     Ctx.SaveChanges();
                     transaction.Commit();
-                    return true;
+                    return book;
                 }
                 catch 
                 {
-                    return false;
+                    throw new Exception();
                 }
             }
         }

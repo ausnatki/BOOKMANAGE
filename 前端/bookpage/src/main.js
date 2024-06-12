@@ -20,6 +20,10 @@ import './utils/error-log' // error log
 
 import * as filters from './filters' // global filters
 
+import './assets/tailwind.css'
+
+// createApp(App).mount('#app')
+
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api

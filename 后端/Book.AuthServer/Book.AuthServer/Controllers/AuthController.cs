@@ -34,6 +34,8 @@ namespace Book.AuthServer.Controllers
 
             return new { code = 20000, data = info };
         }
+
+      
         public class UserInfo
         {
             public string username { get; set; }

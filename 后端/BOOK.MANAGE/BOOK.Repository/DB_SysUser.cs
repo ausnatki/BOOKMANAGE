@@ -1,4 +1,5 @@
 ﻿using BOOK.DB;
+using BOOK.MODEL;
 using BOOK.MODEL.DoTempClass;
 using System;
 using System.Collections.Generic;
@@ -87,5 +88,66 @@ namespace BOOK.Repository
             }
         }
         #endregion
+
+
+        public bool Enroll(SysUser user)
+        {
+            using (var transaction = Ctx.Database.BeginTransaction())
+            {
+                try
+                {
+                    // 新增用户
+                    var tusr = new SysUser
+                    {
+                        UserName = user.UserName,
+                        LoginName = user.UserName,
+                        Password = user.Password,
+                        Email = user.Email
+                    };
+
+                    Ctx.SysUsers.Add(tusr);
+                    Ctx.SaveChanges();
+
+                    // 获取新增用户的ID
+                    var ttuser = Ctx.SysUsers
+                        .Where(c => c.LoginName == user.UserName)
+                        .FirstOrDefault();
+
+
+                    var tt = Ctx.SysUsers.ToList();
+                    var rr = Ctx.Roles.ToList();
+
+                    var tttt = Ctx.User_role.ToList();
+
+                    if (ttuser != null)
+                    {
+                        // 新增用户角色
+                        var tru = new SysUser_Role
+                        {
+                            UID = ttuser.Id,
+                            RID = 4
+                        };
+
+                        Ctx.User_role.Add(tru);
+                        Ctx.SaveChanges();
+
+                        // 提交事务
+                        transaction.Commit();
+                        return true;
+                    }
+                    else
+                    {
+                        throw new Exception("User not found after insertion.");
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    // 在这里记录日志，或者根据需求处理异常
+                    transaction.Rollback();
+                    throw new Exception("User not found after insertion.");
+                }
+            }
+        }
     }
 }

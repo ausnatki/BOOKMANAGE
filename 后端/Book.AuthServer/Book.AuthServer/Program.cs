@@ -9,10 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 
 // Add services to the container.
+// 读取配置文件中的数据库连接字符串
+string connectionString = builder.Configuration.GetConnectionString("BooksDatabase");
 
-// 注册AuthContext
-builder.Services.AddDbContext<AuthContext>(options =>
-    options.UseSqlServer("Server=DESKTOP-VCSEMTQ\\KKKMSSQLSERVER;Database=BOOKMANAGE;Trusted_Connection=True;"));
+// 注册BooksContext
+builder.Services.AddDbContext<Book.AuthServer.DataAccessor.AuthContext>(options =>
+    options.UseSqlServer(connectionString));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

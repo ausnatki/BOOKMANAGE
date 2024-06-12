@@ -66,7 +66,7 @@ namespace BOOK.Repository
         {
             try
             {
-                var result = Ctx.Borroweds.Where(c => c.UID == UID && c.BID == BID).FirstOrDefault();
+                var result = Ctx.Borroweds.Where(c => c.UID == UID && c.BID == BID && c.State == false).FirstOrDefault();
                 if (result == null) return false;
                 return true;
             }

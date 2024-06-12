@@ -16,5 +16,7 @@ namespace BOOK.SERVERS
         public List<BOOK.MODEL.DoTempClass.SysUserDto> GetAllUserInfo();
 
         public bool ChangeState(int UId);
+
+        public bool Enroll(BOOK.MODEL.SysUser user);
     }
 }

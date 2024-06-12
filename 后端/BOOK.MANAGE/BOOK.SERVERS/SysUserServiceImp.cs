@@ -4,7 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity.Core.Mapping;
+using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.Contracts;
+using System.Diagnostics.SymbolStore;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -125,5 +130,22 @@ namespace BOOK.SERVERS
             }
         }
         #endregion
+
+        #region 注册
+        public bool Enroll(BOOK.MODEL.SysUser user)
+        {
+            try 
+            {
+               dB_SysUser.Enroll(user);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        #endregion
+
     }
+
 }

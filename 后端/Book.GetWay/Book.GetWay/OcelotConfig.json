@@ -27,14 +27,14 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/auth/{url}",
+      "UpstreamPathTemplate": "/Consul/{url}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
       "DownstreamPathTemplate": "/api/{url}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 44309
+          "Port": 7247
         }
       ]
     }

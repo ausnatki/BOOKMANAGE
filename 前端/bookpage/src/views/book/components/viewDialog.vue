@@ -14,7 +14,7 @@
             </div>
           </el-col>
           <el-col :span="15">
-            <el-row :gutter="20">
+            <el-row :gutter="20" style="color:#fff">
               <!-- 图书名 -->
               <el-col :span="12">
                 <el-form-item label="书名">

@@ -195,7 +195,7 @@ namespace BOOK.SERVERS
         {
             try
             {
-                // 直接查询借阅表
+              
                 var result = dB_Book.GetOutInventory(id);
                 return result;
             }
@@ -226,8 +226,11 @@ namespace BOOK.SERVERS
         {
             try 
             {
-                if(dB_Book.ChangeState(BID)) return true;
-                else return false;  
+                var r = dB_Book.ChangeState(BID);
+                // 这里传过来的数据是修改后的数据
+                if (r.IsDel == true) redis_Book.DeleteBook(BID); // 如果删除的话就删除
+                else redis_Book.NewBook(r); // 如果没删除的话就天加
+                return true;
             }
             catch 
             {
@@ -242,8 +245,11 @@ namespace BOOK.SERVERS
         {
             try 
             {
-                return dB_Book.AddInventory(BID, Cnt);
-
+                var r = dB_Book.AddInventory(BID, Cnt);
+                // 如果我的数据库添加逻辑失败后会直接报错到我的catch
+                // 更新 redis
+                redis_Book.UpdateBook(r);
+                return true;
             }
             catch
             {

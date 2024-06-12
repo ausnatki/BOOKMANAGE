@@ -5,6 +5,7 @@ D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\bin\Debug\net6.0\B
 D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\bin\Debug\net6.0\Book.AuthServer.runtimeconfig.json
 D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\bin\Debug\net6.0\Book.AuthServer.dll
 D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\bin\Debug\net6.0\Book.AuthServer.pdb
+D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\bin\Debug\net6.0\Consul.dll
 D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\bin\Debug\net6.0\jose-jwt.dll
 D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\bin\Debug\net6.0\JWT.dll
 D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
@@ -75,4 +76,3 @@ D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\obj\Debug\net6.0\r
 D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\obj\Debug\net6.0\Book.AuthServer.pdb
 D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\obj\Debug\net6.0\Book.AuthServer.genruntimeconfig.cache
 D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\obj\Debug\net6.0\ref\Book.AuthServer.dll
-D:\git\book\BOOKMANAGE\后端\Book.AuthServer\Book.AuthServer\bin\Debug\net6.0\Consul.dll

@@ -91,7 +91,7 @@ namespace Book.Repository
         #endregion
 
         #region 添加图书
-        public bool InstallBook(Book.Model.Book book)
+        public Book.Model.Book InstallBook(Book.Model.Book book)
         {
             using (var transaction = Ctx.Database.BeginTransaction())
             {
@@ -105,12 +105,13 @@ namespace Book.Repository
                     Ctx.Add(book);
                     Ctx.SaveChanges();
                     transaction.Commit();
-                    return true;
+                    var result = Ctx.Books.OrderByDescending(c => c.Id).FirstOrDefault();
+                    return result;
                 }
                 catch
                 {
                     transaction.Rollback();
-                    return false;
+                    throw new Exception();
                 }
             }
         }

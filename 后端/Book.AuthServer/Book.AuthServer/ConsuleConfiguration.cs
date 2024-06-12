@@ -28,7 +28,7 @@ namespace Book.AuthServer
                 Name = name,
                 Address = ip,
                 Port = port,
-                Tags = new string[] { "api/Books", "api/HealthCheck" },
+                Tags = new string[] { "api/Auth", "api/HealthCheck" },
                 TaggedAddresses = new Dictionary<string, Consul.ServiceTaggedAddress>(),
 
                 Check = new Consul.AgentServiceCheck() // 注册健康检查方式
@@ -41,9 +41,9 @@ namespace Book.AuthServer
             };
 
             // 相关api
-            info.TaggedAddresses.Add("api/Books", new Consul.ServiceTaggedAddress()
+            info.TaggedAddresses.Add("api/Auth", new Consul.ServiceTaggedAddress()
             {
-                Address = "api/Books",
+                Address = "api/Auth",
                 Port = port,
             });
 

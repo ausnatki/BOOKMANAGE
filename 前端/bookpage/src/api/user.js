@@ -16,6 +16,14 @@ export function getInfo(token) {
   })
 }
 
+export function enroll(data) {
+  return request({
+    url: '/Book/SysUser/Enroll',
+    method: 'post',
+    data
+  })
+}
+
 export function logout() {
   return request({
     url: '/webapiconsul/Login/logout',

@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Consule\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D570BB08-C935-48E6-A28C-C0C295AF3668}|Book.Consule\\Book.Consule.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.consule\\book.consule\\apiresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D570BB08-C935-48E6-A28C-C0C295AF3668}|Book.Consule\\Book.Consule.csproj|solutionrelative:book.consule\\apiresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D570BB08-C935-48E6-A28C-C0C295AF3668}|Book.Consule\\Book.Consule.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.consule\\book.consule\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D570BB08-C935-48E6-A28C-C0C295AF3668}|Book.Consule\\Book.Consule.csproj|solutionrelative:book.consule\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D570BB08-C935-48E6-A28C-C0C295AF3668}|Book.Consule\\Book.Consule.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.consule\\book.consule\\controllers\\consulcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D570BB08-C935-48E6-A28C-C0C295AF3668}|Book.Consule\\Book.Consule.csproj|solutionrelative:book.consule\\controllers\\consulcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D570BB08-C935-48E6-A28C-C0C295AF3668}|Book.Consule\\Book.Consule.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.consule\\book.consule\\controllers\\pollycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D570BB08-C935-48E6-A28C-C0C295AF3668}|Book.Consule\\Book.Consule.csproj|solutionrelative:book.consule\\controllers\\pollycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D570BB08-C935-48E6-A28C-C0C295AF3668}|Book.Consule\\Book.Consule.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.consule\\book.consule\\apiresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D570BB08-C935-48E6-A28C-C0C295AF3668}|Book.Consule\\Book.Consule.csproj|solutionrelative:book.consule\\apiresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D570BB08-C935-48E6-A28C-C0C295AF3668}|Book.Consule\\Book.Consule.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.consule\\book.consule\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D570BB08-C935-48E6-A28C-C0C295AF3668}|Book.Consule\\Book.Consule.csproj|solutionrelative:book.consule\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D570BB08-C935-48E6-A28C-C0C295AF3668}|Book.Consule\\Book.Consule.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.consule\\book.consule\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "apiResult.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Consule\\Book.Consule\\apiResult.cs",
               "RelativeDocumentMoniker": "Book.Consule\\apiResult.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Consule\\Book.Consule\\apiResult.cs",
               "RelativeToolTip": "Book.Consule\\apiResult.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwkAAAAoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T14:01:51.632Z",
               "EditorCaption": ""
@@ -63,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Consule\\Book.Consule\\appsettings.json",
               "RelativeDocumentMoniker": "Book.Consule\\appsettings.json",
@@ -87,27 +87,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "PollyController.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Consule\\Book.Consule\\Controllers\\PollyController.cs",
               "RelativeDocumentMoniker": "Book.Consule\\Controllers\\PollyController.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Consule\\Book.Consule\\Controllers\\PollyController.cs",
               "RelativeToolTip": "Book.Consule\\Controllers\\PollyController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAwFwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T13:51:31.738Z"
+              "WhenOpened": "2024-06-03T13:51:31.738Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ConsulController.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Consule\\Book.Consule\\Controllers\\ConsulController.cs",
               "RelativeDocumentMoniker": "Book.Consule\\Controllers\\ConsulController.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Consule\\Book.Consule\\Controllers\\ConsulController.cs",
               "RelativeToolTip": "Book.Consule\\Controllers\\ConsulController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAPAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAkAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T13:46:08.836Z"
+              "WhenOpened": "2024-06-03T13:46:08.836Z",
+              "EditorCaption": ""
             }
           ]
         }

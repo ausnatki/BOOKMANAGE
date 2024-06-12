@@ -25,17 +25,9 @@ namespace Book.Service
             {
                 if (borrowed.BID == 0 || borrowed.UID == 0) throw new Exception("传值错误");
                 // 首先对数据库进行相关的操作
-                bool result = _dbBorrwoed.IsBorrwoed(borrowed);
-                if (result)
-                {
-                    borrowed.Book = null;
-                    redis_borrowed.Install(borrowed);
+                var result = _dbBorrwoed.IsBorrwoed(borrowed);
+                    redis_borrowed.Install(result);
                     return true;
-                }
-                else
-                {
-                    throw new Exception("数据库添加失败");
-                }
             }
             catch
             {

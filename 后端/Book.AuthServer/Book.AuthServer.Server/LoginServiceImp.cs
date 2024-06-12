@@ -39,16 +39,17 @@ namespace Book.AuthServer.Server
 
                 if (usernameClaim != null)
                 {
-                    var info = m_DbContext.Users
+
+                    var info = m_DbContext.SysUsers
                         .Where(c => c.LoginName == usernameClaim)
                         .Select(c => new
                         {
-                            roles = "admin",
+                            roles = m_DbContext.User_role.Where(d=>d.UID == c.Id).Select(c=>c.Role.Name).ToList(),
                             introduction = "I am a super administrator",
                             avatar = "https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif",
                             name = c.LoginName,
-                            email = "ausnatki@qq.com",
-                            phone = "18581348911",
+                            email = c.Email,
+                            phone = "",
                             uid = c.Id,
                             img = "dsadasdasda"
                         }).FirstOrDefault();
@@ -74,7 +75,7 @@ namespace Book.AuthServer.Server
             //string username = userInfo.username;
             //string password = userInfo.password;
             //验证登录用户名和密码
-            var user = m_DbContext.Users.Where(c => c.LoginName == username && c.Password == password).FirstOrDefault();
+            var user = m_DbContext.SysUsers.Where(c => c.LoginName == username && c.Password == password).FirstOrDefault();
             if (user != null)
             {
                 var now = DateTime.UtcNow; //添加用户的信息，转成一组声明，还可以写入更多用户信息声明
@@ -131,5 +132,8 @@ namespace Book.AuthServer.Server
         }
         #endregion
 
+
+
     }
 }
+

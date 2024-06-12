@@ -136,7 +136,7 @@ export const asyncRoutes = [
     meta: {
       title: '用户管理',
       icon: 'shopping',
-      roles: ['admin', 'editor']
+      roles: ['admin', 'superadmin', 'commonuser', 'visitor']
     },
     children: [{
       path: 'list',
@@ -146,7 +146,31 @@ export const asyncRoutes = [
         title: '用户列表',
         icon: 'guide',
         noCache: true,
-        roles: ['admin', 'editor']
+        roles: ['admin', 'superadmin', 'commonuser', 'visitor']
+      }
+    }
+    ]
+  },
+  {
+    path: '/consul',
+    component: Layout,
+    redirect: '/consul/index',
+    alwaysShow: true,
+    name: 'ConsulManager',
+    meta: {
+      title: 'Consul模块',
+      icon: 'guide',
+      roles: ['admin', 'superadmin', 'commonuser', 'visitor']
+    },
+    children: [{
+      path: 'index',
+      component: () => import('@/views/consolelist/index'),
+      name: 'consulIndex',
+      meta: {
+        title: 'Consul实验',
+        icon: 'guide',
+        noCache: true,
+        roles: ['admin', 'superadmin', 'commonuser', 'visitor']
       }
     }
     ]
@@ -160,7 +184,7 @@ export const asyncRoutes = [
     meta: {
       title: '图书',
       icon: 'shopping',
-      roles: ['admin', 'editor']
+      roles: ['admin', 'superadmin', 'commonuser', 'visitor']
     },
     children: [{
       path: 'list',
@@ -170,7 +194,7 @@ export const asyncRoutes = [
         title: '图书列表',
         icon: 'guide',
         noCache: true,
-        roles: ['admin', 'editor']
+        roles: ['admin', 'commonuser', 'superadmin', 'visitor']
       }
     },
     {
@@ -181,7 +205,7 @@ export const asyncRoutes = [
         title: '图书库存',
         icon: 'guide',
         noCache: true,
-        roles: ['admin']
+        roles: ['admin', 'superadmin', 'commonuser', 'visitor']
       }
     },
     {
@@ -192,7 +216,7 @@ export const asyncRoutes = [
         title: '图书添加',
         icon: 'guide',
         noCache: true,
-        roles: ['admin']
+        roles: ['admin', 'superadmin', 'commonuser', 'visitor']
       }
     }
     ]
@@ -206,7 +230,7 @@ export const asyncRoutes = [
     meta: {
       title: '借阅',
       icon: 'shopping',
-      roles: ['admin', 'editor']
+      roles: ['admin', 'superadmin', 'commonuser', 'visitor']
     },
     children: [{
       path: 'list',
@@ -216,7 +240,7 @@ export const asyncRoutes = [
         title: '我的借阅',
         icon: 'guide',
         noCache: true,
-        roles: ['admin', 'editor']
+        roles: ['admin', 'superadmin', 'commonuser', 'visitor']
       }
     },
     {
@@ -227,7 +251,7 @@ export const asyncRoutes = [
         title: '借阅列表',
         icon: 'guide',
         noCache: true,
-        roles: ['admin', 'editor']
+        roles: ['admin', 'superadmin', 'commonuser', 'visitor']
       }
     }
     ]

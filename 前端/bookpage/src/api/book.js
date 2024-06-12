@@ -35,10 +35,42 @@ export function BorrowedBook(BID, UID) {
 
 export function IsBorrowed(BID, UID) {
   return request({
-    url: 'Book/Borrowed/IsBorrowed',
+    url: '/Book/Borrowed/IsBorrowed',
     method: 'post',
     params: {
       BID, UID
     }
+  })
+}
+
+export function GetInventory() {
+  return request({
+    url: '/Book/Book/GetAllBookAdmin',
+    method: 'get'
+
+  })
+}
+
+export function ChangeState(BID) {
+  return request({
+    url: '/Book/Book/ChangeState',
+    method: 'post',
+    params: { BID }
+  })
+}
+
+export function GetBorrowByBid(BID) {
+  return request({
+    url: '/Book/Book/GetBorrowByBid',
+    method: 'get',
+    params: { BID }
+  })
+}
+
+export function AddInventory(BID, Cnt) {
+  return request({
+    url: '/Book/Book/AddInventory',
+    method: 'post',
+    params: { BID, Cnt }
   })
 }

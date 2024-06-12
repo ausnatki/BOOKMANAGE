@@ -21,7 +21,7 @@ namespace Book.Repository
         #endregion
 
         #region 用户借阅图书
-        public bool IsBorrwoed(Book.Model.Borrowed borrowed)
+        public Book.Model.Borrowed IsBorrwoed(Book.Model.Borrowed borrowed)
         {
             using (var transaction = Ctx.Database.BeginTransaction())
             {
@@ -33,20 +33,44 @@ namespace Book.Repository
                     var sysuer = Ctx.SysUsers.Where(c => c.Id == borrowed.UID).FirstOrDefault();
                     if (book == null || sysuer == null)
                     {
-                        return false; // 数据不合法
+                        throw new Exception();
                     }
                     else
                     {
                         Ctx.Borroweds.Add(borrowed);
                         Ctx.SaveChanges();
                         transaction.Commit();
-                        return true;
+                       // 将 null 字面量或可能为 null 的值转换为非 null 类型。
+                        Book.Model.Borrowed reuslt = Ctx.Borroweds.OrderByDescending(c => c.Id)
+                             .Select(c => new Borrowed // 直接创建Borrowed对象  
+                             {
+                                 Id = c.Id,
+                                 UID = c.UID,
+                                 BID = c.BID,
+                                 BorrowedTime = c.BorrowedTime,
+                                 State = c.State,
+                                 SysUser = c.SysUser != null ? new SysUser // 如果SysUser不为null，则创建一个SysUser对象  
+                                 {
+
+                                     Id = c.SysUser.Id, // 假设SysUser有Id属性  
+                                     UserName = c.SysUser.UserName
+                                 } : null,
+                                 Book = c.Book != null ? new Model.Book // 如果Book不为null，则创建一个Book对象  
+                                 {
+
+                                     Id = c.Book.Id, // 假设Book有Id属性  
+                                     BookName = c.Book.BookName,
+                                     Author = c.Book.Author
+                                 } : null
+                             }).FirstOrDefault();
+                        // 将 null 字面量或可能为 null 的值转换为非 null 类型。
+                        return reuslt;
                     }
                 }
                 catch
                 {
                     transaction.Rollback();
-                    return false;
+                    throw new Exception();
                 }
             }
         }

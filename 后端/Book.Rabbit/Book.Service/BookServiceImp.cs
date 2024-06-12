@@ -103,14 +103,9 @@ namespace Book.Service
             try
             {
                 var reuslt = dB_Book.InstallBook(Book);
-                if (reuslt)
-                {
-                    redis_Book.NewBook(Book);
-                }
-                else
-                {
-                    return false;
-                }
+               
+                redis_Book.NewBook(reuslt);
+
                 return true;
             }
             catch

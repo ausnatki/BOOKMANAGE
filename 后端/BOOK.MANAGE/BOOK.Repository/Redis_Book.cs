@@ -130,7 +130,7 @@ namespace BOOK.Repository
 
         public void RefreshExpiredTime(StackExchange.Redis.IDatabase db)
         {
-            db.KeyExpire(m_BookHashSetName, new TimeSpan(0, 5, 0));// 将过期缓存设置为5分钟的时限
+            db.KeyExpire(m_BookHashSetName, new TimeSpan(0, 5, 0));// 将过期缓存设置为10秒的时限
         }
     }
 }

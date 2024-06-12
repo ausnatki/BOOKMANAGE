@@ -38,8 +38,8 @@ module.exports = {
       errors: true
     },
     proxy: {
-      "/": {
-        target: "https://localhost:7223",
+      '/': {
+        target: 'https://localhost:7223',
         changeOrigin: true
       }
     }
@@ -127,5 +127,17 @@ module.exports = {
           config.optimization.runtimeChunk('single')
         }
       )
+  },
+  css: {
+    loaderOptions: {
+      postcss: {
+        postcssOptions: {
+          plugins: [
+            require('tailwindcss'),
+            require('autoprefixer')
+          ]
+        }
+      }
+    }
   }
 }

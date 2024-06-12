@@ -3,7 +3,8 @@
     <!-- 这里是通过图书名查询 -->
     <el-input v-model="serchUserName" placeholder="用户名" style="width:200px;padding:0 10px 10px 0" />
     <el-button type="primary" @click="ClickSerchUserName">搜索</el-button>
-
+    <el-checkbox v-model="checked1" label="未审核" style="margin-left:20px;padding: 9px 20px 7px 10px;" border />
+    <el-checkbox v-model="checked2" label="已审核" style="margin-left:-10px;padding: 9px 20px 7px 10px;" border />
     <template>
       <el-table
         :data="filteredData"
@@ -55,7 +56,9 @@ export default {
     return {
       tableData: [],
       serchUserName: '',
-      tserchUserName: ''
+      tserchUserName: '',
+      checked1: false,
+      checked2: false
     }
   },
   computed: {
@@ -63,13 +66,27 @@ export default {
       // console.log(this.tableData)
       let filtered = this.tableData
       const username = this.tserchUserName
-
+      const checked1 = this.checked1
+      const checked2 = this.checked2
       // console.log(filtered)
       if (username) {
-        console.log('进行我的作者查询')
+        // console.log('进行我的作者查询')
         filtered = filtered.filter(item => {
           return item.userName.includes(username)
         })
+      }
+      // 根据 checked1 和 checked2 进行过滤
+      if (checked1 && !checked2) {
+        filtered = filtered.filter(item => {
+          return !item.role // 未审核
+        })
+      } else if (!checked1 && checked2) {
+        filtered = filtered.filter(item => {
+          return item.role // 已审核
+        })
+      } else if (checked1 && checked2) {
+        // 显示所有项目
+        // 不需要过滤
       }
 
       return filtered

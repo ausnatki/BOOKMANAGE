@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Book.AuthServer.Models
 {
+    [Table("TB_SysUser_Role")]
+
     public class SysUser_Role
     {
         public int Id { get; set; }

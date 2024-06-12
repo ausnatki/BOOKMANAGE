@@ -1,93 +1,92 @@
+<!-- eslint-disable vue/attribute-hyphenation -->
 <template>
-  <div class="login-container">
-    <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="on" label-position="left">
+  <div style="width:100%;height:100%">
+    <div class="login-container">
+      <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="on" label-position="left">
 
-      <div class="title-container">
-        <h3 class="title">
-          {{ $t('login.title') }}
-        </h3>
-        <lang-select class="set-language" />
-      </div>
+        <div class="title-container">
+          <h3 class="title">
+            图书借阅系统
+          </h3>
+          <lang-select class="set-language" />
+        </div>
 
-      <el-form-item prop="username">
-        <span class="svg-container">
-          <svg-icon icon-class="user" />
-        </span>
-        <el-input
-          ref="username"
-          v-model="loginForm.username"
-          :placeholder="$t('login.username')"
-          name="username"
-          type="text"
-          tabindex="1"
-          autocomplete="on"
-        />
-      </el-form-item>
-
-      <el-tooltip v-model="capsTooltip" content="Caps lock is On" placement="right" manual>
-        <el-form-item prop="password">
+        <el-form-item prop="username">
           <span class="svg-container">
-            <svg-icon icon-class="password" />
+            <svg-icon icon-class="user" />
           </span>
           <el-input
-            :key="passwordType"
-            ref="password"
-            v-model="loginForm.password"
-            :type="passwordType"
-            :placeholder="$t('login.password')"
-            name="password"
-            tabindex="2"
+            ref="username"
+            v-model="loginForm.username"
+            :placeholder="$t('login.username')"
+            name="username"
+            type="text"
+            tabindex="1"
             autocomplete="on"
-            @keyup.native="checkCapslock"
-            @blur="capsTooltip = false"
-            @keyup.enter.native="handleLogin"
           />
-          <span class="show-pwd" @click="showPwd">
-            <svg-icon :icon-class="passwordType === 'password' ? 'eye' : 'eye-open'" />
-          </span>
         </el-form-item>
-      </el-tooltip>
 
-      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">
-        {{ $t('login.logIn') }}
-      </el-button>
+        <el-tooltip v-model="capsTooltip" content="Caps lock is On" placement="right" manual>
+          <el-form-item prop="password">
+            <span class="svg-container">
+              <svg-icon icon-class="password" />
+            </span>
+            <el-input
+              :key="passwordType"
+              ref="password"
+              v-model="loginForm.password"
+              :type="passwordType"
+              :placeholder="$t('login.password')"
+              name="password"
+              tabindex="2"
+              autocomplete="on"
+              @keyup.native="checkCapslock"
+              @blur="capsTooltip = false"
+              @keyup.enter.native="handleLogin"
+            />
+            <span class="show-pwd" @click="showPwd">
+              <svg-icon :icon-class="passwordType === 'password' ? 'eye' : 'eye-open'" />
+            </span>
+          </el-form-item>
+        </el-tooltip>
 
-      <div style="position:relative">
-        <div class="tips">
-          <span>{{ $t('login.username') }} : admin</span>
-          <span>{{ $t('login.password') }} : {{ $t('login.any') }}</span>
-        </div>
-        <div class="tips">
-          <span style="margin-right:18px;">
-            {{ $t('login.username') }} : editor
-          </span>
-          <span>{{ $t('login.password') }} : {{ $t('login.any') }}</span>
-        </div>
-
-        <el-button class="thirdparty-button" type="primary" @click="showDialog=true">
-          {{ $t('login.thirdparty') }}
+        <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">
+          {{ $t('login.logIn') }}
         </el-button>
-      </div>
-    </el-form>
 
-    <el-dialog :title="$t('login.thirdparty')" :visible.sync="showDialog">
+        <div style="position:relative">
+          <div class="tips">
+            <span>{{ $t('login.username') }} : admin</span>
+            <span>{{ $t('login.password') }} :123456</span>
+          </div>
+
+          <el-link type="primary" class="thirdparty-button" @click="isDialog=true">注册</el-link>
+        <!-- <el-button class="thirdparty-button" type="primary" @click="showDialog=true">
+          {{ $t('login.thirdparty') }}
+        </el-button> -->
+        </div>
+      </el-form>
+
+    <!-- <el-dialog :title="$t('login.thirdparty')" :visible.sync="showDialog">
       {{ $t('login.thirdpartyTips') }}
       <br>
       <br>
       <br>
       <social-sign />
-    </el-dialog>
+    </el-dialog> -->
+    </div>
+    <Enroll :isDialog.sync="isDialog" />
   </div>
 </template>
 
 <script>
+import Enroll from '@/views/login/components/enroll.vue'
 import { validUsername } from '@/utils/validate'
 import LangSelect from '@/components/LangSelect'
-import SocialSign from './components/SocialSignin'
 
 export default {
   name: 'Login',
-  components: { LangSelect, SocialSign },
+  components: { LangSelect, Enroll },
   data() {
     const validateUsername = (rule, value, callback) => {
       if (!validUsername(value)) {
@@ -104,6 +103,7 @@ export default {
       }
     }
     return {
+      isDialog: false,
       loginForm: {
         username: 'admin',
         password: '123456'
@@ -130,6 +130,20 @@ export default {
         }
       },
       immediate: true
+    },
+    watch: {
+      isDialog(newVal) {
+        this.dialogVisible = newVal
+      },
+      dialogVisible(newVal) {
+        if (newVal === true) {
+          // this.initbook(this.bookid)
+        }
+        if (newVal === false) {
+          this.$emit('update:isDialog', newVal)
+          this.isLoading = true
+        }
+      }
     }
   },
   created() {
@@ -245,8 +259,7 @@ $cursor: #fff;
       }
     }
   }
-
-  .el-form-item {
+.el-form-item {
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -256,13 +269,15 @@ $cursor: #fff;
 </style>
 
 <style lang="scss" scoped>
+
 $bg:#2d3a4b;
 $dark_gray:#889aa4;
 $light_gray:#eee;
 
 .login-container {
-  min-height: 100%;
+  height: 100%;
   width: 100%;
+  background: url(~@/assets/001.jpeg);
   background-color: $bg;
   overflow: hidden;
 
@@ -270,7 +285,7 @@ $light_gray:#eee;
     position: relative;
     width: 520px;
     max-width: 100%;
-    padding: 160px 35px 0;
+    padding: 220px 35px 0;
     margin: 0 auto;
     overflow: hidden;
   }
