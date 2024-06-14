@@ -30,7 +30,7 @@ namespace BOOK.MANAGE
                 Name = name,
                 Address = ip,
                 Port = port,
-                Tags = new string[] { "api/Books", "api/HealthCheck" },
+                Tags = new string[] { "api/Books","api/Borrowed ", "api/Image",  "api/SysUser", "api/HealthCheck" },
                 TaggedAddresses = new Dictionary<string, Consul.ServiceTaggedAddress>(),
 
                 Check = new Consul.AgentServiceCheck() // 注册健康检查方式
@@ -46,6 +46,24 @@ namespace BOOK.MANAGE
             info.TaggedAddresses.Add("api/Books", new Consul.ServiceTaggedAddress()
             {
                 Address = "api/Books",
+                Port = port,
+            });
+
+            info.TaggedAddresses.Add("api/Borrowed", new Consul.ServiceTaggedAddress()
+            {
+                Address = "api/Borrowed",
+                Port = port,
+            });
+
+            info.TaggedAddresses.Add("api/Image", new Consul.ServiceTaggedAddress()
+            {
+                Address = "api/Image",
+                Port = port,
+            });
+
+            info.TaggedAddresses.Add("api/SysUser", new Consul.ServiceTaggedAddress()
+            {
+                Address = "api/SysUser",
                 Port = port,
             });
 

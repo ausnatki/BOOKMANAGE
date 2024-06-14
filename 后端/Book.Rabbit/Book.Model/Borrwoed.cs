@@ -14,7 +14,9 @@ namespace Book.Model
         public int UID { get; set; }
         public int BID { get; set; }
         public DateTime BorrowedTime { get; set; }
+        public DateTime RepaidTime { get; set; }
         public bool State { get; set; }
+        public bool IsAudit {  get; set; }
         public SysUser? SysUser { get; set; }
         public Book? Book { get; set; }
 

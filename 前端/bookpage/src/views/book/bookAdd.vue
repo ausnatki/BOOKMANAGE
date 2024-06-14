@@ -56,6 +56,8 @@
         <el-select v-model="BookForm.Category" placeholder="请选择图书类别">
           <el-option label="社会哲学" value="社会哲学" />
           <el-option label="数学" value="数学" />
+          <el-option label="软件编程" value="软件编程" />
+          <el-option label="悬疑侦探" value="悬疑侦探" />
         </el-select>
       </el-form-item>
 

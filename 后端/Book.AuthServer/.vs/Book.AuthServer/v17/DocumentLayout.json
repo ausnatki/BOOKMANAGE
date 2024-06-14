@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Book.AuthServer.Server\\LoginServiceImp.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.AuthServer\\Book.AuthServer.Server\\LoginServiceImp.cs",
               "RelativeToolTip": "Book.AuthServer.Server\\LoginServiceImp.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAIwC4AAAByAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEUAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T14:53:39.965Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "Book.AuthServer.Server\\ILoginService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T14:53:39.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T14:53:39.353Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "Book.AuthServer\\Controllers\\AuthController.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T14:50:32.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T14:50:32.652Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "Book.AuthServer\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-11T13:42:43.955Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T13:42:43.955Z"
             }
           ]
         }

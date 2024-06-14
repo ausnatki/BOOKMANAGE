@@ -18,7 +18,7 @@
           label="编号"
         >
           <template slot-scope="scope">
-            {{ scope.$index+1 }}
+            {{ scope.$index+1+(currentPage-1)*pageSize }}
           </template>
         </el-table-column>
         <el-table-column
@@ -65,6 +65,17 @@
         <!-- 控制图书状态 isdelte字段 -->
 
       </el-table>
+      <el-pagination
+        align="center"
+        :current-page="currentPage"
+        :page-sizes="[1, 5, 10, 20]"
+        :page-size="pageSize"
+        layout="total, sizes, prev, pager, next, jumper"
+        :total="tableData.length"
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+      />
+
     </template>
 
     <!-- 我的弹出层位置 -->
@@ -102,7 +113,10 @@ export default {
       isLoading: true,
       isvLoading: true,
       serchBookname: '',
-      tserchBookname: ''
+      tserchBookname: '',
+      currentPage: 1, // 当前页码
+      total: 20, // 总条数
+      pageSize: 10 // 每页的数据条数
     }
   },
   computed: {
@@ -110,6 +124,8 @@ export default {
       // console.log(this.tableData)
       let filtered = this.tableData
       const bookname = this.tserchBookname
+
+      filtered = filtered.slice((this.currentPage - 1) * this.pageSize, this.currentPage * this.pageSize)
 
       // console.log(category.length)
       // 判断是否有值
@@ -171,6 +187,7 @@ export default {
     },
     // 查看图书的借阅记录
     ViewBorrow(BID) {
+      this.isvLoading = true
       this.dialogTableVisible = true
       GetBorrowByBid(BID)
         .then(result => {
@@ -220,7 +237,19 @@ export default {
     // 搜索
     ClickSerchBookName() {
       this.tserchBookname = this.serchBookname
+    },
+    // 每页条数改变时触发 选择一页显示多少行
+    handleSizeChange(val) {
+      // console.log(`每页 ${val} 条`)
+      this.currentPage = 1
+      this.pageSize = val
+    },
+    // 当前页改变时触发 跳转其他页
+    handleCurrentChange(val) {
+      // console.log(`当前页: ${val}`)
+      this.currentPage = val
     }
+
   }
 }
 </script>

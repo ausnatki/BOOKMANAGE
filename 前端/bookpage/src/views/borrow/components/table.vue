@@ -21,7 +21,7 @@
         width="180"
       >
         <template slot-scope="scope">
-          {{ scope.$index+1 }}
+          {{ scope.$index+1+(currentPage-1)*pageSize }}
         </template>
       </el-table-column>
       <el-table-column
@@ -42,6 +42,14 @@
         </template>
       </el-table-column>
       <el-table-column
+        prop="repaidTime"
+        label="归还时间"
+      >
+        <template slot-scope="scope">
+          {{ DoTime(scope.row.repaidTime) }}
+        </template>
+      </el-table-column>
+      <el-table-column
         prop="sysUser.userName"
         label="借阅用户"
       />
@@ -56,16 +64,26 @@
         label="操作"
       >
         <template slot-scope="scope">
-          <el-link class="linetext" type="primary" @click="ClickRepiad(scope.row)">归还</el-link>
+          <el-link class="linetext" type="primary" @click="ClickRenewal(scope.row)">续借</el-link>
         </template>
       </el-table-column>
     </el-table>
+    <el-pagination
+      align="center"
+      :current-page="currentPage"
+      :page-sizes="[1, 5, 10, 20]"
+      :page-size="pageSize"
+      layout="total, sizes, prev, pager, next, jumper"
+      :total="tableData.length"
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+    />
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import { GetBorrowed, Repiad } from '@/api/borrowed.js'
+import { GetBorrowed, Renewal } from '@/api/borrowed.js'
 export default {
   data() {
     return {
@@ -74,7 +92,10 @@ export default {
       serchBookname: '',
       tserchBookname: '',
       serchBookauth: '',
-      tserchBookauth: ''
+      tserchBookauth: '',
+      currentPage: 1, // 当前页码
+      total: 20, // 总条数
+      pageSize: 10 // 每页的数据条数
     }
   },
   computed: {
@@ -89,6 +110,7 @@ export default {
       let filtered = this.tableData
       const bookname = this.tserchBookname
       const auth = this.tserchBookauth
+      filtered = filtered.slice((this.currentPage - 1) * this.pageSize, this.currentPage * this.pageSize)
 
       // 判断是否有值
       if (bookname) {
@@ -113,7 +135,7 @@ export default {
   },
   methods: {
     // 点击归还
-    async ClickRepiad(data) {
+    async ClickRenewal(data) {
       // 创建一个data的深拷贝
       // var tdata = JSON.parse(JSON.stringify(data))
 
@@ -135,12 +157,12 @@ export default {
         type: 'warning'
       })
         .then(() => {
-          Repiad(data).then(result => {
+          Renewal(data).then(result => {
             this.$message({
               type: 'success',
               message: '归还成功'
             })
-            data.state = true
+            // data.state = true
           }).catch(response => {
             this.$message({
               type: 'error',
@@ -207,6 +229,17 @@ export default {
         case false: return '未归还'
         default : return '未知状态'
       }
+    },
+    // 每页条数改变时触发 选择一页显示多少行
+    handleSizeChange(val) {
+      // console.log(`每页 ${val} 条`)
+      this.currentPage = 1
+      this.pageSize = val
+    },
+    // 当前页改变时触发 跳转其他页
+    handleCurrentChange(val) {
+      // console.log(`当前页: ${val}`)
+      this.currentPage = val
     }
   }
 }

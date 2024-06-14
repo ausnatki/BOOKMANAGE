@@ -66,8 +66,15 @@ namespace Book.Repository
 
                     // 获取redis中所有的数据然后再将里面的数据加1就变成了我的id
                     var key = db.HashKeys(m_BorrowedHashName);
-                    int count = key.Length;
-                    var n = db.HashSet(m_BorrowedHashName,borrowed.Id,System.Text.Json.JsonSerializer.Serialize<Book.Model.Borrowed>(borrowed));// 添加到redis
+                    //int count = key.Length;
+                    // 先检查是否存在对应的键
+                    bool exists = db.HashExists(m_BorrowedHashName, borrowed.Id);
+
+                    // 如果存在，则进行更新操作
+                    if (exists)
+                    {
+                        var n = db.HashSet(m_BorrowedHashName, borrowed.Id, System.Text.Json.JsonSerializer.Serialize<Book.Model.Borrowed>(borrowed));// 添加到redis
+                    }
                     return true;
                 }
             }

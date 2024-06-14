@@ -117,6 +117,38 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Bcl.TimeProvider/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Bcl.TimeProvider.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Bcl.TimeProvider.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
@@ -309,6 +341,72 @@
         "runtime": {
           "lib/net6.0/Ocelot.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "Ocelot.Provider.Consul/22.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Consul": "1.7.14.1",
+          "Ocelot": "22.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Ocelot.Provider.Consul.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Ocelot.Provider.Consul.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Ocelot.Provider.Polly/23.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Ocelot": "23.0.0",
+          "Polly": "8.2.0"
+        },
+        "compile": {
+          "lib/net6.0/Ocelot.Provider.Polly.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Ocelot.Provider.Polly.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Polly/8.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Polly.Core": "8.2.0"
+        },
+        "compile": {
+          "lib/net6.0/Polly.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Polly.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "Polly.Core/8.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.TimeProvider": "8.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Polly.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Polly.Core.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -550,6 +648,53 @@
         "lib/net6.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.xml",
         "microsoft.aspnetcore.mvc.newtonsoftjson.6.0.25.nupkg.sha512",
         "microsoft.aspnetcore.mvc.newtonsoftjson.nuspec"
+      ]
+    },
+    "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
+      "sha512": "UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg==",
+      "type": "package",
+      "path": "microsoft.bcl.asyncinterfaces/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
+        "microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Bcl.TimeProvider/8.0.0": {
+      "sha512": "f5Kr5JepAbiGo7uDmhgvMqhntwxqXNn6/IpTBSSI4cuHhgnJGrLxFRhMjVpRkLPp6zJXO0/G0l3j9p9zSJxa+w==",
+      "type": "package",
+      "path": "microsoft.bcl.timeprovider/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Bcl.TimeProvider.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Bcl.TimeProvider.targets",
+        "lib/net462/Microsoft.Bcl.TimeProvider.dll",
+        "lib/net462/Microsoft.Bcl.TimeProvider.xml",
+        "lib/net8.0/Microsoft.Bcl.TimeProvider.dll",
+        "lib/net8.0/Microsoft.Bcl.TimeProvider.xml",
+        "lib/netstandard2.0/Microsoft.Bcl.TimeProvider.dll",
+        "lib/netstandard2.0/Microsoft.Bcl.TimeProvider.xml",
+        "microsoft.bcl.timeprovider.8.0.0.nupkg.sha512",
+        "microsoft.bcl.timeprovider.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -1072,6 +1217,89 @@
         "ocelot.nuspec"
       ]
     },
+    "Ocelot.Provider.Consul/22.0.0": {
+      "sha512": "e3pCArLIbDuPJRPopzXeiMKNuwwpX0f+h6rtncsWkTvZ6b7GBHSeLzm4sMfHiYKkoxdLYjh7B1Z2BkDWSxYijQ==",
+      "type": "package",
+      "path": "ocelot.provider.consul/22.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Ocelot.Provider.Consul.dll",
+        "lib/net6.0/Ocelot.Provider.Consul.xml",
+        "lib/net7.0/Ocelot.Provider.Consul.dll",
+        "lib/net7.0/Ocelot.Provider.Consul.xml",
+        "lib/net8.0/Ocelot.Provider.Consul.dll",
+        "lib/net8.0/Ocelot.Provider.Consul.xml",
+        "ocelot.provider.consul.22.0.0.nupkg.sha512",
+        "ocelot.provider.consul.nuspec"
+      ]
+    },
+    "Ocelot.Provider.Polly/23.0.0": {
+      "sha512": "ZE1y9f0JIdBhb+K1rzXHT5qWZzeXHsCCv0FWWbraRP4OPZ0VDy02Uibo9Ew1YiZByvglbXHUXpCsHi8/kg1BWQ==",
+      "type": "package",
+      "path": "ocelot.provider.polly/23.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Ocelot.Provider.Polly.dll",
+        "lib/net6.0/Ocelot.Provider.Polly.xml",
+        "lib/net7.0/Ocelot.Provider.Polly.dll",
+        "lib/net7.0/Ocelot.Provider.Polly.xml",
+        "lib/net8.0/Ocelot.Provider.Polly.dll",
+        "lib/net8.0/Ocelot.Provider.Polly.xml",
+        "ocelot.provider.polly.23.0.0.nupkg.sha512",
+        "ocelot.provider.polly.nuspec"
+      ]
+    },
+    "Polly/8.2.0": {
+      "sha512": "KZm8iG29y6Mse7YntYYJSf5fGWuhYLliWgZaG/8NcuXS4gN7SPdtPYpjCxQlHqxvMGubkWVrGp3MvUaI7SkyKA==",
+      "type": "package",
+      "path": "polly/8.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Polly.dll",
+        "lib/net462/Polly.pdb",
+        "lib/net472/Polly.dll",
+        "lib/net472/Polly.pdb",
+        "lib/net6.0/Polly.dll",
+        "lib/net6.0/Polly.pdb",
+        "lib/netstandard2.0/Polly.dll",
+        "lib/netstandard2.0/Polly.pdb",
+        "package-icon.png",
+        "package-readme.md",
+        "polly.8.2.0.nupkg.sha512",
+        "polly.nuspec"
+      ]
+    },
+    "Polly.Core/8.2.0": {
+      "sha512": "gnKp3+mxGFmkFs4eHcD9aex0JOF8zS1Y18c2A5ckXXTVqbs6XLcDyLKgSa/mUFqAnH3mn9+uVIM0RhAec/d3kA==",
+      "type": "package",
+      "path": "polly.core/8.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Polly.Core.dll",
+        "lib/net462/Polly.Core.pdb",
+        "lib/net462/Polly.Core.xml",
+        "lib/net472/Polly.Core.dll",
+        "lib/net472/Polly.Core.pdb",
+        "lib/net472/Polly.Core.xml",
+        "lib/net6.0/Polly.Core.dll",
+        "lib/net6.0/Polly.Core.pdb",
+        "lib/net6.0/Polly.Core.xml",
+        "lib/net8.0/Polly.Core.dll",
+        "lib/net8.0/Polly.Core.pdb",
+        "lib/net8.0/Polly.Core.xml",
+        "lib/netstandard2.0/Polly.Core.dll",
+        "lib/netstandard2.0/Polly.Core.pdb",
+        "lib/netstandard2.0/Polly.Core.xml",
+        "package-icon.png",
+        "package-readme.md",
+        "polly.core.8.2.0.nupkg.sha512",
+        "polly.core.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.5.0": {
       "sha512": "FK05XokgjgwlCI6wCT+D4/abtQkL1X1/B9Oas6uIwHFmYrIO9WUD5aLC9IzMs9GnHfUXOtXZ2S43gN1mhs5+aA==",
       "type": "package",
@@ -1276,6 +1504,8 @@
       "Consul >= 1.7.14.3",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.0",
       "Ocelot >= 23.2.2",
+      "Ocelot.Provider.Consul >= 22.0.0",
+      "Ocelot.Provider.Polly >= 23.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -1339,6 +1569,14 @@
           "Ocelot": {
             "target": "Package",
             "version": "[23.2.2, )"
+          },
+          "Ocelot.Provider.Consul": {
+            "target": "Package",
+            "version": "[22.0.0, )"
+          },
+          "Ocelot.Provider.Polly": {
+            "target": "Package",
+            "version": "[23.0.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

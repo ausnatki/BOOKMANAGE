@@ -1,6 +1,7 @@
 ﻿using BOOK.MODEL;
 using BOOK.Repository;
 using BOOK.SERVERS;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace BOOK.MANAGE.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class SysUserController : ControllerBase
     {
         private BOOK.SERVERS.ISysUserService _userService;

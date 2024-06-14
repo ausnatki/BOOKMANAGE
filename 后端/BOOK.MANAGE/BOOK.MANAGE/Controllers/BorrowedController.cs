@@ -9,7 +9,7 @@ namespace BOOK.MANAGE.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class BorrowedController : ControllerBase
     {
         private IBorrowedService borrowedService;
@@ -120,6 +120,28 @@ namespace BOOK.MANAGE.Controllers
                 return result;
             }
         }
+        #endregion\
+
+        #region 续借
+        [HttpPost("Renewal")]
+        public BOOK.MODEL.ApiResp Renewal(BOOK.MODEL.Borrowed borrowed)
+        {
+            var reuslt = new BOOK.MODEL.ApiResp();
+            if (borrowedService.Renewal(borrowed))
+            {
+                reuslt.Code = 20000;
+                reuslt.Msg = "续借成功";
+                reuslt.Result = true;
+                return reuslt;
+            }
+            else
+            {
+                reuslt.Code = 500;
+                reuslt.Result = false;
+                reuslt.Msg = "续借失败";
+                return reuslt;
+            }
+        }
         #endregion
 
         #region 获取所有借阅信息
@@ -141,6 +163,52 @@ namespace BOOK.MANAGE.Controllers
                 result.Code = 500;
                 result.Result= false;
                 result.Msg = "服务器错误，查找失败";
+                return result;
+            }
+        }
+        #endregion
+
+        #region 获取所有借阅审核信息
+        [HttpGet("GetAllAudit")]
+        public BOOK.MODEL.ApiResp GetAllAudit()
+        {
+            var result = new BOOK.MODEL.ApiResp();
+            try 
+            {
+                result.Code = 20000;
+                result.Data = borrowedService.GetAllAudit();
+                result.Result = true;
+                result.Msg = "查询成功";
+                return result;
+
+            }
+            catch 
+            {
+                result.Result = false;
+                result.Code = 500;
+                result.Msg = "查询失败";
+                return result;
+            }
+        }
+        #endregion
+
+        #region 审核成功
+        [HttpPost("AuditSuccess")]
+        public BOOK.MODEL.ApiResp AuditSuccess(int BID)
+        {
+            var result =new BOOK.MODEL.ApiResp();
+            if (borrowedService.AuditSuccess(BID))
+            {
+                result.Code = 20000;
+                result.Result=  true;
+                result.Msg = "审核成功";
+                return result;
+            }
+            else
+            {
+                result.Code = 500;
+                result.Result = false;
+                result.Msg = "操作失败";
                 return result;
             }
         }

@@ -1,7 +1,7 @@
 <template>
   <div class="my-box">
     <el-dialog
-      title="借阅"
+      title="借阅申请"
       :visible.sync="dialogVisible"
       width="50%"
     >
@@ -166,7 +166,7 @@ export default {
         }
 
         // 弹出提示框
-        if (await this.$confirm('是否确认借阅, 是否继续?', '提示', {
+        if (await this.$confirm('是否确认借阅申请, 是否继续?', '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'warning'
@@ -176,7 +176,7 @@ export default {
           if (result.result) {
             this.$message({
               type: 'success',
-              message: '借阅成功'
+              message: '申请成功'
             })
             setTimeout(() => {
               this.dialogVisible = false
@@ -184,7 +184,7 @@ export default {
           } else {
             this.$message({
               type: 'error',
-              message: '借阅失败，系统错误'
+              message: '申请失败，系统错误'
             })
           }
         } else {
@@ -215,6 +215,17 @@ export default {
         console.error(response)
         return Promise.reject(false) // 使用Promise.reject返回失败的值
       })
+    },
+    // 每页条数改变时触发 选择一页显示多少行
+    handleSizeChange(val) {
+      // console.log(`每页 ${val} 条`)
+      this.currentPage = 1
+      this.pageSize = val
+    },
+    // 当前页改变时触发 跳转其他页
+    handleCurrentChange(val) {
+      // console.log(`当前页: ${val}`)
+      this.currentPage = val
     }
   }
 }

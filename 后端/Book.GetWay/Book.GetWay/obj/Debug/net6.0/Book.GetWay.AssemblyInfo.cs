@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Book.GetWay")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce5736cc21b68016b35b8d5b78de967aeb3c90b6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+156d5cbc138fa860959287cd90b8a693f4adf759")]
 [assembly: System.Reflection.AssemblyProductAttribute("Book.GetWay")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Book.GetWay")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

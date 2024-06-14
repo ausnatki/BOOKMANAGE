@@ -16,6 +16,12 @@ namespace BOOK.SERVERS
 
         public bool Repiad(BOOK.MODEL.Borrowed borrowed);
 
+        public bool Renewal(BOOK.MODEL.Borrowed borrowed);
+
         public IEnumerable<BOOK.MODEL.Borrowed> GetAllList();
+
+        public IEnumerable<BOOK.MODEL.Borrowed> GetAllAudit();
+
+        public bool AuditSuccess(int BID);
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Book.AuthServer.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75ae167d1e3a3a1919a40b3671bc190ed8a98995")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+156d5cbc138fa860959287cd90b8a693f4adf759")]
 [assembly: System.Reflection.AssemblyProductAttribute("Book.AuthServer.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Book.AuthServer.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

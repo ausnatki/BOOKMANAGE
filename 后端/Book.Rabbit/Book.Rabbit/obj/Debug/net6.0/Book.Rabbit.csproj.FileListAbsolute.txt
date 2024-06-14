@@ -69,3 +69,7 @@ D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Rabbit\bin\Debug\net6.0\Book.Serv
 D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Rabbit\bin\Debug\net6.0\Book.Repository.pdb
 D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Rabbit\obj\Debug\net6.0\Book.Rabbit.csproj.AssemblyReference.cache
 D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Rabbit\obj\Debug\net6.0\Book.Rab.56076FF0.Up2Date
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Rabbit\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Rabbit\bin\Debug\net6.0\Microsoft.Bcl.TimeProvider.dll
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Rabbit\bin\Debug\net6.0\Polly.dll
+D:\git\book\BOOKMANAGE\后端\Book.Rabbit\Book.Rabbit\bin\Debug\net6.0\Polly.Core.dll

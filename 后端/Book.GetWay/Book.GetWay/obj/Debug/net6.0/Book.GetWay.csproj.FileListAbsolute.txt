@@ -49,3 +49,9 @@ D:\git\book\BOOKMANAGE\后端\Book.GetWay\Book.GetWay\obj\Debug\net6.0\Book.GetW
 D:\git\book\BOOKMANAGE\后端\Book.GetWay\Book.GetWay\obj\Debug\net6.0\Book.GetWay.genruntimeconfig.cache
 D:\git\book\BOOKMANAGE\后端\Book.GetWay\Book.GetWay\obj\Debug\net6.0\ref\Book.GetWay.dll
 D:\git\book\BOOKMANAGE\后端\Book.GetWay\Book.GetWay\bin\Debug\net6.0\OcelotConfig.json
+D:\git\book\BOOKMANAGE\后端\Book.GetWay\Book.GetWay\bin\Debug\net6.0\Ocelot.Provider.Consul.dll
+D:\git\book\BOOKMANAGE\后端\Book.GetWay\Book.GetWay\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\git\book\BOOKMANAGE\后端\Book.GetWay\Book.GetWay\bin\Debug\net6.0\Microsoft.Bcl.TimeProvider.dll
+D:\git\book\BOOKMANAGE\后端\Book.GetWay\Book.GetWay\bin\Debug\net6.0\Ocelot.Provider.Polly.dll
+D:\git\book\BOOKMANAGE\后端\Book.GetWay\Book.GetWay\bin\Debug\net6.0\Polly.dll
+D:\git\book\BOOKMANAGE\后端\Book.GetWay\Book.GetWay\bin\Debug\net6.0\Polly.Core.dll

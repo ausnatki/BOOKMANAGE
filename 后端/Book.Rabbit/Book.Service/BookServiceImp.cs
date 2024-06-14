@@ -1,5 +1,7 @@
 ﻿using Book.Model.Exception;
 using Book.Repository;
+using Polly;
+using Polly.Retry;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -100,37 +102,68 @@ namespace Book.Service
         #region 添加图书
         public bool InstallBook(Book.Model.Book Book)
         {
-            try
-            {
-                var reuslt = dB_Book.InstallBook(Book);
-               
-                redis_Book.NewBook(reuslt);
+            // 定义一个带有重试策略的 Polly 策略，最多重试 3 次，每次重试间隔 2 秒
+            RetryPolicy retryPolicy = Policy
+                .Handle<Exception>()  // 捕捉所有异常
+                .WaitAndRetry(3, retryAttempt => TimeSpan.FromSeconds(2),
+                    (exception, timeSpan, retryCount, context) =>
+                    {
+                        // 这里可以添加日志记录或其他处理逻辑
+                        Console.WriteLine($"重试次数: {retryCount}，异常: {exception.Message}");
+                    });
 
-                return true;
-            }
-            catch
+            return retryPolicy.Execute(() =>
             {
-                return false;
-            }
+                try
+                {
+                    var reuslt = dB_Book.InstallBook(Book);
+
+                    redis_Book.NewBook(reuslt);
+
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    // 这里可以选择是否重新抛出异常或者记录日志
+                    Console.WriteLine($"安装图书失败: {ex.Message}");
+                    throw;  // 重新抛出异常以触发 Polly 的重试
+                }
+            });
         }
         #endregion
 
         #region 删除图书
+
         public bool DelBook(int id)
         {
-            try
+            // 定义一个带有重试策略的 Polly 策略，最多重试 3 次，每次重试间隔 2 秒
+            RetryPolicy retryPolicy = Policy
+                .Handle<Exception>()  // 捕捉所有异常
+                .WaitAndRetry(3, retryAttempt => TimeSpan.FromSeconds(2),
+                    (exception, timeSpan, retryCount, context) =>
+                    {
+                        // 这里可以添加日志记录或其他处理逻辑
+                        Console.WriteLine($"重试次数: {retryCount}，异常: {exception.Message}");
+                    });
+
+            return retryPolicy.Execute(() =>
             {
-                var reuslt = dB_Book.DelBook(id);
-                if (reuslt)
+                try
                 {
-                    redis_Book.DeleteBook(id);
+                    var result = dB_Book.DelBook(id);
+                    if (result)
+                    {
+                        redis_Book.DeleteBook(id);
+                    }
+                    return true;
                 }
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+                catch (Exception ex)
+                {
+                    // 这里可以选择是否重新抛出异常或者记录日志
+                    Console.WriteLine($"删除图书失败: {ex.Message}");
+                    throw;  // 重新抛出异常以触发 Polly 的重试
+                }
+            });
         }
         #endregion
 

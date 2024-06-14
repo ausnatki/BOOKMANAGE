@@ -220,7 +220,7 @@ namespace Book.Consule.Controllers
                 var serviceItem = services.Response.FirstOrDefault(c => c.Key == id);
                 if (serviceItem.Value != null)
                 {
-                    var url = $"https://{serviceItem.Value.Address}:{serviceItem.Value.Port}/api/Books/GetAll";
+                    var url = $"https://{serviceItem.Value.Address}:{serviceItem.Value.Port}/api/HeathCheck";
                     var client = new System.Net.WebClient();
 
                     var result = client.DownloadString(url);

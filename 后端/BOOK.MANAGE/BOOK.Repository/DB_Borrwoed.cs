@@ -47,6 +47,8 @@ namespace BOOK.Repository
                         borrowed.UID = UID;
                         borrowed.BorrowedTime = DateTime.Now;
                         borrowed.State = false;// 借出状态
+                        borrowed.IsAudit = false; // 表示未审核状态
+                        borrowed.RepaidTime = DateTime.Now;
                         Ctx.Borroweds.Add(borrowed);
                         transaction.Commit();
                         return true;
@@ -87,23 +89,25 @@ namespace BOOK.Repository
 
                 // 用户验证完成，然后查询当前用户的借阅列表  
                 IEnumerable<BOOK.MODEL.Borrowed> borrowedList = Ctx.Borroweds
-                    .Where(c => c.UID == UID)
+                    .Where(c => c.UID == UID && c.IsAudit == true)
                     .Select(c => new BOOK.MODEL.Borrowed // 直接创建Borrowed对象  
                     {
                         Id = c.Id,
                         UID = c.UID,
                         BID = c.BID,
                         BorrowedTime = c.BorrowedTime,
+                        RepaidTime = c.RepaidTime,
                         State = c.State,
+                        IsAudit = c.IsAudit,
                         SysUser = c.SysUser != null ? new BOOK.MODEL.SysUser // 如果SysUser不为null，则创建一个SysUser对象  
                         {
-                            
+
                             Id = c.SysUser.Id, // 假设SysUser有Id属性  
                             UserName = c.SysUser.UserName
                         } : null,
                         Book = c.Book != null ? new BOOK.MODEL.Book // 如果Book不为null，则创建一个Book对象  
                         {
-                           
+
                             Id = c.Book.Id, // 假设Book有Id属性  
                             BookName = c.Book.BookName,
                             Author = c.Book.Author
@@ -119,7 +123,7 @@ namespace BOOK.Repository
         }
         #endregion
 
-        #region 用户归还
+        #region 归还
         public bool repiad(BOOK.MODEL.Borrowed borrowed)
         {
             using (var transaction = Ctx.Database.BeginTransaction())
@@ -142,18 +146,44 @@ namespace BOOK.Repository
         }
         #endregion
 
+        #region 续借
+        public bool Renewal (BOOK.MODEL.Borrowed borrowed)
+        {
+            using(var transaction = Ctx.Database.BeginTransaction())
+            {
+                try 
+                {
+                    var borrowedEntity = Ctx.Borroweds.Where(c=>c.Id == borrowed.Id).FirstOrDefault();
+
+                    borrowedEntity.RepaidTime = borrowedEntity.RepaidTime.AddDays(15);
+                    Ctx.SaveChanges();
+                    transaction.Commit();
+                    return true;
+                }
+                catch 
+                {
+                    transaction.Rollback();
+                    throw new Exception();
+                }
+            }
+        }
+        #endregion
+
         #region 获取所有借阅信息（管理员）
         public IEnumerable<BOOK.MODEL.Borrowed> GetAllList()
         {
             // 用户验证完成，然后查询当前用户的借阅列表  
             IEnumerable<BOOK.MODEL.Borrowed> borrowedList = Ctx.Borroweds
+                .Where(c => c.IsAudit == true)
                 .Select(c => new BOOK.MODEL.Borrowed // 直接创建Borrowed对象  
                 {
                     Id = c.Id,
                     UID = c.UID,
                     BID = c.BID,
                     BorrowedTime = c.BorrowedTime,
+                    RepaidTime = c.RepaidTime,
                     State = c.State,
+                    IsAudit = c.IsAudit,
                     SysUser = c.SysUser != null ? new BOOK.MODEL.SysUser // 如果SysUser不为null，则创建一个SysUser对象  
                     {
                         Id = c.SysUser.Id, // 假设SysUser有Id属性  
@@ -171,5 +201,62 @@ namespace BOOK.Repository
         }
         #endregion
 
+        #region 获取所有图书审查列表（管理员）
+        public IEnumerable<BOOK.MODEL.Borrowed> GetAllAudit()
+        {
+            // 用户验证完成，然后查询当前用户的借阅列表  
+            IEnumerable<BOOK.MODEL.Borrowed> borrowedList = Ctx.Borroweds
+                .Where(c => c.IsAudit == false)
+                .Select(c => new BOOK.MODEL.Borrowed // 直接创建Borrowed对象  
+                {
+                    Id = c.Id,
+                    UID = c.UID,
+                    BID = c.BID,
+                    BorrowedTime = c.BorrowedTime,
+                    RepaidTime= c.RepaidTime,
+                    State = c.State,
+                    IsAudit = c.IsAudit,
+                    SysUser = c.SysUser != null ? new BOOK.MODEL.SysUser // 如果SysUser不为null，则创建一个SysUser对象  
+                    {
+                        Id = c.SysUser.Id, // 假设SysUser有Id属性  
+                        UserName = c.SysUser.UserName
+                    } : null,
+                    Book = c.Book != null ? new BOOK.MODEL.Book // 如果Book不为null，则创建一个Book对象  
+                    {
+                        Id = c.Book.Id, // 假设Book有Id属性  
+                        BookName = c.Book.BookName,
+                        Author = c.Book.Author
+                    } : null
+                }).ToList();
+
+            return borrowedList;
+        }
+        #endregion
+
+        #region 审核成功（管理员）
+        public bool AuditSuccess(int BID)
+        {
+            using (var transaction = Ctx.Database.BeginTransaction())
+            {
+                try
+                {
+                    var book = Ctx.Borroweds.Where(c => c.Id == BID).FirstOrDefault();
+                    if (book == null) return false;
+                    book.IsAudit = true; // 审核成功
+                    book.RepaidTime = DateTime.Now.AddDays(15); // 审核成功后添加15天的期限
+                    Ctx.SaveChanges();
+                    transaction.Commit();
+                    return true;
+                }
+                catch
+                {
+                    throw new Exception();
+                }
+            }
+           
+
+        }
+
+        #endregion
     }
 }

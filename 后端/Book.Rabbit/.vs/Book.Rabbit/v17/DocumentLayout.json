@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A1C6C35-DA75-4973-8623-4368E784AA4F}|Book.Rabbit\\Book.Rabbit.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.rabbit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A1C6C35-DA75-4973-8623-4368E784AA4F}|Book.Rabbit\\Book.Rabbit.csproj|solutionrelative:book.rabbit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2EFE8E9-BB7E-4A2C-976B-D3E84B52FD3C}|Book.Model\\Book.Model.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.model\\borrwoed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2EFE8E9-BB7E-4A2C-976B-D3E84B52FD3C}|Book.Model\\Book.Model.csproj|solutionrelative:book.model\\borrwoed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5E452C6E-2D15-44FF-8ECB-73307E3F7023}|Book.DataAccess\\Book.DataAccess.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.dataaccess\\bookcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E452C6E-2D15-44FF-8ECB-73307E3F7023}|Book.DataAccess\\Book.DataAccess.csproj|solutionrelative:book.dataaccess\\bookcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2EFE8E9-BB7E-4A2C-976B-D3E84B52FD3C}|Book.Model\\Book.Model.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.model\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2EFE8E9-BB7E-4A2C-976B-D3E84B52FD3C}|Book.Model\\Book.Model.csproj|solutionrelative:book.model\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.repository\\redis_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|solutionrelative:book.repository\\redis_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.repository\\db_borrwoed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|solutionrelative:book.repository\\db_borrwoed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.repository\\redis_borrowed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|solutionrelative:book.repository\\redis_borrowed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.service\\sysuserserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|solutionrelative:book.service\\sysuserserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A1C6C35-DA75-4973-8623-4368E784AA4F}|Book.Rabbit\\Book.Rabbit.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.rabbit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A1C6C35-DA75-4973-8623-4368E784AA4F}|Book.Rabbit\\Book.Rabbit.csproj|solutionrelative:book.rabbit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.service\\borrwoedserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,36 +35,32 @@
       "RelativeMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|solutionrelative:book.service\\bookserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.repository\\db_borrwoed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|solutionrelative:book.repository\\db_borrwoed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.repository\\db_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|solutionrelative:book.repository\\db_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.repository\\redis_sysuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|solutionrelative:book.repository\\redis_sysuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.repository\\db_sysuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|solutionrelative:book.repository\\db_sysuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2EFE8E9-BB7E-4A2C-976B-D3E84B52FD3C}|Book.Model\\Book.Model.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.model\\borrwoed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2EFE8E9-BB7E-4A2C-976B-D3E84B52FD3C}|Book.Model\\Book.Model.csproj|solutionrelative:book.model\\borrwoed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5E452C6E-2D15-44FF-8ECB-73307E3F7023}|Book.DataAccess\\Book.DataAccess.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.dataaccess\\bookcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E452C6E-2D15-44FF-8ECB-73307E3F7023}|Book.DataAccess\\Book.DataAccess.csproj|solutionrelative:book.dataaccess\\bookcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.service\\sysuserserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|solutionrelative:book.service\\sysuserserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.repository\\redis_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|solutionrelative:book.repository\\redis_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.service\\isysuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|solutionrelative:book.service\\isysuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.repository\\redis_sysuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|solutionrelative:book.repository\\redis_sysuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.repository\\db_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7CD5F25-6758-4B73-842C-51884E2FDE6A}|Book.Repository\\Book.Repository.csproj|solutionrelative:book.repository\\db_book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.service\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|solutionrelative:book.service\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.service\\isysuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|solutionrelative:book.service\\isysuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{925B0254-DB2F-4E03-B13F-80C82A3F01C2}|Book.Service\\Book.Service.csproj|d:\\git\\book\\bookmanage\\\u540E\u7AEF\\book.rabbit\\book.service\\iborrowedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,11 +82,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Model\\Book.cs",
+              "RelativeDocumentMoniker": "Book.Model\\Book.cs",
+              "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Model\\Book.cs",
+              "RelativeToolTip": "Book.Model\\Book.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T11:24:06.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "BookContext.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.DataAccess\\BookContext.cs",
               "RelativeDocumentMoniker": "Book.DataAccess\\BookContext.cs",
@@ -94,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "DB_SysUser.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Repository\\DB_SysUser.cs",
               "RelativeDocumentMoniker": "Book.Repository\\DB_SysUser.cs",
@@ -106,19 +122,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "Borrwoed.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Model\\Borrwoed.cs",
               "RelativeDocumentMoniker": "Book.Model\\Borrwoed.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Model\\Borrwoed.cs",
               "RelativeToolTip": "Book.Model\\Borrwoed.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAADwvwAAAAAAAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAADwvw8AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T05:43:43.692Z"
+              "WhenOpened": "2024-06-11T05:43:43.692Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Role.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Model\\Role.cs",
               "RelativeDocumentMoniker": "Book.Model\\Role.cs",
@@ -130,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "SysUser_Role.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Model\\SysUser_Role.cs",
               "RelativeDocumentMoniker": "Book.Model\\SysUser_Role.cs",
@@ -142,31 +159,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 8,
               "Title": "Redis_SysUser.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Repository\\Redis_SysUser.cs",
               "RelativeDocumentMoniker": "Book.Repository\\Redis_SysUser.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Repository\\Redis_SysUser.cs",
               "RelativeToolTip": "Book.Repository\\Redis_SysUser.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAAwEkAAAAJAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAEkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T06:01:06.846Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "SysUserServiceImp.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Service\\SysUserServiceImp.cs",
               "RelativeDocumentMoniker": "Book.Service\\SysUserServiceImp.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Service\\SysUserServiceImp.cs",
               "RelativeToolTip": "Book.Service\\SysUserServiceImp.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAnwB4AAAAgAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAlwCkAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T06:00:26.273Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "ISysUserService.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Service\\ISysUserService.cs",
               "RelativeDocumentMoniker": "Book.Service\\ISysUserService.cs",
@@ -178,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "IBorrowedService.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Service\\IBorrowedService.cs",
               "RelativeDocumentMoniker": "Book.Service\\IBorrowedService.cs",
@@ -190,13 +207,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "BorrwoedServiceImp.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Service\\BorrwoedServiceImp.cs",
               "RelativeDocumentMoniker": "Book.Service\\BorrwoedServiceImp.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Service\\BorrwoedServiceImp.cs",
               "RelativeToolTip": "Book.Service\\BorrwoedServiceImp.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAuwCUAAAAAAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAF0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-06T02:10:12.768Z"
             },
@@ -208,44 +225,44 @@
               "RelativeDocumentMoniker": "Book.Repository\\Redis_Borrowed.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Repository\\Redis_Borrowed.cs",
               "RelativeToolTip": "Book.Repository\\Redis_Borrowed.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAIwFYAAABAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T02:02:49.185Z"
+              "WhenOpened": "2024-06-06T02:02:49.185Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "DB_Borrwoed.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Repository\\DB_Borrwoed.cs",
               "RelativeDocumentMoniker": "Book.Repository\\DB_Borrwoed.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Repository\\DB_Borrwoed.cs",
               "RelativeToolTip": "Book.Repository\\DB_Borrwoed.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAwwEwAAAASAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAxwBcAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-06T02:02:33.984Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Rabbit\\Program.cs",
               "RelativeDocumentMoniker": "Book.Rabbit\\Program.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Rabbit\\Program.cs",
               "RelativeToolTip": "Book.Rabbit\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAF4AAAAVAAAA",
+              "ViewState": "AQIAAJcAAAAAAAAAAAApwKYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T00:57:56.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T00:57:56.349Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "BookServiceImp.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Service\\BookServiceImp.cs",
               "RelativeDocumentMoniker": "Book.Service\\BookServiceImp.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Service\\BookServiceImp.cs",
               "RelativeToolTip": "Book.Service\\BookServiceImp.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAowIYAAAASAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAIYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-06T00:53:10.295Z"
             },
@@ -263,25 +280,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "Redis_Book.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Repository\\Redis_Book.cs",
               "RelativeDocumentMoniker": "Book.Repository\\Redis_Book.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Repository\\Redis_Book.cs",
               "RelativeToolTip": "Book.Repository\\Redis_Book.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAkwI4AAAA/AAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAGYAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-06T00:48:54.517Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "DB_Book.cs",
               "DocumentMoniker": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Repository\\DB_Book.cs",
               "RelativeDocumentMoniker": "Book.Repository\\DB_Book.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Repository\\DB_Book.cs",
               "RelativeToolTip": "Book.Repository\\DB_Book.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAIA6wFwAAAAAAAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAADwv1wAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-06T00:41:12.732Z"
             }

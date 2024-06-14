@@ -112,31 +112,61 @@ namespace BOOK.SERVERS
             var borrowedlist = new List<BOOK.MODEL.Borrowed>();
             try
             {
-               var redisborrowed = redis_borrowed.GetBorrowed(UID);
-                if (redisborrowed.Count() > 0)
-                {
-                    redisborrowed = redisborrowed.ToList();
-                    return redisborrowed;
-                }
-                else
-                {
-                    // 如果redis中里面没有查询到相关的数据就从数据库里面查询数据
-                    var dbBorrowed = _dbBorrwoed.Borrowed_User(UID);
-                    if (dbBorrowed != null)
-                    {
-                        foreach(var t in dbBorrowed)
-                        {
-                            redis_borrowed.UpdataBorrowed(t);
-                        }
-                        borrowedlist = dbBorrowed.ToList();
-                        return borrowedlist;
-                    }
-                }
+                //var redisborrowed = redis_borrowed.GetBorrowed(UID);
+                // if (redisborrowed.Count() > 0)
+                // {
+                //     redisborrowed = redisborrowed.ToList();
+                //     return redisborrowed;
+                // }
+                // else
+                // {
+                // 如果redis中里面没有查询到相关的数据就从数据库里面查询数据
+                borrowedlist = _dbBorrwoed.Borrowed_User(UID).ToList();
+                    //if (dbBorrowed != null)
+                    //{
+                    //    foreach(var t in dbBorrowed)
+                    //    {
+                    //        redis_borrowed.UpdataBorrowed(t);
+                    //    }
+                    //    borrowedlist = dbBorrowed.ToList();
+                    //    return borrowedlist;
+                    //}
+                //}
                 return borrowedlist;
             } 
             catch
             {
                 return null;
+            }
+        }
+        #endregion
+
+        #region 续借
+        public bool Renewal(BOOK.MODEL.Borrowed borrowed)
+        {
+            try 
+            {
+                _dbBorrwoed.Renewal(borrowed);
+               return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        #region 获取借阅审核列表
+        public IEnumerable<BOOK.MODEL.Borrowed> GetAllAudit()
+        {
+            try
+            {
+                return _dbBorrwoed.GetAllAudit();
+
+            }
+            catch 
+            {
+                throw new Exception();
             }
         }
         #endregion
@@ -209,5 +239,20 @@ namespace BOOK.SERVERS
             }
         }
         #endregion
+
+        #region 审核成功
+        public bool AuditSuccess(int BID)
+        {
+            try 
+            {
+               return _dbBorrwoed.AuditSuccess(BID);
+            }
+            catch 
+            {
+                return false;
+            }
+        }
+        #endregion
+
     }
 }

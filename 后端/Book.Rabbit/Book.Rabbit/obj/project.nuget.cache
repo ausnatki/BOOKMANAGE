@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "YnPDKzoNVLyeWwL47ujAEyFXAbmACLwwmvwwWraRuZSrinxQT+QlgGeKjcnsvI84jy1zqLC4cZX16Yr0uUQPdA==",
+  "dgSpecHash": "HdNPcqk9rDofvvkGw/6holv1yaGXxcLQVQP5ZAHrGl0YsW4hIG0mDxYovAj9vo2t/A5kV54lnmHi2SrkfBN4Fg==",
   "success": true,
   "projectFilePath": "D:\\git\\book\\BOOKMANAGE\\后端\\Book.Rabbit\\Book.Rabbit\\Book.Rabbit.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\KKK\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "C:\\Users\\KKK\\.nuget\\packages\\microsoft.bcl.timeprovider\\8.0.0\\microsoft.bcl.timeprovider.8.0.0.nupkg.sha512",
     "C:\\Users\\KKK\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\KKK\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\KKK\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
@@ -32,6 +34,8 @@
     "C:\\Users\\KKK\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\KKK\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\KKK\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\KKK\\.nuget\\packages\\polly\\8.4.0\\polly.8.4.0.nupkg.sha512",
+    "C:\\Users\\KKK\\.nuget\\packages\\polly.core\\8.4.0\\polly.core.8.4.0.nupkg.sha512",
     "C:\\Users\\KKK\\.nuget\\packages\\rabbitmq.client\\6.8.1\\rabbitmq.client.6.8.1.nupkg.sha512",
     "C:\\Users\\KKK\\.nuget\\packages\\stackexchange.redis\\2.7.33\\stackexchange.redis.2.7.33.nupkg.sha512",
     "C:\\Users\\KKK\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",

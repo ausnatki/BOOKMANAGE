@@ -21,7 +21,7 @@
         width="180"
       >
         <template slot-scope="scope">
-          {{ scope.$index+1 }}
+          {{ scope.$index+1+(currentPage-1)*pageSize }}
         </template>
       </el-table-column>
       <el-table-column
@@ -60,6 +60,17 @@
         </template>
       </el-table-column>
     </el-table>
+    <el-pagination
+      align="center"
+      :current-page="currentPage"
+      :page-sizes="[1, 5, 10, 20]"
+      :page-size="pageSize"
+      layout="total, sizes, prev, pager, next, jumper"
+      :total="tableData.length"
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+    />
+
   </div>
 </template>
 
@@ -73,7 +84,10 @@ export default {
       serchBookname: '',
       tserchBookname: '',
       serchBookauth: '',
-      tserchBookauth: ''
+      tserchBookauth: '',
+      currentPage: 1, // 当前页码
+      total: 20, // 总条数
+      pageSize: 10 // 每页的数据条数
     }
   },
   computed: {
@@ -82,6 +96,7 @@ export default {
       let filtered = this.tableData
       const bookname = this.tserchBookname
       const auth = this.tserchBookauth
+      filtered = filtered.slice((this.currentPage - 1) * this.pageSize, this.currentPage * this.pageSize)
 
       // 判断是否有值
       if (bookname) {
@@ -200,6 +215,17 @@ export default {
         case false: return '未归还'
         default : return '未知状态'
       }
+    },
+    // 每页条数改变时触发 选择一页显示多少行
+    handleSizeChange(val) {
+      // console.log(`每页 ${val} 条`)
+      this.currentPage = 1
+      this.pageSize = val
+    },
+    // 当前页改变时触发 跳转其他页
+    handleCurrentChange(val) {
+      // console.log(`当前页: ${val}`)
+      this.currentPage = val
     }
   }
 }

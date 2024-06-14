@@ -102,8 +102,8 @@ namespace Book.Repository
                 var db = connection.GetDatabase();
                 this.RefreshExpiredTime(db);// 设置缓存时间
                 // 首先获取redies中的所有数据 然后得到我的总体长度
-                  // 先检查是否存在对应的键
-                bool exists = db.HashExists(m_BookHashSetName, book.Id);
+                // 先检查是否存在对应的键
+                bool exists = db.KeyExists(m_BookHashSetName); 
                 if (exists)
                 {
                     var keys = db.HashKeys(m_BookHashSetName);

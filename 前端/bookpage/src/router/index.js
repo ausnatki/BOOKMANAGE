@@ -135,8 +135,8 @@ export const asyncRoutes = [
     name: 'UserManage',
     meta: {
       title: '用户管理',
-      icon: 'shopping',
-      roles: ['admin', 'superadmin', 'commonuser', 'visitor']
+      icon: 'list',
+      roles: ['admin', 'superadmin']
     },
     children: [{
       path: 'list',
@@ -146,35 +146,35 @@ export const asyncRoutes = [
         title: '用户列表',
         icon: 'guide',
         noCache: true,
-        roles: ['admin', 'superadmin', 'commonuser', 'visitor']
+        roles: ['admin', 'superadmin']
       }
     }
     ]
   },
-  {
-    path: '/consul',
-    component: Layout,
-    redirect: '/consul/index',
-    alwaysShow: true,
-    name: 'ConsulManager',
-    meta: {
-      title: 'Consul模块',
-      icon: 'guide',
-      roles: ['admin', 'superadmin', 'commonuser', 'visitor']
-    },
-    children: [{
-      path: 'index',
-      component: () => import('@/views/consolelist/index'),
-      name: 'consulIndex',
-      meta: {
-        title: 'Consul实验',
-        icon: 'guide',
-        noCache: true,
-        roles: ['admin', 'superadmin', 'commonuser', 'visitor']
-      }
-    }
-    ]
-  },
+  // {
+  //   path: '/consul',
+  //   component: Layout,
+  //   redirect: '/consul/index',
+  //   alwaysShow: true,
+  //   name: 'ConsulManager',
+  //   meta: {
+  //     title: 'Consul模块',
+  //     icon: 'list',
+  //     roles: ['superadmin']
+  //   },
+  //   children: [{
+  //     path: 'index',
+  //     component: () => import('@/views/consolelist/index'),
+  //     name: 'consulIndex',
+  //     meta: {
+  //       title: 'Consul实验',
+  //       icon: 'guide',
+  //       noCache: true,
+  //       roles: ['superadmin']
+  //     }
+  //   }
+  //   ]
+  // },
   {
     path: '/book',
     component: Layout,
@@ -183,18 +183,18 @@ export const asyncRoutes = [
     name: 'BookList',
     meta: {
       title: '图书',
-      icon: 'shopping',
-      roles: ['admin', 'superadmin', 'commonuser', 'visitor']
+      icon: 'list',
+      roles: ['admin', 'superadmin', 'user']
     },
     children: [{
       path: 'list',
       component: () => import('@/views/book/index'),
-      name: 'bookpage',
+      name: 'list',
       meta: {
         title: '图书列表',
         icon: 'guide',
         noCache: true,
-        roles: ['admin', 'commonuser', 'superadmin', 'visitor']
+        roles: ['admin', 'user', 'superadmin']
       }
     },
     {
@@ -205,7 +205,7 @@ export const asyncRoutes = [
         title: '图书库存',
         icon: 'guide',
         noCache: true,
-        roles: ['admin', 'superadmin', 'commonuser', 'visitor']
+        roles: ['admin', 'superadmin']
       }
     },
     {
@@ -216,7 +216,7 @@ export const asyncRoutes = [
         title: '图书添加',
         icon: 'guide',
         noCache: true,
-        roles: ['admin', 'superadmin', 'commonuser', 'visitor']
+        roles: ['admin', 'superadmin']
       }
     }
     ]
@@ -229,8 +229,8 @@ export const asyncRoutes = [
     name: 'BorrowList',
     meta: {
       title: '借阅',
-      icon: 'shopping',
-      roles: ['admin', 'superadmin', 'commonuser', 'visitor']
+      icon: 'list',
+      roles: ['admin', 'superadmin', 'user']
     },
     children: [{
       path: 'list',
@@ -240,7 +240,18 @@ export const asyncRoutes = [
         title: '我的借阅',
         icon: 'guide',
         noCache: true,
-        roles: ['admin', 'superadmin', 'commonuser', 'visitor']
+        roles: ['admin', 'superadmin', 'user']
+      }
+    },
+    {
+      path: 'censorlist',
+      component: () => import('@/views/borrow/censorlist'),
+      name: 'censorpage',
+      meta: {
+        title: '借阅审查',
+        icon: 'guide',
+        noCache: true,
+        roles: ['admin', 'superadmin', 'user']
       }
     },
     {
@@ -251,7 +262,7 @@ export const asyncRoutes = [
         title: '借阅列表',
         icon: 'guide',
         noCache: true,
-        roles: ['admin', 'superadmin', 'commonuser', 'visitor']
+        roles: ['admin', 'superadmin']
       }
     }
     ]
