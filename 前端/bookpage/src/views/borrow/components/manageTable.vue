@@ -11,7 +11,7 @@
     <el-table
       v-loading="isLoading"
       :data="filteredData"
-      :default-sort="{prop: 'id', order: 'descending'}"
+      :default-sort="{prop: 'id'}"
       border
       style="width: 100%"
     >

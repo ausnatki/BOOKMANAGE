@@ -251,7 +251,7 @@ export const asyncRoutes = [
         title: '借阅审查',
         icon: 'guide',
         noCache: true,
-        roles: ['admin', 'superadmin', 'user']
+        roles: ['admin', 'superadmin']
       }
     },
     {

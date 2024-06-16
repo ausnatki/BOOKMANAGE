@@ -9,7 +9,7 @@ namespace BOOK.MANAGE.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+
     public class SysUserController : ControllerBase
     {
         private BOOK.SERVERS.ISysUserService _userService;
@@ -18,7 +18,7 @@ namespace BOOK.MANAGE.Controllers
         {
             _userService = userService;
         }
-
+        [Authorize]
         [HttpPost("GetInfoById")]
         public BOOK.MODEL.ApiResp GetInfoById(int id)
         {
@@ -51,7 +51,7 @@ namespace BOOK.MANAGE.Controllers
                 }
             }
         }
-
+        [Authorize]
         [HttpPost("EditInfo")]
         public BOOK.MODEL.ApiResp EditInfo([FromBody]BOOK.MODEL.SysUser user) 
         {
@@ -84,7 +84,7 @@ namespace BOOK.MANAGE.Controllers
                 }
             }
         }
-
+        [Authorize]
         [HttpGet("GetAllSysUser")]
         public BOOK.MODEL.ApiResp GetAllSysUser()
         {
@@ -107,7 +107,7 @@ namespace BOOK.MANAGE.Controllers
                 return result;
             }
         }
-
+        [Authorize]
         [HttpPost("ChangeState")]
         public BOOK.MODEL.ApiResp ChangeState(int UID)
         {
@@ -136,7 +136,6 @@ namespace BOOK.MANAGE.Controllers
         }
 
         [HttpPost("Enroll")]
-
         public ActionResult<object> Enroll([FromBody] SysUser user)
         {
             if (user.UserName == null) { return StatusCode(400, new { code = 50008, message = "注册失败" }); }

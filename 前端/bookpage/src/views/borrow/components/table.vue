@@ -163,6 +163,7 @@ export default {
               message: '归还成功'
             })
             // data.state = true
+            this.Initdata()
           }).catch(response => {
             this.$message({
               type: 'error',

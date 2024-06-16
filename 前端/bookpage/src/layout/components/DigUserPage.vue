@@ -30,7 +30,7 @@
         </el-col>
         <el-col :span="10" :offset="2">
           <div class="mylable">密码：</div>
-          <span class="mytext">{{ form.Password }}</span>
+          <el-link class="mytext" target="_blank" @click="ClickPasswordEdit">{{ form.Password }}</el-link>
         <!-- <el-button type="primary" icon="el-icon-edit" size="mini" circle /> -->
         </el-col>
       </el-row>
@@ -42,7 +42,7 @@
         </el-col>
         <el-col :span="10" :offset="2" style="">
           <div class="mylable">角色：</div>
-          <span class="mytext">{{ role }}</span>
+          <span class="mytext">{{ RoleText(roles) }}</span>
         <!-- <el-button type="primary" icon="el-icon-edit" size="mini" circle /> -->
         </el-col>
       </el-row>
@@ -75,13 +75,13 @@ export default {
         LoginName: '',
         Email: '',
         Password: ''
-      },
-      role: '管理员'
+      }
     }
   },
   computed: {
     ...mapGetters([
-      'uid'
+      'uid',
+      'roles'
     ])
   },
   watch: {
@@ -114,6 +114,23 @@ export default {
         inputErrorMessage: '邮箱长度必须超过20个字符'
       }).then(({ value }) => {
         this.form.UserName = value
+        this.EditInfo()
+      }).catch(() => {
+        this.$message({
+          type: 'info',
+          message: '取消输入'
+        })
+      })
+    },
+    // 修改用户密码
+    async ClickPasswordEdit() {
+      await this.$prompt('请输入新密码', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        inputPattern: /^.{0,20}$/,
+        inputErrorMessage: '邮箱长度必须超过20个字符'
+      }).then(({ value }) => {
+        this.form.Password = value
         this.EditInfo()
       }).catch(() => {
         this.$message({
@@ -158,6 +175,24 @@ export default {
           message: '修改失败'
         })
       })
+    },
+    // 显示用户角色文本
+    RoleText(role) {
+      if (role.includes('superadmin')) {
+        return '超级管理员'
+      }
+
+      if (role.includes('admin')) {
+        return '管理员'
+      }
+
+      if (role.includes('user')) {
+        return '普通用户'
+      }
+
+      if (role.includes('visitor')) {
+        return '访客'
+      }
     }
   }
 }
