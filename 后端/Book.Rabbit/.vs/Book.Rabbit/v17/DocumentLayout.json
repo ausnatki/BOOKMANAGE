@@ -130,8 +130,7 @@
               "RelativeToolTip": "Book.Model\\Borrwoed.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAADwvw8AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T05:43:43.692Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T05:43:43.692Z"
             },
             {
               "$type": "Document",
@@ -225,7 +224,7 @@
               "RelativeDocumentMoniker": "Book.Repository\\Redis_Borrowed.cs",
               "ToolTip": "D:\\git\\book\\BOOKMANAGE\\\u540E\u7AEF\\Book.Rabbit\\Book.Repository\\Redis_Borrowed.cs",
               "RelativeToolTip": "Book.Repository\\Redis_Borrowed.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAD4vx4AAAAUAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAADwvx4AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-06T02:02:49.185Z",
               "EditorCaption": ""
